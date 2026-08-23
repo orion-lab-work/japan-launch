@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan Launch | Native Japanese App Store & Landing Page Localization</title>
+    <meta name="description" content="Make your app feel native to Japanese users. High-converting App Store & Landing Page localization starting at $199. Written by a professional Japanese content writer. Free sample available!">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;800&family=Shippori+Mincho:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS (Explicit Relative Path for Netlify & Linux Compatibility) -->
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body data-current-lang="en">
+
+    <!-- Background Decor -->
+    <div class="bg-decorations">
+        <div class="bg-blob blob-1"></div>
+        <div class="bg-blob blob-2"></div>
+        <div class="sakura-petals-container" id="sakuraContainer"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="#" class="brand-logo">
+                <img src="./assets/logo.png" alt="Japan Launch Logo" class="brand-logo-img">
+                <span class="brand-name">Japan <span class="brand-accent">Launch</span></span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#why-japan" data-en="Why Japan?" data-jp="日本市場の魅力">Why Japan?</a>
+                <a href="#why-us" data-en="Why Us?" data-jp="選ばれる理由">Why Us?</a>
+                <a href="#how-it-works" data-en="How It Works" data-jp="作業の流れ">How It Works</a>
+                <a href="#requirements" data-en="Requirements" data-jp="必要素材">Requirements</a>
+                <a href="#samples" data-en="Live Case Studies" data-jp="制作事例サンプル">Live Case Studies</a>
+                <a href="#pricing" data-en="Pricing Pack ($199)" data-jp="料金プラン ($199)">Pricing Pack ($199)</a>
+                <a href="#faq" data-en="FAQ" data-jp="FAQ">FAQ</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Language Toggle Switcher -->
+                <div class="lang-switch-toggle">
+                    <button class="lang-btn active" id="btnLangEn" onclick="switchLanguage('en')">EN</button>
+                    <span class="lang-divider">|</span>
+                    <button class="lang-btn" id="btnLangJp" onclick="switchLanguage('jp')">JP</button>
+                </div>
+
+                <button class="btn btn-primary" onclick="openSampleModal()">
+                    <span data-en="Get a Free Localization Sample" data-jp="無料ローカライズサンプルを試す">Get a Free Localization Sample</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero-offer">
+            <div class="container hero-grid-large">
+                
+                <!-- Left Copy -->
+                <div class="hero-copy">
+                    <div class="tag-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                        <span data-en="Native Japanese App Store & Landing Page Localization" data-jp="App Store & ランディングページ 日本語ローカライズ">Native Japanese App Store & Landing Page Localization</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Launch Your App in <span class="highlight-japan">Japan</span>
+                    </h1>
+
+                    <p class="hero-main-tagline" data-en="Make Your App Feel Native to Japanese Users" data-jp="日本のユーザーに、まるで国内アプリのように届ける。">
+                        Make Your App Feel Native to Japanese Users
+                    </p>
+
+                    <p class="hero-subtitle" data-en="Turn awkward machine translations into natural, high-converting Japanese store text. Written by a professional Japanese content writer — 100% focused on your store page copy." data-jp="機械翻訳特有の違和感を解消し、プロの日本人コンテンツライターが自然でCV率の高い日本語説明文へ書き直します。">
+                        Turn awkward machine translations into natural, high-converting Japanese store text. Written by a professional Japanese content writer — 100% focused on your store page copy.
+                    </p>
+
+                    <!-- JUST SEND A URL DIFFERENTIATOR BANNER -->
+                    <div class="differentiator-banner">
+                        <div class="diff-title-row">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="2.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                            <strong data-en="Just Send Your URL." data-jp="URLをお送りいただくだけ。">Just Send Your URL.</strong>
+                        </div>
+                        <div class="diff-bullets">
+                            <span data-en="No spreadsheets." data-jp="面倒なエクセル作業なし">No spreadsheets.</span>
+                            <span class="diff-dot">•</span>
+                            <span data-en="No setup." data-jp="複雑な設定なし">No setup.</span>
+                            <span class="diff-dot">•</span>
+                            <span data-en="No technical work." data-jp="開発・コード作業なし">No technical work.</span>
+                        </div>
+                    </div>
+
+                    <!-- Core Strengths Badges -->
+                    <div class="hero-features-list">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="2.5"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/></svg>
+                            </div>
+                            <div class="feature-text">
+                                <strong data-en="Written by a Professional Japanese Content Writer" data-jp="プロの日本人コンテンツライターが執筆">Written by a Professional Japanese Content Writer</strong>
+                                <span data-en="Not machine translation" data-jp="機械翻訳ではありません">Not machine translation</span>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            </div>
+                            <div class="feature-text">
+                                <strong data-en="AI-Assisted, Human-Perfected" data-jp="AIサポート × プロ人間の仕上げ">AI-Assisted, Human-Perfected</strong>
+                                <span data-en="Speed + Flawless Quality" data-jp="圧倒的なスピードと最高の品質">Speed + Flawless Quality</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Hero CTA & Price Visibility -->
+                    <div class="hero-cta-wrapper">
+                        <div class="cta-main-box">
+                            <button class="btn btn-coral btn-lg" onclick="openSampleModal('App Store Listing Copy Pack ($199)')">
+                                <span data-en="Get a Free Localization Sample" data-jp="無料ローカライズサンプルを試す">Get a Free Localization Sample</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </button>
+
+                            <div class="hero-price-anchor">
+                                <span class="hero-price-tag" data-en="Starting at $199" data-jp="定額 $199〜">Starting at $199</span>
+                                <span class="hero-price-dot">•</span>
+                                <span class="hero-delivery-tag" data-en="Delivered within 2 business days" data-jp="2営業日以内に納品">Delivered within 2 business days</span>
+                            </div>
+                        </div>
+
+                        <div class="cta-tooltip-annotation">
+                            <svg class="hand-arrow" viewBox="0 0 60 30" fill="none" stroke="#D13B62" stroke-width="2" stroke-dasharray="3 3">
+                                <path d="M10 20 Q 30 5, 50 15" />
+                                <polygon points="50,15 42,10 44,18" fill="#D13B62"/>
+                            </svg>
+                            <span class="handwriting" data-en="We'll localize part of your content for free before you decide!" data-jp="決定する前に一部を無料でローカライズします！">We'll localize part of your content for free before you decide!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual: Prominent Before/After Mockup Switcher -->
+                <div class="hero-mockup-wrapper prominent-hero-mockup">
+                    
+                    <div class="mockup-header-indicator">
+                        <button class="switcher-pill" id="btnPhoneBefore" onclick="switchPhoneMockup('before')">
+                            <span data-en="Before (English)" data-jp="Before (英語表示)">Before (English)</span>
+                        </button>
+                        
+                        <button class="switcher-pill active" id="btnPhoneAfter" onclick="switchPhoneMockup('after')">
+                            <span data-en="After (Japanese Copy)" data-jp="After (自然な日本語)">After (Japanese Copy)</span>
+                        </button>
+
+                        <button class="switcher-pill mode-dual" id="btnPhoneBoth" onclick="switchPhoneMockup('both')">
+                            <span data-en="Both Side-by-Side" data-jp="両方並べて比較">Both Side-by-Side</span>
+                        </button>
+                    </div>
+
+                    <div class="phone-display-area mode-single-after" id="phoneDisplayArea">
+                        <div class="phone-image-wrapper phone-img-before" id="wrapperPhoneBefore">
+                            <span class="phone-label-tag warning" data-en="Before: English Store Copy" data-jp="Before：元の英語ストア文">Before：English Store Copy</span>
+                            <img src="./assets/iphone_before.png" alt="App Store Listing Before Japanese Localization" class="hero-phone-img large-mockup">
+                        </div>
+
+                        <div class="phone-image-wrapper phone-img-after active" id="wrapperPhoneAfter">
+                            <span class="phone-label-tag success" data-en="After: Natural Japanese Copy" data-jp="After：自然な日本語説明文">After：Natural Japanese Copy</span>
+                            <img src="./assets/iphone_after.png" alt="App Store Listing After Japanese Localization" class="hero-phone-img large-mockup">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- WHY JAPAN MARKET OPPORTUNITY SECTION (市場メリット・リサーチデータ) -->
+        <section class="section-market-opportunity" id="why-japan">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="badge-sub" data-en="Huge Market Opportunity" data-jp="市場の巨大なポテンシャル">Huge Market Opportunity</span>
+                    <h2 data-en="Why Launch in Japan? (A $10B+ Market)" data-jp="なぜ今、日本市場に出すべきなのか？">Why Launch in Japan? (A $10B+ Market)</h2>
+                    <p data-en="Japan is the world's #3 mobile app economy with industry-leading monetization. But without native copy, 85%+ of potential downloads are lost." data-jp="日本は世界第3位のアプリ課金市場。しかし自然な日本語で訴求しない限り、85%以上のユーザーを獲得できずに見過ごしてしまいます。">Japan is the world's #3 mobile app economy with industry-leading monetization. But without native copy, 85%+ of potential downloads are lost.</p>
+                </div>
+
+                <div class="market-stats-grid">
+                    
+                    <!-- Stat Card 1: Market Size -->
+                    <div class="market-stat-card">
+                        <div class="stat-top-row">
+                            <div class="stat-number-accent">$10B+</div>
+                            <span class="stat-pill-badge">#3 WORLDWIDE</span>
+                        </div>
+                        <h3 class="stat-card-title" data-en="World's 3rd Largest App Economy" data-jp="世界第3位の巨大アプリ課金市場">World's 3rd Largest App Economy</h3>
+                        <p class="stat-card-desc" data-en="Behind only the US and China, Japanese users spend over $10 Billion annually on mobile apps and subscriptions." data-jp="米国・中国に次ぐ世界トップ3の市場規模。日本のユーザーは年間100億ドル以上をモバイルアプリやサブスクリプションに消費しています。">Behind only the US and China, Japanese users spend over $10 Billion annually on mobile apps and subscriptions.</p>
+                        <div class="stat-source-footer">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                            <a href="https://sensortower.com/blog/state-of-mobile-2024" target="_blank" rel="noopener noreferrer" class="stat-source-link">Source: Sensor Tower & data.ai Report <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                        </div>
+                    </div>
+
+                    <!-- Stat Card 2: iOS Share -->
+                    <div class="market-stat-card">
+                        <div class="stat-top-row">
+                            <div class="stat-number-accent">60%+</div>
+                            <span class="stat-pill-badge">iOS DOMINANCE</span>
+                        </div>
+                        <h3 class="stat-card-title" data-en="Massive iPhone Market Share" data-jp="60%超の圧倒的なiPhoneシェア">Massive iPhone Market Share</h3>
+                        <p class="stat-card-desc" data-en="Unlike most global markets, Japan is heavily iOS-dominated. Japanese iPhone users show exceptional willingness to pay for premium apps." data-jp="世界平均（約28%）とは対照的に、日本は6割以上がiPhoneユーザー。有料アプリ購入やサブスク課金に対する抵抗感が非常に低いのが特徴です。">Unlike most global markets, Japan is heavily iOS-dominated. Japanese iPhone users show exceptional willingness to pay for premium apps.</p>
+                        <div class="stat-source-footer">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                            <a href="https://gs.statcounter.com/os-market-share/mobile/japan" target="_blank" rel="noopener noreferrer" class="stat-source-link">Source: StatCounter Global Stats (Japan) <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                        </div>
+                    </div>
+
+                    <!-- Stat Card 3: ARPU / LTV -->
+                    <div class="market-stat-card">
+                        <div class="stat-top-row">
+                            <div class="stat-number-accent">Top Tier</div>
+                            <span class="stat-pill-badge">HIGHEST ARPU</span>
+                        </div>
+                        <h3 class="stat-card-title" data-en="High Spending Power & Retention" data-jp="世界トップクラスの課金単価と高い継続率">High Spending Power & Retention</h3>
+                        <p class="stat-card-desc" data-en="Average revenue per user (ARPU) ranks among the highest globally. Japanese users have high loyalty and lower churn rates once committed." data-jp="ユーザー1人あたりの課金単価（ARPU）が世界最高水準。一度価値を認めたアプリに対しては解約率（チャーン）が低く、長く愛用されます。">Average revenue per user (ARPU) ranks among the highest globally. Japanese users have high loyalty and lower churn rates once committed.</p>
+                        <div class="stat-source-footer">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                            <a href="https://liftoff.io/resources/" target="_blank" rel="noopener noreferrer" class="stat-source-link">Source: Liftoff Mobile Trends Report <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                        </div>
+                    </div>
+
+                    <!-- Stat Card 4: Language Moat -->
+                    <div class="market-stat-card highlight-card">
+                        <div class="stat-top-row">
+                            <div class="stat-number-accent">85%+</div>
+                            <span class="stat-pill-badge highlight-pill">YOUR UNFAIR ADVANTAGE</span>
+                        </div>
+                        <h3 class="stat-card-title" data-en="The 'Language Moat' Advantage" data-jp="「言葉の壁」がつくる先行者利益">The 'Language Moat' Advantage</h3>
+                        <p class="stat-card-desc" data-en="Over 85% of Japanese users skip English-only or machine-translated apps. Professional localization instantly gives you a dominant edge over competitors." data-jp="日本のユーザーの85%以上は英語のみ・直訳アプリを敬遠します。自然な日本語にするだけで、海外の強豪アプリに大差をつける強力な参入障壁（モート）になります。">Over 85% of Japanese users skip English-only or machine-translated apps. Professional localization instantly gives you a dominant edge over competitors.</p>
+                        <div class="stat-source-footer">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                            <a href="https://csa-research.com/" target="_blank" rel="noopener noreferrer" class="stat-source-link">Source: CSA Research & EF EPI <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Strategic Opportunity Banner -->
+                <div class="market-opportunity-banner">
+                    <div class="opp-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <div class="opp-content">
+                        <strong class="opp-title" data-en="Don't Leave 20%–30% of Global Revenue on the Table" data-jp="本来得られるはずのグローバル売上の20〜30%を取りこぼしていませんか？">Don't Leave 20%–30% of Global Revenue on the Table</strong>
+                        <p class="opp-desc" data-en="If you only target English-speaking markets, you are missing out on one of the most lucrative app economies in the world. Just send your store URL — we'll handle the rest." data-jp="英語圏だけで勝負しているなら、世界屈指の高収益市場を見過ごしています。あなたのアプリURLを送るだけで、最短2日で日本展開の準備が整います。">If you only target English-speaking markets, you are missing out on one of the most lucrative app economies in the world. Just send your store URL — we'll handle the rest.</p>
+                    </div>
+                    <button class="btn btn-coral" onclick="openSampleModal()">
+                        <span data-en="Claim Your Free Sample" data-jp="無料サンプルを試す">Claim Your Free Sample</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 5-STEP PROCESS SECTION (作業の流れ) -->
+        <section class="section-process" id="how-it-works">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="badge-sub" data-en="Simple 5-Step Process" data-jp="作業の流れ">Simple 5-Step Process</span>
+                    <h2 data-en="How It Works" data-jp="発注から納品までの流れ">How It Works</h2>
+                    <p data-en="Getting high-converting Japanese copy is quick and effortless." data-jp="面倒なやり取りは不要。たったの5ステップで自然な日本語テキストが手に入ります。">Getting high-converting Japanese copy is quick and effortless.</p>
+                </div>
+
+                <div class="process-5steps-grid">
+                    <div class="p-step-card">
+                        <div class="p-step-num">Step 1</div>
+                        <h4 data-en="Send Your URL" data-jp="URLを送信">Send Your URL</h4>
+                        <p data-en="Send your App Store, Google Play, or Landing Page URL." data-jp="App Store、Google Play、またはランディングページのURLをお送りください。">Send your App Store, Google Play, or Landing Page URL.</p>
+                    </div>
+
+                    <div class="p-step-card">
+                        <div class="p-step-num">Step 2</div>
+                        <h4 data-en="We Review Content" data-jp="原稿の確認">We Review Content</h4>
+                        <p data-en="We review your content & key selling points." data-jp="お送りいただいたアプリ・サイトのアピールポイントを確認します。">We review your content & key selling points.</p>
+                    </div>
+
+                    <div class="p-step-card">
+                        <div class="p-step-num">Step 3</div>
+                        <h4 data-en="Native Localization" data-jp="自然な日本語化">Native Localization</h4>
+                        <p data-en="Natural Japanese localization by a Japanese content writer." data-jp="日本人コンテンツライターが自然な日本語へローカライズ執筆。">Natural Japanese localization by a Japanese content writer.</p>
+                    </div>
+
+                    <div class="p-step-card">
+                        <div class="p-step-num">Step 4</div>
+                        <h4 data-en="Receive Your Copy" data-jp="完成原稿の受け取り">Receive Your Copy</h4>
+                        <p data-en="Receive your localized copy in Google Docs or Word." data-jp="コピペ可能なGoogle DocumentまたはWord形式で原稿をお届け。">Receive your localized copy in Google Docs or Word.</p>
+                    </div>
+
+                    <div class="p-step-card">
+                        <div class="p-step-num">Step 5</div>
+                        <h4 data-en="Paste & Publish" data-jp="コピペして反映">Paste & Publish</h4>
+                        <p data-en="Paste it into your website or app store." data-jp="届いた文章をストア管理画面や自社Webサイトへ貼り付けて公開。">Paste it into your website or app store.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REQUIREMENTS & DELIVERY SECTION (お客様に送ってもらうもの & 納品方法) -->
+        <section class="section-requirements" id="requirements">
+            <div class="container">
+                <div class="requirements-box-grid">
+                    
+                    <!-- Left: What You Send -->
+                    <div class="req-card">
+                        <div class="req-card-header">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="2.5"><path d="M22 2L11 13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                            <h3 data-en="What You Need to Send" data-jp="お客様に送ってもらうもの">What You Need to Send</h3>
+                        </div>
+
+                        <div class="req-list">
+                            <div class="req-item">
+                                <span class="bullet-dot"></span>
+                                <div>
+                                    <strong data-en="Send Just One URL:" data-jp="どれか1つのURLをお送りください：">Send Just One URL:</strong>
+                                    <ul class="sub-bullet-list">
+                                        <li>App Store URL</li>
+                                        <li>Google Play URL</li>
+                                        <li>Landing Page URL</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="req-item note-bg">
+                                <span class="bullet-dot highlight"></span>
+                                <div>
+                                    <strong data-en="If URL is Private / Not Public Yet:" data-jp="URLが非公開の場合のみ：">If URL is Private / Not Public Yet:</strong>
+                                    <p data-en="Simply paste your English text." data-jp="英語の原稿テキストを直接貼り付けてお送りください。">Simply paste your English text.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Delivery Method -->
+                    <div class="req-card">
+                        <div class="req-card-header">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                            <h3 data-en="Delivery Method" data-jp="納品方法">Delivery Method</h3>
+                        </div>
+
+                        <div class="req-list">
+                            <div class="req-item">
+                                <span class="bullet-dot"></span>
+                                <div>
+                                    <strong data-en="Format Options:" data-jp="納品ファイル形式：">Format Options:</strong>
+                                    <p data-en="Delivered in Google Docs or Word." data-jp="Google Document または Word 形式。">Delivered in Google Docs or Word.</p>
+                                </div>
+                            </div>
+
+                            <div class="req-item">
+                                <span class="bullet-dot"></span>
+                                <div>
+                                    <strong data-en="Ready to Copy & Paste:" data-jp="そのまま使える状態でお届け：">Ready to Copy & Paste:</strong>
+                                    <p data-en="Formatted cleanly so you can directly copy & paste into App Store Connect, Google Play Console, or your CMS." data-jp="ストア管理画面やCMSにそのままコピー＆ペーストできる状態で納品します。">Formatted cleanly so you can directly copy & paste into App Store Connect, Google Play Console, or your CMS.</p>
+                                </div>
+                            </div>
+
+                            <div class="req-item note-warning">
+                                <span class="bullet-dot warning"></span>
+                                <div>
+                                    <p data-en="* Please note: We deliver ready-to-use copy; we do not directly edit or update your live website or store account." data-jp="※Webサイトやストア画面への実際の直接反映作業は含みません。">* Please note: We deliver ready-to-use copy; we do not directly edit or update your live website or store account.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US? (選ばれる理由・他社との違い) -->
+        <section class="section-why" id="why-us">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="badge-sub" data-en="Our Advantages" data-jp="私たちの強み">Our Advantages</span>
+                    <h2 data-en="Why Choose Us?" data-jp="選ばれる5つの理由">Why Choose Us?</h2>
+                    <p data-en="Tailored specifically for indie developers and small teams launching in Japan." data-jp="日本市場に参入する海外の個人アプリ開発者・スモールチームに選ばれる理由。">Tailored specifically for indie developers and small teams launching in Japan.</p>
+                </div>
+
+                <div class="why-grid-5">
+                    <div class="why-box">
+                        <div class="why-icon-circle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/></svg>
+                        </div>
+                        <h3 data-en="Professional Writer" data-jp="プロの日本人ライター">Professional Writer</h3>
+                        <p data-en="Written by a professional Japanese content writer. Not machine translation." data-jp="機械翻訳ではありません。プロの日本人ライターが自然な文章を執筆。">Written by a professional Japanese content writer. Not machine translation.</p>
+                    </div>
+
+                    <div class="why-box">
+                        <div class="why-icon-circle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        </div>
+                        <h3 data-en="Fast Turnaround" data-jp="スピーディーな納品">Fast Turnaround</h3>
+                        <p data-en="App Store Listings within 2 business days; Landing Pages within 2–3 business days." data-jp="ストア説明文は2営業日以内、LPは2〜3営業日以内に納品。">App Store Listings within 2 business days; Landing Pages within 2–3 business days.</p>
+                    </div>
+
+                    <div class="why-box">
+                        <div class="why-icon-circle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                        </div>
+                        <h3 data-en="Easy Process" data-jp="かんたん注文">Easy Process</h3>
+                        <p data-en="No spreadsheets or setup. Just send an App Store, Google Play, or LP URL." data-jp="エクセルや設定作業なし。URLをひとつ送るだけで完了。">No spreadsheets or setup. Just send an App Store, Google Play, or LP URL.</p>
+                    </div>
+
+                    <div class="why-box">
+                        <div class="why-icon-circle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        </div>
+                        <h3 data-en="AI-Assisted, Human-Perfected" data-jp="AIサポート × プロ間の推敲">AI-Assisted, Human-Perfected</h3>
+                        <p data-en="AI assists initial drafting, but every sentence is polished by a human writer." data-jp="AIで初稿を作成し、プロの日本人ライターが完璧に推敲。">AI assists initial drafting, but every sentence is polished by a human writer.</p>
+                    </div>
+
+                    <div class="why-box">
+                        <div class="why-icon-circle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        </div>
+                        <h3 data-en="Indie Developer Friendly" data-jp="個人開発者に最適">Indie Developer Friendly</h3>
+                        <p data-en="Flat-rate pricing with zero corporate bloat or hidden fees." data-jp="中抜きなし・定額料金。個人アプリ開発者に寄り添った柔軟な対応。">Flat-rate pricing with zero corporate bloat or hidden fees.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HIGHLY VISUAL CASE STUDY SAMPLES SECTION WITH ELEGANT CARDS & MOBILE TOUCH OPTIMIZATION -->
+        <section class="section-samples-showcase" id="samples">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="badge-sub" data-en="Real Localized Case Studies" data-jp="実際の制作事例・解説サンプル">Real Localized Case Studies</span>
+                    <h2 data-en="Sample Case Studies & Insights" data-jp="ローカライズ制作事例・改善の理由">Sample Case Studies & Insights</h2>
+                    <p data-en="See how we adapt English app descriptions into natural, high-converting Japanese copy." data-jp="実際のアプリ説明文がどのように自然な日本語へ書き換えられ、ダウンロード率を高めるかご覧ください。">See how we adapt English app descriptions into natural, high-converting Japanese copy.</p>
+                </div>
+
+                <!-- Interactive Case Study Tabs with Mobile Touch Optimization -->
+                <div class="case-study-tabs" id="caseStudyTabs">
+                    <button class="case-study-tab active" data-cs="sample1" onclick="switchCaseStudy('sample1')">
+                        <div class="cs-tab-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+                        </div>
+                        <div class="cs-tab-info">
+                            <span class="cs-tag">Sample #01</span>
+                            <strong data-en="AI Meeting Notes App" data-jp="AI議事録・ミーティング">AI Meeting Notes App</strong>
+                        </div>
+                    </button>
+
+                    <button class="case-study-tab" data-cs="sample2" onclick="switchCaseStudy('sample2')">
+                        <div class="cs-tab-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                        </div>
+                        <div class="cs-tab-info">
+                            <span class="cs-tag">Sample #02</span>
+                            <strong data-en="AI Image Generator" data-jp="AI画像生成アプリ">AI Image Generator</strong>
+                        </div>
+                    </button>
+
+                    <button class="case-study-tab" data-cs="sample3" onclick="switchCaseStudy('sample3')">
+                        <div class="cs-tab-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <div class="cs-tab-info">
+                            <span class="cs-tag">Sample #03</span>
+                            <strong data-en="Team Productivity" data-jp="チーム生産性ツール">Team Productivity</strong>
+                        </div>
+                    </button>
+
+                    <button class="case-study-tab" data-cs="sample4" onclick="switchCaseStudy('sample4')">
+                        <div class="cs-tab-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+                        </div>
+                        <div class="cs-tab-info">
+                            <span class="cs-tag">Sample #04</span>
+                            <strong data-en="AI Writing Assistant" data-jp="AIライティングLP">AI Writing Assistant</strong>
+                        </div>
+                    </button>
+
+                    <button class="case-study-tab" data-cs="sample5" onclick="switchCaseStudy('sample5')">
+                        <div class="cs-tab-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                        </div>
+                        <div class="cs-tab-info">
+                            <span class="cs-tag">Sample #05</span>
+                            <strong data-en="AI Design App Listing" data-jp="AIデザインアプリ説明文">AI Design App Listing</strong>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Case Study Display Card -->
+                <div class="case-study-display-card" id="caseStudyDisplay">
+                    
+                    <!-- App Title Meta Header inside Card -->
+                    <div class="cs-card-header-row">
+                        <div class="cs-app-meta">
+                            <div class="cs-app-badge-icon" id="csAppIcon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+                            </div>
+                            <div class="cs-app-title-group">
+                                <h3 id="csAppTitle">AI Meeting Notes App</h3>
+                                <span class="cs-app-genre-pill" id="csAppGenre">PRODUCTIVITY APP LOCALIZATION</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-coral btn-sm" onclick="openSampleModal('Free Sample')">
+                            <span data-en="Get Sample Like This" data-jp="このサンプルを試す">Get Sample Like This</span>
+                        </button>
+                    </div>
+
+                    <!-- Side-by-Side Store Listing Cards (Before vs After) -->
+                    <div class="cs-visual-comparison-grid">
+                        
+                        <!-- Left Card: Before (Machine Translation) -->
+                        <div class="cs-store-card before-card">
+                            <span class="cs-card-badge before">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                                <span data-en="BEFORE: Literal Translation" data-jp="BEFORE：直訳・機械翻訳">BEFORE: Literal Translation</span>
+                            </span>
+                            <div class="cs-copy-text" id="csLiteralText">
+                                「AIを搭載した会議アシスタント。すべての会議を録音し、要約して整理します。」
+                            </div>
+                            <div class="cs-card-footnote" id="csBaOriginal">
+                                Original: AI-powered meeting assistant.
+                            </div>
+                        </div>
+
+                        <!-- Right Card: After (Japan Launch Native Copywriting) -->
+                        <div class="cs-store-card after-card">
+                            <span class="cs-card-badge after">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span data-en="AFTER: Japan Launch Native Copy" data-jp="AFTER：プロ日本人ライター原稿">AFTER: Japan Launch Native Copy</span>
+                            </span>
+                            <div class="cs-copy-text" id="csLocalizedText">
+                                「AIが会議内容を自動で整理。<br>面倒な議事録作成や情報共有を、もっとスムーズに。」
+                            </div>
+                            <div class="cs-card-footnote" id="csBaLocalized">
+                                Japanese Copy: AIが会議内容を自動で整理。議事録作成をもっとスムーズに。
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- 2x2 Visual Insights Grid -->
+                    <div class="cs-insights-visual-grid">
+                        
+                        <!-- Card 1: Why We Changed It -->
+                        <div class="cs-insight-card-box">
+                            <div class="cs-insight-header">
+                                <div class="cs-insight-header-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/></svg>
+                                </div>
+                                <h4 id="csWhyTitle">Focus on Benefits, Not Features</h4>
+                            </div>
+                            <p class="cs-insight-body-text" id="csWhyText">
+                                The original copy emphasizes technical features. Japanese users often respond better to clear outcomes than feature lists. Instead of highlighting that the app is 'AI-powered', we focused on saving time.
+                            </p>
+                        </div>
+
+                        <!-- Card 2: Japanese User Tip / Cultural Insight -->
+                        <div class="cs-insight-card-box tip-box">
+                            <div class="cs-insight-header">
+                                <div class="cs-insight-header-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8.5 14.5A7 7 0 1 1 15.5 14.5L12 19l-3.5-4.5z"/><line x1="12" y1="2" x2="12" y2="4"/></svg>
+                                </div>
+                                <h4 data-en="Japanese User Tip & Insight" data-jp="日本のユーザー行動のインサイト">Japanese User Tip & Insight</h4>
+                            </div>
+                            <p class="cs-insight-body-text" id="csCulturalText">
+                                Japanese App Store users typically look for practical value first. Copy that answers 'How does this help me?' feels much more trustworthy than feature-heavy descriptions.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <!-- 4-Pill Visual Checklist Grid -->
+                    <div class="cs-insight-card-box">
+                        <div class="cs-insight-header">
+                            <div class="cs-insight-header-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            </div>
+                            <h4 data-en="What Changed & Key Improvements" data-jp="主な変更ポイントと効果">What Changed & Key Improvements</h4>
+                        </div>
+                        <div class="cs-pills-checklist-grid">
+                            <div class="cs-check-pill">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span id="csCheck1">Replaced technical wording with user benefits</span>
+                            </div>
+                            <div class="cs-check-pill">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span id="csCheck2">Improved natural Japanese flow</span>
+                            </div>
+                            <div class="cs-check-pill">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span id="csCheck3">Adapted tone for Japanese readers</span>
+                            </div>
+                            <div class="cs-check-pill">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                                <span id="csCheck4">Focused on clarity instead of direct translation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Full Width Dark Takeaway Banner -->
+                    <div class="cs-takeaway-full-banner">
+                        <div class="takeaway-badge-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <div class="takeaway-content">
+                            <span class="takeaway-tag" data-en="KEY TAKEAWAY" data-jp="重要ポイント">KEY TAKEAWAY</span>
+                            <p class="takeaway-quote" id="csTakeaway">
+                                "Localization isn't about translating words. It's about making your product feel natural to Japanese users."
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PRICING SECTION (Placed EXACTLY BETWEEN SAMPLES AND FAQ!) -->
+        <section class="section-services" id="pricing">
+            <div class="container">
+                
+                <!-- Main Featured Pack: $199 App Store & Google Play Listing -->
+                <div class="main-featured-service-block">
+                    <div class="featured-badge-top" data-en="MAIN SERVICE PACK" data-jp="メイン提供サービス">MAIN SERVICE PACK</div>
+                    <div class="service-block-content">
+                        <div class="service-info">
+                            <h2 data-en="App Store & Google Play Listing Pack" data-jp="App Store / Google Play ストア説明文パック">App Store & Google Play Listing Pack</h2>
+                            <p class="service-subtitle" data-en="The essential copywriting package for every app launching in Japan." data-jp="日本市場に参入するすべての個人アプリ開発者向け必注掲載文パック。">The essential copywriting package for every app launching in Japan.</p>
+                            
+                            <ul class="service-list">
+                                <li><svg class="bullet-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <strong data-en="App Title & Subtitle" data-jp="アプリタイトル＆サブタイトル">App Title & Subtitle</strong> <span data-en="optimized for Japanese ASO search terms" data-jp="（日本の検索キーワード・ASOに最適化）">optimized for Japanese ASO search terms</span></li>
+                                <li><svg class="bullet-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <strong data-en="Short & Full Description" data-jp="概要文・詳細説明文">Short & Full Description</strong> <span data-en="to convert store visitors into downloads" data-jp="（離脱を防ぎDLへ誘導）">to convert store visitors into downloads</span></li>
+                                <li><svg class="bullet-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <strong data-en="Release Notes / What's New" data-jp="アップデート情報 / 新機能テキスト">Release Notes / What's New</strong> <span data-en="for launch or version updates" data-jp="（リリースノートの日本語化）">for launch or version updates</span></li>
+                                <li><svg class="bullet-check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <strong data-en="Delivered within 2 Business Days" data-jp="2営業日以内に納品">Delivered within 2 Business Days</strong> <span data-en="in Google Docs or Word" data-jp="（Google DocsまたはWord納品）">in Google Docs or Word</span></li>
+                            </ul>
+                        </div>
+                        <div class="service-pricing-box">
+                            <span class="price-currency">$</span>
+                            <span class="price-val">199</span>
+                            <span class="price-period" data-en="one-time flat fee" data-jp="買い切り・追加費用なし">one-time flat fee</span>
+                            <a href="https://www.paypal.com/ncp/payment/HZYUWPZ35QG8N" target="_blank" rel="noopener noreferrer" class="btn btn-coral btn-lg full-width" style="text-decoration:none;">
+                                <span data-en="Order Pack with PayPal ($199)" data-jp="PayPalで注文する ($199)">Order Pack with PayPal ($199)</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                            <button class="btn btn-outline full-width" onclick="openSampleModal('Free Sample')">
+                                <span data-en="Try Free Sample First" data-jp="まずは無料サンプルを試す">Try Free Sample First</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary Add-ons Section -->
+                <div class="addons-header">
+                    <h3 data-en="Need Landing Page Copy Too?" data-jp="ストア説明文の次に、さらにLPも依頼したい方へ">Need Landing Page Copy Too?</h3>
+                    <p data-en="If you also need your landing page or full website localized for the Japanese market:" data-jp="ストア説明文で効果を実感いただいた後、さらに日本でのWeb集客用LPやアプリ公式サイトを翻訳・制作したい方向けのオプションです。">If you also need your landing page or full website localized for the Japanese market:</p>
+                </div>
+
+                <div class="addons-grid">
+                    
+                    <!-- Addon 1: Landing Page -->
+                    <div class="addon-card">
+                        <div class="addon-tag" data-en="Optional Web Add-on" data-jp="追加Webオプション">Optional Web Add-on</div>
+                        <h4 data-en="Landing Page Copywriting" data-jp="ランディングページ (LP) コピーライティング">Landing Page Copywriting</h4>
+                        <div class="addon-price">$299</div>
+                        <p data-en="Natural Japanese copywriting for your marketing LP, hero section, features, and FAQ." data-jp="マーケティングLPのヒーローセクション、機能紹介、FAQなどの自然な日本語コピーライティング。">Natural Japanese copywriting for your marketing LP, hero section, features, and FAQ.</p>
+                        <ul class="addon-features">
+                            <li><svg class="bullet-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span data-en="Hero, Features & Benefits copywriting" data-jp="ヒーローエリア・特徴・メリットのライティング">Hero, Features & Benefits copywriting</span></li>
+                            <li><svg class="bullet-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span data-en="Delivered within 2–3 business days" data-jp="納期: 2〜3営業日以内">Delivered within 2–3 business days</span></li>
+                        </ul>
+                        <button class="btn btn-outline full-width" onclick="openSampleModal('Landing Page Copywriting ($299)')">
+                            <span data-en="Select LP Option ($299)" data-jp="LPオプションを選択 ($299)">Select LP Option ($299)</span>
+                        </button>
+                    </div>
+
+                    <!-- Addon 2: Full Website -->
+                    <div class="addon-card">
+                        <div class="addon-tag" data-en="Full Web Add-on" data-jp="全ページWebオプション">Full Web Add-on</div>
+                        <h4 data-en="Website Localization" data-jp="Webサイト・全ページローカライズ">Website Localization</h4>
+                        <div class="addon-price">From $599</div>
+                        <p data-en="For multi-page product sites and web applications. Includes i18n JSON file support for developer integration." data-jp="複数ページのWebサイトやWebアプリ向け。エンジニアが組み込めるi18n JSONファイル形式にも対応。">For multi-page product sites and web applications. Includes i18n JSON file support for developer integration.</p>
+                        <ul class="addon-features">
+                            <li><svg class="bullet-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span data-en="Up to 5 full website pages" data-jp="最大5ページまでの全体ローカライズ">Up to 5 full website pages</span></li>
+                            <li><svg class="bullet-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span data-en="Custom quotes available upon request" data-jp="個別お見積もりも可能">Custom quotes available upon request</span></li>
+                        </ul>
+                        <button class="btn btn-outline full-width" onclick="openSampleModal('Website Localization (From $599)')">
+                            <span data-en="Get Custom Quote" data-jp="個別見積もりを依頼">Get Custom Quote</span>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FAQ SECTION (DIRECTLY AFTER PRICING & SERVICES) -->
+        <section class="section-faq" id="faq">
+            <div class="container medium">
+                <div class="section-header center">
+                    <span class="badge-sub" data-en="Got Questions?" data-jp="よくあるご質問">Got Questions?</span>
+                    <h2 data-en="Frequently Asked Questions" data-jp="よくあるご質問 (FAQ)">Frequently Asked Questions</h2>
+                </div>
+
+                <div class="faq-list">
+                    
+                    <!-- FAQ 1: What do I need to send? -->
+                    <div class="faq-item active">
+                        <div class="faq-question">
+                            <span data-en="What do I need to send?" data-jp="発注時に何を送ればいいですか？">What do I need to send?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-en="Just send your App Store, Google Play, or landing page URL." data-jp="App Store、Google Play、またはランディングページのURLをどれか1つお送りいただくだけです。（※URLが未公開の場合のみ、英語のテキストを貼り付けてお送りください）。">Just send your App Store, Google Play, or landing page URL.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2: Do you use AI? -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span data-en="Do you use AI?" data-jp="AIは使用していますか？">Do you use AI?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-en="Yes. AI helps with the first draft, and every project is carefully reviewed, rewritten, and polished by a Japanese content writer." data-jp="はい。AIは初稿の作成補助に使用し、すべてのプロジェクトはプロの日本人コンテンツライターが丁寧に校正・推敲・リライトして仕上げます。">Yes. AI helps with the first draft, and every project is carefully reviewed, rewritten, and polished by a Japanese content writer.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3: Is this translation? -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span data-en="Is this translation?" data-jp="これは単なる「翻訳」ですか？">Is this translation?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-en="No. This is localization written to sound natural to Japanese users." data-jp="いいえ、単なる直訳ではありません。日本のユーザーにとって不自然さがなく、すっと心に響く自然な表現へローカライズ執筆します。">No. This is localization written to sound natural to Japanese users.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4: Do you update my website? -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span data-en="Do you update my website?" data-jp="Webサイトやストア画面への直接反映作業も行ってくれますか？">Do you update my website?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-en="No. You'll receive ready-to-use Japanese copy that you can easily paste into your website or app store." data-jp="いいえ。お客様がそのままストア管理画面や自社Webサイトにコピー＆ペーストして使える状態で、Google Docs または Word 形式で納品いたします。">No. You'll receive ready-to-use Japanese copy that you can easily paste into your website or app store.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5: How long does it take? -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span data-en="How long does it take?" data-jp="納期はどれくらいかかりますか？">How long does it take?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-en="App Store Listings: Within 2 business days. Landing Pages: Within 2–3 business days." data-jp="App Store / Google Play ストア説明文：2営業日以内。ランディングページ（LP）：2〜3営業日以内です。">App Store Listings: Within 2営業日以内。Landing Pages: Within 2〜3営業日以内です。</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FINAL TRUST & REASSURANCE RIBBON / BANNER -->
+    <section class="section-trust-ribbon">
+        <div class="container trust-ribbon-content">
+            <div class="trust-pill">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span data-en="Trusted by Indie Developers" data-jp="海外の個人開発者から信頼されています">Trusted by Indie Developers</span>
+            </div>
+
+            <div class="trust-pill">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span data-en="Ready in 2 Business Days" data-jp="2営業日以内にスピーディー納品">Ready in 2 Business Days</span>
+            </div>
+
+            <div class="trust-pill">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="2.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                <span data-en="Starting at $199" data-jp="安心の定額 $199〜">Starting at $199</span>
+            </div>
+
+            <div class="trust-pill">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="2.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                <span data-en="Free Sample Available" data-jp="一部無料サンプル提供中">Free Sample Available</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom Sticky Bar -->
+    <div class="bottom-bar">
+        <div class="container bottom-bar-content">
+            <div class="bottom-features">
+                <div class="b-feat">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    <div>
+                        <strong data-en="Just Send Your URL" data-jp="URLを送るだけ">Just Send Your URL</strong>
+                        <span data-en="Starting at $199 · 2 Days" data-jp="定額 $199〜 · 2日納品">Starting at $199 · 2日納品</span>
+                    </div>
+                </div>
+
+                <div class="b-feat">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <div>
+                        <strong data-en="Get a Free Localization Sample" data-jp="無料ローカライズサンプル">Get a Free Localization Sample</strong>
+                        <span data-en="Test part of your content for free" data-jp="事前の一部無料ローカライズ">Test part of your content for free</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-coral btn-lg" onclick="openSampleModal()">
+                <span data-en="Get a Free Localization Sample" data-jp="無料ローカライズサンプルを試す">Get a Free Localization Sample</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Free Sample Request Modal (Configured for User's Formspree Endpoint: https://formspree.io/f/mdaqwlke) -->
+    <div class="modal-overlay" id="sampleModal">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeSampleModal()">&times;</button>
+            <div class="modal-header">
+                <span class="sakura-badge" data-en="RISK-FREE SAMPLE" data-jp="お試し無料サンプル">RISK-FREE SAMPLE</span>
+                <h3 data-en="Get a Free Localization Sample" data-jp="無料ローカライズサンプルを依頼">Get a Free Localization Sample</h3>
+                <p data-en="We'll localize part of your content for free before you decide! Send your URL or paste text below." data-jp="発注を決定する前に、原稿の一部を無料でローカライズします。URLまたはテキストを入力してください。">We'll localize part of your content for free before you decide! Send your URL or paste text below.</p>
+            </div>
+
+            <!-- Integrated User Formspree Action Endpoint -->
+            <form id="sampleForm" action="https://formspree.io/f/mdaqwlke" method="POST" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="developerName" data-en="Your Name / App Name" data-jp="お名前 / アプリ名">Your Name / App Name</label>
+                    <input type="text" id="developerName" name="name" placeholder="e.g. Alex / FocusFlow App" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="emailAddress" data-en="Email Address" data-jp="メールアドレス">Email Address</label>
+                    <input type="email" id="emailAddress" name="_replyto" placeholder="alex@mycoolapp.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="appUrl" data-en="Send Your URL (App Store, Google Play, or LP URL)" data-jp="URLをお送りください (App Store, Google Play, または LP URL)">Send Your URL (App Store, Google Play, または LP URL)</label>
+                    <input type="url" id="appUrl" name="appUrl" placeholder="https://apps.apple.com/app/id... OR https://mycoolapp.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="appDetails" data-en="If URL is Private: Paste Your English Text Here" data-jp="※URLが非公開の場合のみ：英語テキストを貼り付け">If URL is Private: Paste Your English Text Here</label>
+                    <textarea id="appDetails" name="message" rows="3" placeholder="e.g. 'FocusFlow is a smart pomodoro timer built to boost your daily focus...'"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-coral full-width btn-lg" id="btnSubmitForm">
+                    <span data-en="Get a Free Localization Sample" data-jp="無料サンプルを送信する">Get a Free Localization Sample</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </form>
+
+            <div class="modal-success" id="modalSuccess" style="display: none;">
+                <div class="success-icon">
+                    <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+                </div>
+                <h3 data-en="Sample Request Submitted!" data-jp="送信が完了しました！">Sample Request Submitted!</h3>
+                <p data-en="Thank you! We will review your content and send your free localized sample to your email shortly." data-jp="ありがとうございます。内容を確認次第、すぐに無料ローカライズサンプルをメールでお送りいたします。">Thank you! We will review your content and send your free localized sample to your email shortly.</p>
+                <button class="btn btn-primary" onclick="closeSampleModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS (Explicit Relative Path) -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
