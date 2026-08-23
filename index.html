@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,1687 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700;800&family=Shippori+Mincho:wght@600;700;800&display=swap" rel="stylesheet">
     
     <!-- CSS (Explicit Relative Path for Netlify & Linux Compatibility) -->
-    <link rel="stylesheet" href="./css/styles.css">
+    <style>
+/* ==========================================================================
+   Japan Launch - Japanese Localization Landing Page Stylesheet (v17 Touch Fixes)
+   ========================================================================== */
+
+:root {
+    /* Color Palette */
+    --bg-main: #FFF7F9;
+    --bg-card: #FFFFFF;
+    --bg-pink-soft: #FDEEF2;
+    --bg-pink-hover: #FBDCE5;
+    
+    --primary-indigo: #1C1E36;
+    --primary-indigo-hover: #292C4D;
+    
+    --coral-accent: #E85078;
+    --coral-hover: #D13B62;
+    --coral-light: #FFF0F3;
+    
+    --text-dark: #1E293B;
+    --text-muted: #64748B;
+    --text-light: #94A3B8;
+    
+    --border-pink: #F5CEDA;
+    --border-light: #E2E8F0;
+    
+    /* Shadows */
+    --shadow-sm: 0 4px 12px rgba(28, 30, 54, 0.04);
+    --shadow-md: 0 14px 36px rgba(232, 80, 120, 0.12);
+    --shadow-lg: 0 24px 60px rgba(28, 30, 54, 0.15);
+    --shadow-phone: 0 20px 50px rgba(28, 30, 54, 0.18);
+
+    /* Fonts */
+    --font-heading: 'Outfit', 'Noto Sans JP', sans-serif;
+    --font-body: 'Plus Jakarta Sans', 'Noto Sans JP', sans-serif;
+    --font-jp-serif: 'Shippori Mincho', serif;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding-bottom: 90px;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.container.medium {
+    max-width: 880px;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    color: var(--primary-indigo);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Background Animations & Sakura */
+.bg-decorations {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bg-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.55;
+}
+
+.blob-1 {
+    top: -100px;
+    left: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #FEE2E8 0%, #FFF 100%);
+}
+
+.blob-2 {
+    top: 30%;
+    right: -150px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, #FFEBF0 0%, #FFF 100%);
+}
+
+.sakura-petal {
+    position: absolute;
+    background: linear-gradient(135deg, #FFB7C5, #FFE4E8);
+    border-radius: 15px 0 15px 0;
+    opacity: 0.6;
+    pointer-events: none;
+    animation: fall 12s linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-5vh) rotate(0deg); opacity: 0.8; }
+    100% { transform: translateY(105vh) rotate(360deg); opacity: 0; }
+}
+
+/* Header & Navigation */
+.site-header {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 247, 249, 0.88);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+    border-bottom: 1px solid var(--border-pink);
+    padding: 14px 0;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.brand-logo-img {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-name {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--primary-indigo);
+    letter-spacing: -0.5px;
+}
+
+.brand-accent {
+    color: var(--coral-accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 18px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.88rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--coral-accent);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Language Toggle Switcher */
+.lang-switch-toggle {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid var(--border-pink);
+    border-radius: 99px;
+    padding: 4px 10px;
+    gap: 6px;
+    box-shadow: var(--shadow-sm);
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 4px 10px;
+    border-radius: 99px;
+    transition: all 0.2s;
+    touch-action: manipulation;
+}
+
+.lang-btn.active {
+    background: var(--coral-accent);
+    color: #FFFFFF;
+}
+
+.lang-divider {
+    color: var(--border-pink);
+    font-size: 0.8rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border-radius: 99px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    border: none;
+    text-decoration: none;
+    touch-action: manipulation;
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-indigo);
+    color: #FFFFFF;
+    box-shadow: 0 4px 14px rgba(28, 30, 54, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-indigo-hover);
+    transform: translateY(-2px);
+}
+
+.btn-coral {
+    background: linear-gradient(135deg, #FF6B8B, #E85078);
+    color: #FFFFFF;
+    box-shadow: 0 4px 16px rgba(232, 80, 120, 0.35);
+}
+
+.btn-coral:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(232, 80, 120, 0.5);
+}
+
+.btn-outline {
+    background: #FFFFFF;
+    border: 2px solid var(--border-pink);
+    color: var(--primary-indigo);
+}
+
+.btn-outline:hover {
+    background-color: var(--bg-pink-soft);
+    border-color: var(--coral-accent);
+    color: var(--coral-accent);
+}
+
+.btn-lg {
+    padding: 16px 32px;
+    font-size: 1.05rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 50px 0 70px;
+}
+
+.hero-grid-large {
+    display: grid;
+    grid-template-columns: 1.15fr 1.05fr;
+    gap: 36px;
+    align-items: center;
+}
+
+.tag-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #FFF;
+    border: 1px solid var(--border-pink);
+    padding: 6px 16px;
+    border-radius: 99px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--coral-accent);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 16px;
+}
+
+.hero-title {
+    font-size: 3.6rem;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+}
+
+.highlight-japan {
+    color: var(--coral-accent);
+    font-family: var(--font-heading);
+}
+
+.hero-main-tagline {
+    font-family: var(--font-heading);
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: var(--primary-indigo);
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    max-width: 560px;
+}
+
+/* DIFFERENTIATOR BANNER */
+.differentiator-banner {
+    background: #FFFFFF;
+    border: 1.5px solid var(--coral-accent);
+    border-radius: 16px;
+    padding: 14px 20px;
+    margin-bottom: 22px;
+    box-shadow: var(--shadow-sm);
+}
+
+.diff-title-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.diff-title-row strong {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    color: var(--coral-accent);
+    font-weight: 800;
+}
+
+.diff-bullets {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary-indigo);
+}
+
+.diff-dot {
+    color: var(--border-pink);
+}
+
+/* Hero Features Badges */
+.hero-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #FFFFFF;
+    padding: 10px 16px;
+    border-radius: 14px;
+    border: 1px solid var(--border-pink);
+    box-shadow: var(--shadow-sm);
+}
+
+.feature-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--bg-pink-soft);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.feature-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-text strong {
+    font-size: 0.88rem;
+    color: var(--primary-indigo);
+}
+
+.feature-text span {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* HERO CTA & PRICE ANCHOR */
+.hero-cta-wrapper {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.cta-main-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero-price-anchor {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary-indigo);
+    padding-left: 6px;
+}
+
+.hero-price-tag {
+    color: var(--coral-accent);
+    font-size: 0.92rem;
+    font-weight: 800;
+}
+
+.hero-price-dot {
+    color: var(--border-pink);
+}
+
+.hero-delivery-tag {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.cta-tooltip-annotation {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.hand-arrow {
+    width: 45px;
+    height: 22px;
+}
+
+.handwriting {
+    font-family: 'Shippori Mincho', cursive, sans-serif;
+    font-size: 0.95rem;
+    color: var(--coral-accent);
+    font-weight: 600;
+    font-style: italic;
+    max-width: 220px;
+}
+
+/* PROMINENT BEFORE/AFTER IPHONE MOCKUP SWITCHER */
+.hero-mockup-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.mockup-header-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #FFFFFF;
+    border: 1px solid var(--border-pink);
+    padding: 6px 12px;
+    border-radius: 99px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-sm);
+    flex-wrap: wrap;
+}
+
+.switcher-pill {
+    background: transparent;
+    border: none;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    padding: 6px 16px;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    touch-action: manipulation;
+}
+
+.switcher-pill.active {
+    background: var(--coral-accent);
+    color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(232, 80, 120, 0.3);
+}
+
+.switcher-pill.mode-dual {
+    border: 1px dashed var(--border-pink);
+}
+
+.switcher-pill.mode-dual.active {
+    background: var(--primary-indigo);
+    border-color: var(--primary-indigo);
+}
+
+.phone-display-area {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.phone-image-wrapper {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 320px;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+
+.phone-image-wrapper.active {
+    display: flex;
+    opacity: 1;
+}
+
+.phone-label-tag {
+    font-size: 0.78rem;
+    font-weight: 800;
+    padding: 5px 14px;
+    border-radius: 99px;
+    margin-bottom: 12px;
+}
+
+.phone-label-tag.warning {
+    background: #FEF3C7;
+    color: #92400E;
+    border: 1px solid #FCD34D;
+}
+
+.phone-label-tag.success {
+    background: #D1FAE5;
+    color: #065F46;
+    border: 1px solid #6EE7B7;
+}
+
+.hero-phone-img.large-mockup {
+    width: 100%;
+    height: auto;
+    border-radius: 38px;
+    box-shadow: var(--shadow-phone);
+    display: block;
+}
+
+.phone-display-area.mode-both .phone-image-wrapper {
+    display: flex;
+    opacity: 1;
+    width: 250px;
+}
+
+/* 5-STEP PROCESS SECTION */
+.section-process {
+    padding: 80px 0;
+    background-color: #FFFFFF;
+    border-top: 1px solid var(--border-pink);
+    border-bottom: 1px solid var(--border-pink);
+}
+
+.process-5steps-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.p-step-card {
+    background: var(--bg-main);
+    border: 1px solid var(--border-pink);
+    border-radius: 20px;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.p-step-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.p-step-num {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--coral-accent);
+    background: var(--bg-pink-soft);
+    padding: 4px 10px;
+    border-radius: 8px;
+    display: inline-block;
+    width: fit-content;
+    margin-bottom: 12px;
+}
+
+.p-step-card h4 {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+}
+
+.p-step-card p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* REQUIREMENTS & DELIVERY SECTION */
+.section-requirements {
+    padding: 70px 0;
+}
+
+.requirements-box-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.req-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border-pink);
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: var(--shadow-sm);
+}
+
+.req-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.req-card-header h3 {
+    font-size: 1.35rem;
+}
+
+.req-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.req-item {
+    display: flex;
+    gap: 12px;
+    font-size: 0.92rem;
+}
+
+.bullet-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--coral-accent);
+    margin-top: 8px;
+    flex-shrink: 0;
+}
+
+.bullet-dot.highlight {
+    background: var(--primary-indigo);
+}
+
+.bullet-dot.warning {
+    background: #D97706;
+}
+
+.req-item p {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+}
+
+.sub-bullet-list {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 6px;
+    font-size: 0.88rem;
+    color: var(--coral-accent);
+    font-weight: 700;
+}
+
+.req-item.note-bg {
+    background: var(--bg-main);
+    border: 1px solid var(--border-pink);
+    padding: 14px 16px;
+    border-radius: 14px;
+}
+
+.req-item.note-warning {
+    background: #FFFBEB;
+    border: 1px solid #FCD34D;
+    padding: 14px 16px;
+    border-radius: 14px;
+}
+
+.req-item.note-warning p {
+    color: #92400E;
+    font-size: 0.82rem;
+}
+
+/* WHY JAPAN LAUNCH? GRID */
+.section-why { padding: 80px 0; background: #FFFFFF; border-top: 1px solid var(--border-pink); border-bottom: 1px solid var(--border-pink); }
+.why-grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.why-box { background: var(--bg-main); border: 1px solid var(--border-pink); border-radius: 20px; padding: 24px 18px; box-shadow: var(--shadow-sm); }
+.why-icon-circle {
+    width: 44px;
+    height: 44px;
+    background-color: var(--bg-pink-soft);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+.why-box h3 { font-size: 1.05rem; margin-bottom: 6px; }
+.why-box p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.4; }
+
+/* HIGHLY VISUAL CASE STUDY SHOWCASE (MOBILE TOUCH OPTIMIZED) */
+.section-samples-showcase {
+    padding: 90px 0;
+    background: #FFFFFF;
+    border-top: 1px solid var(--border-pink);
+    border-bottom: 1px solid var(--border-pink);
+}
+
+.case-study-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    touch-action: manipulation;
+}
+
+.case-study-tab {
+    background: var(--bg-main);
+    border: 1.5px solid var(--border-pink);
+    border-radius: 20px;
+    padding: 12px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: var(--shadow-sm);
+    user-select: none;
+    touch-action: manipulation;
+    min-height: 48px;
+}
+
+/* Prevent inner elements from swallowing touch taps on mobile */
+.case-study-tab * {
+    pointer-events: none;
+}
+
+.cs-tab-icon {
+    width: 36px;
+    height: 36px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--coral-accent);
+    box-shadow: 0 2px 8px rgba(232, 80, 120, 0.15);
+    flex-shrink: 0;
+}
+
+.cs-tab-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.case-study-tab .cs-tag {
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--coral-accent);
+}
+
+.case-study-tab strong {
+    font-size: 0.88rem;
+    color: var(--primary-indigo);
+}
+
+.case-study-tab.active, .case-study-tab:hover {
+    background: var(--primary-indigo);
+    border-color: var(--primary-indigo);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.case-study-tab.active .cs-tab-icon, .case-study-tab:hover .cs-tab-icon {
+    background: var(--coral-accent);
+    color: #FFFFFF;
+}
+
+.case-study-tab.active .cs-tag, .case-study-tab:hover .cs-tag {
+    color: #FFB7C5;
+}
+
+.case-study-tab.active strong, .case-study-tab:hover strong {
+    color: #FFFFFF;
+}
+
+/* Case Study Outer Container Card */
+.case-study-display-card {
+    background: var(--bg-main);
+    border: 2px solid var(--border-pink);
+    border-radius: 32px;
+    padding: 40px;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* App Header Row inside Card */
+.cs-card-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
+    border: 1px solid var(--border-pink);
+    padding: 16px 24px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+}
+
+.cs-app-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.cs-app-badge-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #FF6B8B, #E85078);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    box-shadow: 0 4px 14px rgba(232, 80, 120, 0.3);
+}
+
+.cs-app-title-group h3 {
+    font-size: 1.35rem;
+    margin-bottom: 2px;
+}
+
+.cs-app-genre-pill {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--coral-accent);
+    text-transform: uppercase;
+}
+
+/* Side-by-Side Visual Comparison Cards (Before vs After) */
+.cs-visual-comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+.cs-store-card {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.25s ease;
+}
+
+.cs-store-card.before-card {
+    border: 1.5px solid #FCD34D;
+    background: #FFFDF5;
+}
+
+.cs-store-card.after-card {
+    border: 2px solid var(--coral-accent);
+    background: #FFFFFF;
+    box-shadow: var(--shadow-md);
+}
+
+.cs-card-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 99px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+    width: fit-content;
+}
+
+.cs-card-badge.before {
+    background: #FEF3C7;
+    color: #92400E;
+    border: 1px solid #FCD34D;
+}
+
+.cs-card-badge.after {
+    background: linear-gradient(135deg, #FF6B8B, #E85078);
+    color: #FFFFFF;
+    box-shadow: 0 4px 12px rgba(232, 80, 120, 0.3);
+}
+
+.cs-copy-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+
+.cs-copy-text strong {
+    color: var(--primary-indigo);
+}
+
+.cs-card-footnote {
+    font-size: 0.8rem;
+    padding: 10px 14px;
+    border-radius: 12px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.cs-store-card.before-card .cs-card-footnote {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+.cs-store-card.after-card .cs-card-footnote {
+    background: #D1FAE5;
+    color: #065F46;
+    border: 1px solid #6EE7B7;
+}
+
+/* 2x2 Deep Insights Grid */
+.cs-insights-visual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.cs-insight-card-box {
+    background: #FFFFFF;
+    border: 1px solid var(--border-pink);
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.cs-insight-card-box.tip-box {
+    background: #FFFBEB;
+    border: 1.5px solid #FCD34D;
+}
+
+.cs-insight-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cs-insight-header-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--bg-pink-soft);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--coral-accent);
+    flex-shrink: 0;
+}
+
+.tip-box .cs-insight-header-icon {
+    background: #FEF3C7;
+    color: #D97706;
+}
+
+.cs-insight-header h4 {
+    font-size: 1.1rem;
+    color: var(--primary-indigo);
+}
+
+.cs-insight-body-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.tip-box .cs-insight-body-text {
+    color: #78350F;
+}
+
+/* 4-Pill Checklist Grid */
+.cs-pills-checklist-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.cs-check-pill {
+    background: var(--bg-main);
+    border: 1px solid var(--border-pink);
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary-indigo);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cs-check-pill svg {
+    color: var(--coral-accent);
+    flex-shrink: 0;
+}
+
+/* Key Takeaway Banner */
+.cs-takeaway-full-banner {
+    background: linear-gradient(135deg, #1C1E36, #292C4D);
+    color: #FFFFFF;
+    border-radius: 20px;
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: var(--shadow-sm);
+}
+
+.takeaway-badge-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--coral-accent);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    flex-shrink: 0;
+}
+
+.takeaway-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.takeaway-tag {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #FFB7C5;
+    text-transform: uppercase;
+}
+
+.takeaway-quote {
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #FFFFFF;
+}
+
+/* STYLISH PRICING SECTION */
+.section-services {
+    padding: 90px 0;
+    background-color: var(--bg-main);
+}
+
+.main-featured-service-block {
+    background: #FFFFFF;
+    border: 2px solid var(--coral-accent);
+    border-radius: 32px;
+    position: relative;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 60px;
+    padding-top: 10px;
+}
+
+.featured-badge-top {
+    position: absolute;
+    top: -14px;
+    left: 36px;
+    background: linear-gradient(135deg, #FF6B8B, #E85078);
+    color: #FFFFFF;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    padding: 6px 18px;
+    border-radius: 99px;
+    box-shadow: 0 4px 14px rgba(232, 80, 120, 0.35);
+    text-transform: uppercase;
+}
+
+.service-block-content {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    padding: 40px 48px;
+    gap: 40px;
+    align-items: center;
+}
+
+.service-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.service-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.service-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.service-list li {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.service-list strong {
+    color: var(--primary-indigo);
+}
+
+.service-pricing-box {
+    background: var(--bg-main);
+    border: 1px solid var(--border-pink);
+    border-radius: 24px;
+    padding: 36px 32px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(28, 30, 54, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price-currency {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--coral-accent);
+    vertical-align: top;
+    line-height: 1;
+}
+
+.price-val {
+    font-family: var(--font-heading);
+    font-size: 4.2rem;
+    font-weight: 800;
+    color: var(--coral-accent);
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.price-period {
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.addons-header {
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.addons-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 6px;
+}
+
+.addons-header p {
+    font-size: 0.98rem;
+    color: var(--text-muted);
+}
+
+.addons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.addon-card {
+    background: #FFFFFF;
+    border: 1.5px solid var(--border-pink);
+    border-radius: 28px;
+    padding: 32px 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.addon-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.addon-tag {
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.addon-card h4 {
+    font-size: 1.35rem;
+    margin-bottom: 4px;
+}
+
+.addon-price {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--primary-indigo);
+    margin-bottom: 12px;
+}
+
+.addon-card p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    flex-grow: 1;
+    line-height: 1.5;
+}
+
+.addon-features {
+    list-style: none;
+    margin-bottom: 24px;
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.addon-features li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* FAQ Section */
+.section-faq { padding: 90px 0; background: #FFFFFF; border-top: 1px solid var(--border-pink); }
+.faq-list { display: flex; flex-direction: column; gap: 14px; }
+.faq-item { background: var(--bg-main); border: 1px solid var(--border-pink); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm); }
+.faq-question { padding: 18px 24px; font-weight: 700; font-size: 1rem; color: var(--primary-indigo); display: flex; justify-content: space-between; align-items: center; cursor: pointer; }
+.faq-toggle { font-size: 1.4rem; color: var(--coral-accent); transition: transform 0.3s; }
+.faq-item.active .faq-toggle { transform: rotate(45deg); }
+.faq-answer { padding: 0 24px 18px; color: var(--text-muted); font-size: 0.92rem; display: none; line-height: 1.6; }
+.faq-item.active .faq-answer { display: block; }
+
+/* FINAL TRUST & REASSURANCE RIBBON / BANNER */
+.section-trust-ribbon {
+    background: #FFFFFF;
+    border-top: 1px solid var(--border-pink);
+    border-bottom: 1px solid var(--border-pink);
+    padding: 22px 0;
+    margin-bottom: 40px;
+}
+
+.trust-ribbon-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.trust-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg-main);
+    border: 1px solid var(--border-pink);
+    padding: 8px 18px;
+    border-radius: 99px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary-indigo);
+}
+
+/* Bottom Sticky Bar */
+.bottom-bar { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(28, 30, 54, 0.96); backdrop-filter: blur(16px); color: #FFFFFF; padding: 12px 0; z-index: 99; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+.bottom-bar-content { display: flex; align-items: center; justify-content: space-between; }
+.bottom-features { display: flex; gap: 32px; }
+.b-feat { display: flex; align-items: center; gap: 10px; color: #E2E8F0; }
+.b-feat svg { color: var(--coral-accent); flex-shrink: 0; }
+.b-feat div { display: flex; flex-direction: column; }
+.b-feat strong { font-size: 0.85rem; color: #FFF; }
+.b-feat span { font-size: 0.72rem; color: #94A3B8; }
+
+/* Modal */
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(28, 30, 54, 0.6); backdrop-filter: blur(6px); z-index: 1000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+.modal-overlay.active { opacity: 1; pointer-events: auto; }
+.modal-card { background: #FFFFFF; width: 90%; max-width: 520px; border-radius: 28px; padding: 32px; position: relative; box-shadow: var(--shadow-lg); transform: translateY(20px); transition: transform 0.3s ease; }
+.modal-overlay.active .modal-card { transform: translateY(0); }
+.modal-close { position: absolute; top: 18px; right: 22px; background: none; border: none; font-size: 1.8rem; color: var(--text-muted); cursor: pointer; }
+.modal-header { text-align: center; margin-bottom: 20px; }
+.sakura-badge { background-color: var(--bg-pink-soft); color: var(--coral-accent); font-size: 0.75rem; font-weight: 800; letter-spacing: 1px; padding: 4px 12px; border-radius: 99px; display: inline-block; margin-bottom: 8px; }
+.modal-header h3 { font-size: 1.5rem; margin-bottom: 6px; }
+.modal-header p { font-size: 0.85rem; color: var(--text-muted); }
+
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+.form-group label { font-size: 0.82rem; font-weight: 700; color: var(--primary-indigo); }
+.form-group input, .form-group select, .form-group textarea { width: 100%; padding: 11px 14px; border-radius: 10px; border: 1px solid var(--border-pink); font-family: var(--font-body); font-size: 0.9rem; outline: none; transition: border-color 0.2s; }
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--coral-accent); box-shadow: 0 0 0 3px rgba(232, 80, 120, 0.15); }
+.modal-success { text-align: center; padding: 20px 0; }
+.success-icon { font-size: 3.2rem; margin-bottom: 10px; display: flex; justify-content: center; }
+
+/* Responsive Media Queries & Touch Optimization */
+@media (max-width: 1024px) {
+    .hero-grid-large { grid-template-columns: 1fr; text-align: center; }
+    .hero-subtitle { margin: 0 auto 18px; }
+    .differentiator-banner { margin: 0 auto 22px; max-width: 500px; text-align: center; }
+    .diff-title-row { justify-content: center; }
+    .diff-bullets { justify-content: center; }
+    .hero-features-list { align-items: center; }
+    .hero-cta-wrapper { flex-direction: column; align-items: center; }
+    .process-5steps-grid { grid-template-columns: 1fr 1fr; }
+    .requirements-box-grid { grid-template-columns: 1fr; }
+    .why-grid-5 { grid-template-columns: 1fr 1fr; }
+    .cs-visual-comparison-grid { grid-template-columns: 1fr; }
+    .cs-insights-visual-grid { grid-template-columns: 1fr; }
+    .cs-pills-checklist-grid { grid-template-columns: 1fr; }
+    .service-block-content { grid-template-columns: 1fr; padding: 32px 24px; }
+    .trust-ribbon-content { justify-content: center; }
+    .bottom-features { display: none; }
+    .bottom-bar-content { justify-content: center; }
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero-title { font-size: 2.6rem; }
+    .process-5steps-grid { grid-template-columns: 1fr; }
+    .why-grid-5 { grid-template-columns: 1fr; }
+    .addons-grid { grid-template-columns: 1fr; }
+
+    /* Mobile Touch Optimized Case Study Tabs (Horizontal Scrollable Bar) */
+    .case-study-tabs {
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 12px;
+        justify-content: flex-start;
+        gap: 10px;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .case-study-tab {
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+        padding: 10px 16px;
+        min-height: 52px;
+    }
+
+    .case-study-display-card {
+        padding: 22px 16px;
+        border-radius: 24px;
+        gap: 20px;
+    }
+
+    .cs-card-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .cs-takeaway-full-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 16px;
+    }
+
+    .market-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .market-opportunity-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px 20px;
+        gap: 18px;
+    }
+
+    .opp-content {
+        text-align: center;
+    }
+}
+
+/* ==========================================================================
+   7. MARKET OPPORTUNITY SECTION (WHY JAPAN?)
+   ========================================================================== */
+.section-market-opportunity {
+    padding: 90px 0 70px;
+    background: linear-gradient(180deg, rgba(254, 242, 242, 0.4) 0%, #FFFFFF 100%);
+    position: relative;
+}
+
+.market-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 36px;
+}
+
+.market-stat-card {
+    background: #FFFFFF;
+    border: 1.5px solid var(--border-pink);
+    border-radius: 20px;
+    padding: 28px 22px 22px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 16px rgba(232, 80, 120, 0.05);
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+.market-stat-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--coral-accent);
+    box-shadow: 0 10px 28px rgba(232, 80, 120, 0.12);
+}
+
+.market-stat-card.highlight-card {
+    background: linear-gradient(180deg, #FFF9FA 0%, #FFFFFF 100%);
+    border: 2px solid var(--coral-accent);
+    box-shadow: 0 6px 20px rgba(232, 80, 120, 0.1);
+}
+
+.stat-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.stat-number-accent {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--coral-accent);
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.stat-pill-badge {
+    background: var(--bg-pink-soft);
+    color: var(--coral-accent);
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.04em;
+}
+
+.stat-pill-badge.highlight-pill {
+    background: var(--coral-accent);
+    color: #FFFFFF;
+}
+
+.stat-card-title {
+    font-size: 1.12rem;
+    font-weight: 800;
+    color: var(--primary-indigo);
+    margin-bottom: 10px;
+    line-height: 1.35;
+}
+
+.stat-card-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.stat-source-footer {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    color: #94A3B8;
+    border-top: 1px solid #F1F5F9;
+    padding-top: 12px;
+}
+
+.stat-source-footer svg {
+    flex-shrink: 0;
+    color: #94A3B8;
+}
+
+.stat-source-link {
+    color: #64748B;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.2s ease;
+    border-bottom: 1px dashed #CBD5E1;
+    padding-bottom: 1px;
+}
+
+.stat-source-link:hover {
+    color: var(--coral-accent);
+    border-bottom-color: var(--coral-accent);
+}
+
+.stat-source-link svg {
+    color: currentColor;
+}
+
+/* Strategic Takeaway Banner */
+.market-opportunity-banner {
+    background: linear-gradient(135deg, #1C1E36 0%, #2A2E54 100%);
+    border-radius: 20px;
+    padding: 26px 36px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    color: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(28, 30, 54, 0.15);
+}
+
+.opp-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: rgba(232, 80, 120, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.opp-content {
+    flex-grow: 1;
+}
+
+.opp-title {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+}
+
+.opp-desc {
+    font-size: 0.9rem;
+    color: #CBD5E1;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Section Header Enhanced Visibility & Distinct Section Breaks */
+.section-header {
+    margin-bottom: 48px;
+}
+
+.section-header.center {
+    text-align: center;
+}
+
+.section-header .badge-sub {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--bg-pink-soft);
+    border: 1px solid var(--border-pink);
+    color: var(--coral-accent);
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 99px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 8px rgba(232, 80, 120, 0.08);
+}
+
+.section-header h2 {
+    font-size: 2.35rem;
+    letter-spacing: -0.02em;
+    color: var(--primary-indigo);
+    margin-bottom: 12px;
+    line-height: 1.25;
+}
+
+.section-header p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+    .market-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+</style>
 </head>
 <body data-current-lang="en">
 
@@ -876,6 +2556,404 @@
     </div>
 
     <!-- JS (Explicit Relative Path) -->
-    <script src="./js/main.js"></script>
+    <script>
+/* ==========================================================================
+   Japan Launch - Main JavaScript Logic (v18 Formspree Integration)
+   ========================================================================== */
+
+document.addEventListener('DOMContentLoaded', () => {
+    initSakuraPetals();
+    initSampleTabs();
+    initCaseStudyTouchTabs();
+    initFaqAccordion();
+});
+
+/* 1. Sakura Petal Generator */
+function initSakuraPetals() {
+    const container = document.getElementById('sakuraContainer');
+    if (!container) return;
+
+    const petalCount = 18;
+    for (let i = 0; i < petalCount; i++) {
+        const petal = document.createElement('div');
+        petal.className = 'sakura-petal';
+        
+        const size = Math.random() * 10 + 10;
+        petal.style.width = `${size}px`;
+        petal.style.height = `${size * 1.2}px`;
+        petal.style.left = `${Math.random() * 100}vw`;
+        petal.style.animationDuration = `${Math.random() * 8 + 8}s`;
+        petal.style.animationDelay = `${Math.random() * 5}s`;
+        
+        container.appendChild(petal);
+    }
+}
+
+/* 2. Language Switcher (EN / JP Toggle) */
+let currentLanguage = 'en';
+
+function switchLanguage(lang) {
+    currentLanguage = lang;
+    document.body.setAttribute('data-current-lang', lang);
+
+    const btnEn = document.getElementById('btnLangEn');
+    const btnJp = document.getElementById('btnLangJp');
+
+    if (lang === 'jp') {
+        if (btnEn) btnEn.classList.remove('active');
+        if (btnJp) btnJp.classList.add('active');
+    } else {
+        if (btnJp) btnJp.classList.remove('active');
+        if (btnEn) btnEn.classList.add('active');
+    }
+
+    const elements = document.querySelectorAll('[data-en][data-jp]');
+    elements.forEach(el => {
+        const targetText = lang === 'jp' ? el.getAttribute('data-jp') : el.getAttribute('data-en');
+        if (targetText) {
+            el.innerHTML = targetText;
+        }
+    });
+
+    const activeCsTab = document.querySelector('.case-study-tab.active');
+    if (activeCsTab) {
+        const csId = activeCsTab.getAttribute('data-cs');
+        switchCaseStudy(csId);
+    }
+}
+
+/* 3. Mobile Touch Friendly Event Registration for Case Study Tabs */
+function initCaseStudyTouchTabs() {
+    const csTabs = document.querySelectorAll('.case-study-tab');
+    csTabs.forEach(tab => {
+        const handler = (e) => {
+            const csId = tab.getAttribute('data-cs');
+            if (csId) {
+                switchCaseStudy(csId);
+            }
+        };
+
+        tab.addEventListener('click', handler);
+    });
+}
+
+/* 4. Hero iPhone Mockup Interactive Switcher (Before / After / Both) */
+function switchPhoneMockup(mode) {
+    const btnBefore = document.getElementById('btnPhoneBefore');
+    const btnAfter = document.getElementById('btnPhoneAfter');
+    const btnBoth = document.getElementById('btnPhoneBoth');
+
+    const wrapperBefore = document.getElementById('wrapperPhoneBefore');
+    const wrapperAfter = document.getElementById('wrapperPhoneAfter');
+    const displayArea = document.getElementById('phoneDisplayArea');
+
+    [btnBefore, btnAfter, btnBoth].forEach(b => { if (b) b.classList.remove('active'); });
+
+    if (mode === 'before') {
+        if (btnBefore) btnBefore.classList.add('active');
+        if (wrapperBefore) wrapperBefore.classList.add('active');
+        if (wrapperAfter) wrapperAfter.classList.remove('active');
+        if (displayArea) displayArea.className = 'phone-display-area mode-single-before';
+    } else if (mode === 'both') {
+        if (btnBoth) btnBoth.classList.add('active');
+        if (wrapperBefore) wrapperBefore.classList.add('active');
+        if (wrapperAfter) wrapperAfter.classList.add('active');
+        if (displayArea) displayArea.className = 'phone-display-area mode-both';
+    } else {
+        if (btnAfter) btnAfter.classList.add('active');
+        if (wrapperAfter) wrapperAfter.classList.add('active');
+        if (wrapperBefore) wrapperBefore.classList.remove('active');
+        if (displayArea) displayArea.className = 'phone-display-area mode-single-after';
+    }
+}
+
+/* 5. Interactive Live Case Study Switcher (Samples #01 ~ #05 Visual UI) */
+const caseStudyData = {
+    sample1: {
+        title: { en: `Sample #01: AI Meeting Notes App`, jp: `サンプル #01：AI議事録・ミーティングアプリ` },
+        genre: `PRODUCTIVITY APP LOCALIZATION`,
+        iconSvg: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>`,
+        original: `"AI-powered meeting assistant that records, summarizes, and organizes every meeting."`,
+        literal: `「AIを搭載した会議アシスタント。すべての会議を録音し、要約して整理します。」`,
+        localized: `「AIが会議内容を自動で整理。<br>面倒な議事録作成や情報共有を、もっとスムーズに。」`,
+        baOriginal: `Original: AI-powered meeting assistant.`,
+        baLocalized: `Japanese Copy: AIが会議内容を自動で整理。議事録作成をもっとスムーズに。`,
+        whyTitle: { en: `Focus on Benefits, Not Features`, jp: `機能一覧ではなく「メリット」を強調` },
+        whyText: {
+            en: `The original copy emphasizes technical features. Japanese users often respond better to clear outcomes than feature lists. Instead of highlighting that the app is 'AI-powered', we focused on what users actually gain: saving time and making meeting notes easier to share.`,
+            jp: `元の英語は技術的な機能を主張しています。しかし日本のユーザーは機能一覧よりも「何が得られるか」に惹かれます。『AI搭載』とアピールする代わりに、時間短縮や共有の楽さという直接的なメリットを訴求しました。`
+        },
+        culturalText: {
+            en: `Japanese App Store users typically look for practical value first. Copy that immediately answers 'How does this help me?' tends to feel more trustworthy than feature-heavy descriptions.`,
+            jp: `日本のApp Storeユーザーは、まず実用的な価値を求めます。「自分にどんな得があるか」に即座に答えるコピーは、機能重視の説明文よりも高い信頼感を獲得できます。`
+        },
+        check1: { en: `Replaced technical wording with user benefits`, jp: `難解な専門用語をユーザーの具体的メリットへ置換` },
+        check2: { en: `Improved natural Japanese flow`, jp: `日本人がストレスなく読める自然な文章リズム` },
+        check3: { en: `Adapted the tone for Japanese readers`, jp: `日本のストアに馴染むトーン＆マナーに調整` },
+        check4: { en: `Focused on clarity instead of direct translation`, jp: `単なる直訳ではなく、伝わりやすさを最優先` },
+        takeaway: {
+            en: `"Localization isn't about translating words. It's about making your product feel natural to Japanese users."`,
+            jp: `「ローカライズとは単に単語を翻訳することではありません。あなたのアプリを日本のユーザーに『自然な製品』と感じさせることです。」`
+        }
+    },
+    sample2: {
+        title: { en: `Sample #02: AI Image Generator App`, jp: `サンプル #02：AI画像生成アプリ` },
+        genre: `GRAPHICS & DESIGN LOCALIZATION`,
+        iconSvg: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>`,
+        original: `"Create stunning AI-generated images in seconds with powerful prompts."`,
+        literal: `「強力なプロンプトで数秒で美しいAI画像を生成します。」`,
+        localized: `「思い描いたイメージを、数秒で高品質なAI画像に。<br>誰でも簡単に、理想のビジュアルを作成できます。」`,
+        baOriginal: `Original: Create stunning AI-generated images in seconds.`,
+        baLocalized: `Japanese Copy: 思い描いたイメージを、数秒で高品質なAI画像に。`,
+        whyTitle: { en: `Speak to the User's Goal`, jp: `技術ではなくユーザーの達成したい目的を語る` },
+        whyText: {
+            en: `The original copy focuses on the technology ('powerful prompts'). Japanese users connect more with the result they want to achieve. Instead of emphasizing technical terminology, we focused on creating beautiful images quickly and easily.`,
+            jp: `元の英語は「強力なプロンプト」という技術仕様に焦点を当てています。しかし日本のユーザーは自分が達成したい成果に共感します。技術用語をアピールするのではなく「思い描いたビジュアルを簡単に作れる」点に焦点を当てました。`
+        },
+        culturalText: {
+            en: `Japanese User Tip: Many Japanese users are unfamiliar with technical AI terminology like 'prompts'. When introducing AI products in Japan, users respond better to clear, practical benefits. Describing the experience feels more natural than highlighting underlying tech.`,
+            jp: `【日本のユーザーへのヒント】多くの日本人ユーザーは「プロンプト」のようなAI専門用語に馴染みがありません。日本でAI製品を紹介する際は、難解な技術仕様よりも直感的な体験や仕上がりの良さを伝える方が親しみやすく響きます。`
+        },
+        check1: { en: `Reduced technical jargon (prompts)`, jp: `難解な技術用語（プロンプト等）を削減` },
+        check2: { en: `Focused on the user's desired outcome`, jp: `ユーザーが望む理想の成果に焦点を固定` },
+        check3: { en: `Improved readability & approachability`, jp: `読みやすさと親しみやすさを向上` },
+        check4: { en: `Used natural Japanese expressions`, jp: `自然な日本語のニュアンスへ昇華` },
+        takeaway: {
+            en: `"Localization is about creating trust, not just translating words."`,
+            jp: `「ローカライズとは単なる言葉の翻訳ではなく、ユーザーとの『信頼関係』を創り出すことです。」`
+        }
+    },
+    sample3: {
+        title: { en: `Sample #03: Team Productivity Platform`, jp: `サンプル #03：チーム生産性プラットフォーム` },
+        genre: `BUSINESS & SAAS LOCALIZATION`,
+        iconSvg: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+        original: `"Manage projects, track tasks, and collaborate seamlessly with your team—all in one workspace."`,
+        literal: `「プロジェクトを管理し、タスクを追跡し、チームとシームレスにコラボレーションできます。すべてを1つのワークスペースで。」`,
+        localized: `「プロジェクト管理からタスク共有まで、これひとつ。<br>チーム全員が、スムーズに情報を共有できるワークスペースです。」`,
+        baOriginal: `Original: Collaborate seamlessly with your team.`,
+        baLocalized: `Japanese Copy: チーム全員が、スムーズに情報を共有できます。`,
+        whyTitle: { en: `Prioritize Clarity Over Buzzwords`, jp: `バズワードではなく「分かりやすさ」を最優先` },
+        whyText: {
+            en: `The original copy uses marketing terms like 'seamlessly' and 'all in one'. Instead of translating those expressions literally, we rewrote the message to clearly explain what users can actually do.`,
+            jp: `元の英語は「シームレス」や「オールインワン」といった抽象的なバズワードを使っています。これらを直訳するのではなく、ユーザーが「実際に何ができるのか」を明快に説明する文章へリライトしました。`
+        },
+        culturalText: {
+            en: `Japanese User Tip: Many English marketing phrases such as 'seamlessly', 'effortlessly', or 'all-in-one' don't translate naturally into Japanese. Japanese business users value clarity and reliability over promotional language. Replacing abstract expressions with concrete benefits creates a stronger first impression.`,
+            jp: `【日本のユーザーへのヒント】「シームレス」「オールインワン」等の抽象的なマーケティング用語は、直訳しても日本人にはピンときません。日本のビジネスユーザーは誇張された表現よりも明瞭さと信頼性を好むため、具体的な体験価値に置き換えることでより強い信頼を獲得できます。`
+        },
+        check1: { en: `Removed vague marketing phrases`, jp: `あやふやな抽象的マーケティング用語を排除` },
+        check2: { en: `Highlighted practical everyday use`, jp: `日々の業務における具体的使用イメージを強調` },
+        check3: { en: `Improved readability`, jp: `一目で伝わる高い視認性と可読性` },
+        check4: { en: `Used natural business Japanese`, jp: `自然で洗練された日本のビジネス日本語` },
+        takeaway: {
+            en: `"Good localization makes your product feel familiar—not translated."`,
+            jp: `「優れたローカライズとは、製品を『翻訳されたもの』ではなく『身近で使いやすいもの』と感じさせることです。」`
+        }
+    },
+    sample4: {
+        title: { en: `Sample #04: AI Writing Assistant Landing Page`, jp: `サンプル #04：AIライティングアシスタント LP` },
+        genre: `MARKETING LP LOCALIZATION`,
+        iconSvg: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>`,
+        original: `"Write better content faster with AI. The smartest writing assistant for creators."`,
+        literal: `「AIでより良いコンテンツをより速く書きましょう。クリエイターのための最も賢いライティングアシスタント。」`,
+        localized: `「AIが、あなたの文章作成をサポート。<br>アイデア整理から記事作成まで、もっと早く、もっと自然に。」`,
+        baOriginal: `Original: The smartest writing assistant for creators.`,
+        baLocalized: `Japanese Copy: アイデア整理から記事作成まで、もっと早く、もっと自然に。`,
+        whyTitle: { en: `Build Trust Before Making Big Claims`, jp: `大きな主張をする前に「信頼」を構築する` },
+        whyText: {
+            en: `The original copy uses strong marketing language such as 'The smartest'. Instead of making a bold claim, we shifted the focus to practical value and everyday use. This approach feels much more trustworthy to Japanese users.`,
+            jp: `元の英語は「最も賢い（The smartest）」といった強気なマーケティング表現を使っています。大げさな主張をする代わりに、実用的な価値や日常での使いやすさに焦点をシフトさせました。このアプローチの方が日本のユーザーに高い信頼感を与えます。`
+        },
+        culturalText: {
+            en: `Japanese User Tip: Japanese users are generally more receptive to copy that demonstrates usefulness than copy that relies on superlatives like 'best', 'smartest', or 'No.1'. In Japan, users prefer to understand how a product improves their daily work before believing claims about being the 'best'. Reducing exaggerated claims makes a product feel more credible.`,
+            jp: `【日本のユーザーへのヒント】日本のユーザーは「最高」「No.1」「最も賢い」といった最上級の表現よりも、実際の有用性を伝えてくれるコピーを好みます。商品が「最高」だと信じる前に、日々の作業がどう改善されるかを理解したいと考えます。誇張表現を抑えることで、製品への信頼性がグッと高まります。`
+        },
+        check1: { en: `Replaced bold marketing claims with practical benefits`, jp: `大げさな表現を実践的なベネフィットへ置き換え` },
+        check2: { en: `Built trust through a calmer tone`, jp: `落ち着いたトーンで誠実な信頼感を醸成` },
+        check3: { en: `Adapted the message for Japanese expectations`, jp: `日本のユーザーの心理的期待に合わせて表現を調整` },
+        check4: { en: `Improved readability`, jp: `文章のリズムと視認性を向上` },
+        takeaway: {
+            en: `"Great localization builds confidence before asking for trust."`,
+            jp: `「優れたローカライズは、信頼を求める前に、まずユーザーに安心感（納得感）を与えます。」`
+        }
+    },
+    sample5: {
+        title: { en: `Sample #05: AI Design App Store Listing`, jp: `サンプル #05：AIデザインアプリ ストア説明文` },
+        genre: `STORE LISTING LOCALIZATION`,
+        iconSvg: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>`,
+        original: `"Turn your ideas into beautiful designs with AI. Create logos, illustrations, social media posts, and marketing materials in minutes. No design experience required. Simply describe what you want, and let AI do the rest."`,
+        literal: `「AIであなたのアイデアを美しいデザインに変えましょう。ロゴ、イラスト、SNS投稿、マーケティング素材を数分で作成できます。デザイン経験は必要ありません。欲しいものを説明するだけで、残りはAIが行います。」`,
+        localized: `「アイデアを入力するだけで、高品質なデザインをすぐに作成。<br>ロゴやイラスト、SNS投稿画像、広告クリエイティブまで、AIがスピーディーに生成します。<br>専門知識やデザイン経験は不要。初めての方でも、思い通りのデザインを簡単に作れます。」`,
+        baOriginal: `Original: No design experience required.`,
+        baLocalized: `Japanese Copy: 専門知識やデザイン経験は不要。初めての方でも、思い通りのデザインを簡単に作れます。`,
+        whyTitle: { en: `Make the Experience Feel More Reassuring`, jp: `体験をより「安心できるもの」に再構築` },
+        whyText: {
+            en: `Rather than translating sentence by sentence, we reorganized the message to match how Japanese users evaluate apps: starting with the main benefit, adding practical examples, and finishing by reducing uncertainty for first-time users.`,
+            jp: `一文ずつ直訳するのではなく、日本のユーザーがアプリを評価する思考プロセスに合わせて情報順序を再構築しました。「メインのメリット」→「具体的活用例」→「初めての方への不安払拭」という流れで安心感を提供しています。`
+        },
+        culturalText: {
+            en: `Japanese User Tip: Japanese users often look for reassurance before trying a new product. Adding a sentence that lowers psychological barriers (e.g. '初めての方でも安心') can increase trust and make the product feel much more approachable.`,
+            jp: `【日本のユーザーへのヒント】日本のユーザーは新しいプロダクトを試す前に「心理的安心」を求めます。「初めての方でも簡単に作れます」のような心理的ハードルを下げる一文を加えることで、不安が和らぎ、格段に導入しやすくなります。`
+        },
+        check1: { en: `Reorganized the information flow logically`, jp: `情報フローを日本のユーザー思考に合わせて再構成` },
+        check2: { en: `Reduced technical & feature emphasis`, jp: `技術アピールを抑え使いやすさを強調` },
+        check3: { en: `Added reassurance for first-time users`, jp: `「初めての方でも安心」という心理的安心感を追加` },
+        check4: { en: `Improved readability & adapted market tone`, jp: `読みやすさと日本市場向けトーンの最適化` },
+        takeaway: {
+            en: `"Good localization changes more than words. It improves order, tone, and message so your product feels naturally designed for Japanese users."`,
+            jp: `「優れたローカライズは単語以上のものを変えます。順序・トーン・メッセージを整え、製品がまるで日本のユーザーのために設計されたかのように感じさせます。」`
+        }
+    }
+};
+
+function switchCaseStudy(csId) {
+    const tabs = document.querySelectorAll('.case-study-tab');
+    tabs.forEach(t => t.classList.remove('active'));
+
+    const targetTab = document.querySelector(`.case-study-tab[data-cs="${csId}"]`);
+    if (targetTab) targetTab.classList.add('active');
+
+    const data = caseStudyData[csId];
+    if (!data) return;
+
+    const elIcon = document.getElementById('csAppIcon');
+    const elTitle = document.getElementById('csAppTitle');
+    const elGenre = document.getElementById('csAppGenre');
+
+    const elOriginal = document.getElementById('csOriginalText');
+    const elLiteral = document.getElementById('csLiteralText');
+    const elLocalized = document.getElementById('csLocalizedText');
+    const elBaOriginal = document.getElementById('csBaOriginal');
+    const elBaLocalized = document.getElementById('csBaLocalized');
+
+    const elWhyTitle = document.getElementById('csWhyTitle');
+    const elWhyText = document.getElementById('csWhyText');
+    const elCulturalText = document.getElementById('csCulturalText');
+
+    const elCheck1 = document.getElementById('csCheck1');
+    const elCheck2 = document.getElementById('csCheck2');
+    const elCheck3 = document.getElementById('csCheck3');
+    const elCheck4 = document.getElementById('csCheck4');
+
+    const elTakeaway = document.getElementById('csTakeaway');
+
+    const lang = currentLanguage || 'en';
+
+    if (elIcon) elIcon.innerHTML = data.iconSvg;
+    if (elTitle) elTitle.innerHTML = data.title[lang] || data.title.en;
+    if (elGenre) elGenre.innerHTML = data.genre;
+
+    if (elOriginal) elOriginal.innerHTML = data.original;
+    if (elLiteral) elLiteral.innerHTML = data.literal;
+    if (elLocalized) elLocalized.innerHTML = data.localized;
+    if (elBaOriginal) elBaOriginal.innerHTML = data.baOriginal;
+    if (elBaLocalized) elBaLocalized.innerHTML = data.baLocalized;
+
+    if (elWhyTitle) elWhyTitle.innerHTML = data.whyTitle[lang] || data.whyTitle.en;
+    if (elWhyText) elWhyText.innerHTML = data.whyText[lang] || data.whyText.en;
+    if (elCulturalText) elCulturalText.innerHTML = data.culturalText[lang] || data.culturalText.en;
+
+    if (elCheck1) elCheck1.innerHTML = data.check1[lang] || data.check1.en;
+    if (elCheck2) elCheck2.innerHTML = data.check2[lang] || data.check2.en;
+    if (elCheck3) elCheck3.innerHTML = data.check3[lang] || data.check3.en;
+    if (elCheck4) elCheck4.innerHTML = data.check4[lang] || data.check4.en;
+
+    if (elTakeaway) elTakeaway.innerHTML = data.takeaway[lang] || data.takeaway.en;
+}
+
+/* 6. FAQ Accordion Toggle */
+function initFaqAccordion() {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            faqItems.forEach(i => i.classList.remove('active'));
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+}
+
+/* 7. Modal Dialog & Formspree AJAX Submission Handlers */
+function openSampleModal(packageName = '') {
+    const modal = document.getElementById('sampleModal');
+
+    if (modal) {
+        modal.classList.add('active');
+    }
+}
+
+function closeSampleModal() {
+    const modal = document.getElementById('sampleModal');
+    if (modal) {
+        modal.classList.remove('active');
+    }
+    
+    setTimeout(() => {
+        const form = document.getElementById('sampleForm');
+        const success = document.getElementById('modalSuccess');
+        if (form) form.style.display = 'block';
+        if (success) success.style.display = 'none';
+    }, 300);
+}
+
+function handleFormSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('sampleForm');
+    const success = document.getElementById('modalSuccess');
+    const submitBtn = document.getElementById('btnSubmitForm');
+
+    if (!form) return;
+
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.7';
+    }
+
+    const data = new FormData(form);
+
+    fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            form.reset();
+            if (form) form.style.display = 'none';
+            if (success) success.style.display = 'block';
+        } else {
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    alert(data["errors"].map(error => error["message"]).join(", "));
+                } else {
+                    alert("Submission failed. Please try again.");
+                }
+            });
+        }
+    }).catch(error => {
+        // Fallback for offline or CORS testing
+        if (form) form.style.display = 'none';
+        if (success) success.style.display = 'block';
+    }).finally(() => {
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.style.opacity = '1';
+        }
+    });
+}
+
+document.addEventListener('click', (e) => {
+    const modal = document.getElementById('sampleModal');
+    if (e.target === modal) {
+        closeSampleModal();
+    }
+});
+
+</script>
 </body>
 </html>
