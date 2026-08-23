@@ -2394,7 +2394,7 @@ h1, h2, h3, h4 {
                     
                     <!-- FAQ 1: What do I need to send? -->
                     <div class="faq-item active">
-                        <div class="faq-question">
+                        <div class="faq-question" onclick="toggleFaq(this)">
                             <span data-en="What do I need to send?" data-jp="発注時に何を送ればいいですか？">What do I need to send?</span>
                             <span class="faq-toggle">+</span>
                         </div>
@@ -2405,7 +2405,7 @@ h1, h2, h3, h4 {
 
                     <!-- FAQ 2: Do you use AI? -->
                     <div class="faq-item">
-                        <div class="faq-question">
+                        <div class="faq-question" onclick="toggleFaq(this)">
                             <span data-en="Do you use AI?" data-jp="AIは使用していますか？">Do you use AI?</span>
                             <span class="faq-toggle">+</span>
                         </div>
@@ -2416,7 +2416,7 @@ h1, h2, h3, h4 {
 
                     <!-- FAQ 3: Is this translation? -->
                     <div class="faq-item">
-                        <div class="faq-question">
+                        <div class="faq-question" onclick="toggleFaq(this)">
                             <span data-en="Is this translation?" data-jp="これは単なる「翻訳」ですか？">Is this translation?</span>
                             <span class="faq-toggle">+</span>
                         </div>
@@ -2427,7 +2427,7 @@ h1, h2, h3, h4 {
 
                     <!-- FAQ 4: Do you update my website? -->
                     <div class="faq-item">
-                        <div class="faq-question">
+                        <div class="faq-question" onclick="toggleFaq(this)">
                             <span data-en="Do you update my website?" data-jp="Webサイトやストア画面への直接反映作業も行ってくれますか？">Do you update my website?</span>
                             <span class="faq-toggle">+</span>
                         </div>
@@ -2438,7 +2438,7 @@ h1, h2, h3, h4 {
 
                     <!-- FAQ 5: How long does it take? -->
                     <div class="faq-item">
-                        <div class="faq-question">
+                        <div class="faq-question" onclick="toggleFaq(this)">
                             <span data-en="How long does it take?" data-jp="納期はどれくらいかかりますか？">How long does it take?</span>
                             <span class="faq-toggle">+</span>
                         </div>
@@ -2954,6 +2954,28 @@ document.addEventListener('click', (e) => {
     }
 });
 
+</script>
+<script>
+function toggleFaq(el) {
+    var item = el.closest('.faq-item');
+    if (!item) return;
+    var allItems = document.querySelectorAll('.faq-item');
+    var isActive = item.classList.contains('active');
+    allItems.forEach(function(i) { i.classList.remove('active'); });
+    if (!isActive) {
+        item.classList.add('active');
+    }
+}
+// Execute immediately on load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof initSakuraPetals === 'function') initSakuraPetals();
+        if (typeof initFaqAccordion === 'function') initFaqAccordion();
+    });
+} else {
+    if (typeof initSakuraPetals === 'function') initSakuraPetals();
+    if (typeof initFaqAccordion === 'function') initFaqAccordion();
+}
 </script>
 </body>
 </html>
