@@ -2392,7 +2392,7 @@ h1, h2, h3, h4 {
                 <div class="faq-list">
                     
                     <!-- FAQ 1 -->
-                    <div class="faq-item">
+                    <div class="faq-item" onclick="toggleFaq(this)" style="cursor: pointer;">
                         <div class="faq-question">
                             <span data-en="What do I need to send to get started?" data-jp="発注時に何を送ればいいですか？">What do I need to send to get started?</span>
                             <span class="faq-toggle">+</span>
@@ -2403,7 +2403,7 @@ h1, h2, h3, h4 {
                     </div>
 
                     <!-- FAQ 2 -->
-                    <div class="faq-item">
+                    <div class="faq-item" onclick="toggleFaq(this)" style="cursor: pointer;">
                         <div class="faq-question">
                             <span data-en="Do you use AI translation or human copywriting?" data-jp="AI翻訳ですか？それとも人間が書いていますか？">Do you use AI translation or human copywriting?</span>
                             <span class="faq-toggle">+</span>
@@ -2414,7 +2414,7 @@ h1, h2, h3, h4 {
                     </div>
 
                     <!-- FAQ 3 -->
-                    <div class="faq-item">
+                    <div class="faq-item" onclick="toggleFaq(this)" style="cursor: pointer;">
                         <div class="faq-question">
                             <span data-en="Is this just a translation service?" data-jp="これは単なる「直訳・翻訳」ですか？">Is this just a translation service?</span>
                             <span class="faq-toggle">+</span>
@@ -2425,7 +2425,7 @@ h1, h2, h3, h4 {
                     </div>
 
                     <!-- FAQ 4 -->
-                    <div class="faq-item">
+                    <div class="faq-item" onclick="toggleFaq(this)" style="cursor: pointer;">
                         <div class="faq-question">
                             <span data-en="How do I receive and publish the localized copy?" data-jp="納品データはどのように受け取り、公開できますか？">How do I receive and publish the localized copy?</span>
                             <span class="faq-toggle">+</span>
@@ -2436,7 +2436,7 @@ h1, h2, h3, h4 {
                     </div>
 
                     <!-- FAQ 5 -->
-                    <div class="faq-item">
+                    <div class="faq-item" onclick="toggleFaq(this)" style="cursor: pointer;">
                         <div class="faq-question">
                             <span data-en="How long does delivery take?" data-jp="納期はどれくらいかかりますか？">How long does delivery take?</span>
                             <span class="faq-toggle">+</span>
@@ -2447,7 +2447,7 @@ h1, h2, h3, h4 {
                     </div>
 
                     <!-- FAQ 6 -->
-                    <div class="faq-item">
+                    <div class="faq-item" onclick="toggleFaq(this)" style="cursor: pointer;">
                         <div class="faq-question">
                             <span data-en="What if I need revisions or adjustments?" data-jp="納品後に修正をお願いすることはできますか？">What if I need revisions or adjustments?</span>
                             <span class="faq-toggle">+</span>
@@ -2522,9 +2522,9 @@ h1, h2, h3, h4 {
         <div class="modal-card">
             <button class="modal-close" onclick="closeSampleModal()">&times;</button>
             <div class="modal-header">
-                <span class="sakura-badge" id="modalBadge" data-en="RISK-FREE SAMPLE" data-jp="縺願ｩｦ縺礼┌譁吶し繝ｳ繝励Ν">RISK-FREE SAMPLE</span>
-                <h3 id="modalTitle" data-en="Get a Free Localization Sample" data-jp="辟｡譁吶Ο繝ｼ繧ｫ繝ｩ繧､繧ｺ繧ｵ繝ｳ繝励Ν繧剃ｾ晞ｼ">Get a Free Localization Sample</h3>
-                <p id="modalDesc" data-en="We'll localize part of your content for free before you decide! Send your URL or paste text below." data-jp="逋ｺ豕ｨ繧呈ｱｺ螳壹☆繧句燕縺ｫ縲∝次遞ｿ縺ｮ荳驛ｨ繧堤┌譁吶〒繝ｭ繝ｼ繧ｫ繝ｩ繧､繧ｺ縺励∪縺吶６RL縺ｾ縺溘・繝・く繧ｹ繝医ｒ蜈･蜉帙＠縺ｦ縺上□縺輔＞縲・>We'll localize part of your content for free before you decide! Send your URL or paste text below.</p>
+                <span class="sakura-badge" id="modalBadge" data-en="RISK-FREE SAMPLE" data-jp="お試し無料サンプル">RISK-FREE SAMPLE</span>
+                <h3 id="modalTitle" data-en="Get a Free Localization Sample" data-jp="無料ローカライズサンプルを依頼">Get a Free Localization Sample</h3>
+                <p id="modalDesc" data-en="We'll localize part of your content for free before you decide! Send your URL or paste text below." data-jp="発注を決定する前に、原稿の一部を無料でローカライズします。URLまたはテキストを入力してください。">We'll localize part of your content for free before you decide! Send your URL or paste text below.</p>
             </div>
 
             <!-- Integrated User Formspree Action Endpoint -->
@@ -2532,41 +2532,42 @@ h1, h2, h3, h4 {
                 <input type="hidden" id="modalPackageType" name="package_type" value="Free Sample">
                 
                 <div class="form-group">
-                    <label for="developerName" data-en="Your Name / App Name" data-jp="縺雁錐蜑・/ 繧｢繝励Μ蜷・>Your Name / App Name</label>
+                    <label for="developerName" data-en="Your Name / App Name" data-jp="お名前 / アプリ名">Your Name / App Name</label>
                     <input type="text" id="developerName" name="name" placeholder="e.g. Alex / FocusFlow App" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="emailAddress" data-en="Email Address" data-jp="繝｡繝ｼ繝ｫ繧｢繝峨Ξ繧ｹ">Email Address</label>
+                    <label for="emailAddress" data-en="Email Address" data-jp="メールアドレス">Email Address</label>
                     <input type="email" id="emailAddress" name="_replyto" placeholder="alex@mycoolapp.com" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="appUrl" data-en="Send Your URL (App Store, Google Play, or LP URL)" data-jp="URL繧偵♀騾√ｊ縺上□縺輔＞ (App Store, Google Play, 縺ｾ縺溘・ LP URL)">Send Your URL (App Store, Google Play, 縺ｾ縺溘・ LP URL)</label>
+                    <label for="appUrl" data-en="Send Your URL (App Store, Google Play, or LP URL)" data-jp="URLをお送りください (App Store, Google Play, または LP URL)">Send Your URL (App Store, Google Play, または LP URL)</label>
                     <input type="url" id="appUrl" name="appUrl" placeholder="https://apps.apple.com/app/id... OR https://mycoolapp.com">
                 </div>
 
                 <div class="form-group">
-                    <label for="appDetails" data-en="If URL is Private: Paste Your English Text Here" data-jp="窶ｻURL縺碁撼蜈ｬ髢九・蝣ｴ蜷医・縺ｿ・夊恭隱槭ユ繧ｭ繧ｹ繝医ｒ雋ｼ繧贋ｻ倥￠">If URL is Private: Paste Your English Text Here</label>
+                    <label for="appDetails" data-en="If URL is Private: Paste Your English Text Here" data-jp="※URLが非公開の場合のみ：英語テキストを貼り付け">If URL is Private: Paste Your English Text Here</label>
                     <textarea id="appDetails" name="message" rows="3" placeholder="e.g. 'FocusFlow is a smart pomodoro timer built to boost your daily focus...'"></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-coral full-width btn-lg" id="btnSubmitForm">
-                    <span id="modalSubmitText" data-en="Get a Free Localization Sample" data-jp="辟｡譁吶し繝ｳ繝励Ν繧帝∽ｿ｡縺吶ｋ">Get a Free Localization Sample</span>
+                    <span id="modalSubmitText" data-en="Get a Free Localization Sample" data-jp="無料サンプルを送信する">Get a Free Localization Sample</span>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </button>
             </form>
 
-            <div class="modal-success" id="modalSuccess" style="display: none;">
-                <div class="success-icon">
-                    <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+            <div class="modal-success" id="modalSuccess" style="display: none; text-align: center; padding: 20px 0;">
+                <div class="success-icon" style="margin-bottom: 16px;">
+                    <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
                 </div>
-                <h3 data-en="Sample Request Submitted!" data-jp="騾∽ｿ｡縺悟ｮ御ｺ・＠縺ｾ縺励◆・・>Sample Request Submitted!</h3>
-                <p data-en="Thank you! We will review your content and send your free localized sample to your email shortly." data-jp="縺ゅｊ縺後→縺・＃縺悶＞縺ｾ縺吶ょ・螳ｹ繧堤｢ｺ隱肴ｬ｡隨ｬ縲√☆縺舌↓辟｡譁吶Ο繝ｼ繧ｫ繝ｩ繧､繧ｺ繧ｵ繝ｳ繝励Ν繧偵Γ繝ｼ繝ｫ縺ｧ縺企√ｊ縺・◆縺励∪縺吶・>Thank you! We will review your content and send your free localized sample to your email shortly.</p>
-                <button class="btn btn-primary" onclick="closeSampleModal()">Close</button>
+                <h3 id="successTitle" data-en="Request Submitted Successfully!" data-jp="送信が完了いたしました！" style="margin-bottom: 8px;">Request Submitted Successfully!</h3>
+                <p id="successDesc" data-en="Thank you! We have received your details and will review your content. We will email you back within 24 hours." data-jp="ありがとうございます。内容を確認次第、24時間以内にメールにてご連絡差し上げます。" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px;">Thank you! We have received your details and will review your content. We will email you back within 24 hours.</p>
+                <button class="btn btn-primary" onclick="closeSampleModal()" style="min-width: 140px;">OK</button>
             </div>
         </div>
     </div>
+
 
     <!-- JS (Explicit Relative Path) -->
     <script>
