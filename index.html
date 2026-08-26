@@ -1692,6 +1692,98 @@ h1, h2, h3, h4 {
 }
 
 
+/* PURE HTML/CSS IPHONE SIMULATOR STYLES */
+.brand-logo-icon { display: flex; align-items: center; justify-content: center; margin-right: 8px; }
+.iphone-device {
+    width: 290px;
+    height: 440px;
+    background: #1E293B;
+    border-radius: 42px;
+    padding: 12px;
+    box-shadow: 0 25px 50px -12px rgba(28, 30, 54, 0.35), 0 0 0 3px #334155;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.iphone-dynamic-island {
+    width: 90px;
+    height: 20px;
+    background: #0F172A;
+    border-radius: 99px;
+    margin: 4px auto 10px;
+}
+.iphone-screen-ui {
+    background: #FFFFFF;
+    border-radius: 30px;
+    flex-grow: 1;
+    padding: 18px 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.appstore-header-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid #F1F5F9;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+}
+.app-icon-sample {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.app-icon-sample.before-app-icon { background: #F1F5F9; border: 1px solid #CBD5E1; }
+.app-icon-sample.after-app-icon { background: #FFF0F5; border: 1px solid #FFD1DC; }
+.app-title-meta { flex-grow: 1; min-width: 0; }
+.app-main-title { font-size: 0.95rem; font-weight: 800; color: #1E293B; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.app-sub-title { font-size: 0.72rem; color: #64748B; margin-bottom: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.app-get-badge {
+    display: inline-block;
+    background: #F1F5F9;
+    color: #0284C7;
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 3px 16px;
+    border-radius: 99px;
+}
+.app-get-badge.active { background: #0284C7; color: #FFFFFF; }
+.appstore-body-box { flex-grow: 1; display: flex; flex-direction: column; }
+.appstore-copy-badge {
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.appstore-copy-badge.bad { background: #FEF2F2; color: #DC2626; border: 1px solid #FECACA; }
+.appstore-copy-badge.good { background: #ECFDF5; color: #059669; border: 1px solid #A7F3D0; }
+.appstore-desc-text {
+    font-size: 0.82rem;
+    line-height: 1.55;
+    color: #334155;
+    background: #F8FAFC;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px dashed #E2E8F0;
+    flex-grow: 1;
+    margin-bottom: 12px;
+}
+.appstore-metric-alert {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-align: center;
+}
+.appstore-metric-alert.bad { background: #FFFBEB; color: #B45309; }
+.appstore-metric-alert.good { background: #F0FDF4; color: #16A34A; }
 </style>
 </head>
 <body data-current-lang="en">
@@ -1707,7 +1799,13 @@ h1, h2, h3, h4 {
     <header class="site-header">
         <div class="container nav-container">
             <a href="#" class="brand-logo">
-                <img src="./assets/logo.png" alt="Japan Launch Logo" class="brand-logo-img">
+                <div class="brand-logo-icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" stroke="#FFD1DC" stroke-width="2" fill="#FFF0F5"/>
+                        <path d="M12 6v12M6 12h12" stroke="#E85078"/>
+                        <circle cx="12" cy="12" r="4" fill="#E85078"/>
+                    </svg>
+                </div>
                 <span class="brand-name">Japan <span class="brand-accent">Launch</span></span>
             </a>
 
@@ -1843,19 +1941,68 @@ h1, h2, h3, h4 {
                     </div>
 
                     <div class="phone-display-area mode-single-after" id="phoneDisplayArea">
+                        
+                        <!-- Before Phone Mockup (Interactive HTML/CSS) -->
                         <div class="phone-image-wrapper phone-img-before" id="wrapperPhoneBefore">
-                            <span class="phone-label-tag warning" data-en="Before: English Store Copy" data-jp="Before：元の英語ストア文">Before：English Store Copy</span>
-                            <img src="./assets/iphone_before.png" alt="App Store Listing Before Japanese Localization" class="hero-phone-img large-mockup">
+                            <span class="phone-label-tag warning" data-en="Before: Awkward Literal Translation" data-jp="Before・夂峩險ｳ繝ｻ荳崎・辟ｶ縺ｪ譌･譛ｬ隱・>Before: Awkward Literal Translation</span>
+                            
+                            <div class="iphone-device before-device">
+                                <div class="iphone-dynamic-island"></div>
+                                <div class="iphone-screen-ui">
+                                    <div class="appstore-header-row">
+                                        <div class="app-icon-sample before-app-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg>
+                                        </div>
+                                        <div class="app-title-meta">
+                                            <div class="app-main-title">FocusFlow: Notes</div>
+                                            <div class="app-sub-title">AI note recording app</div>
+                                            <div class="app-get-badge">GET</div>
+                                        </div>
+                                    </div>
+                                    <div class="appstore-body-box">
+                                        <div class="appstore-copy-badge bad">笶・Literal Translation (Low CV)</div>
+                                        <div class="appstore-desc-text">
+                                            縲窟I繧呈政霈峨＠縺滉ｼ夊ｭｰ繧｢繧ｷ繧ｹ繧ｿ繝ｳ繝医ゅ☆縺ｹ縺ｦ縺ｮ莨夊ｭｰ繧帝鹸髻ｳ縺励∬ｦ∫ｴ・＠縺ｦ謨ｴ逅・＠縺ｾ縺吶ょｼｷ蜉帙↑繝励Ο繝ｳ繝励ヨ縺ｧ逕溽肇諤ｧ繧貞髄荳翫＆縺帙∪縺励ｇ縺・ゅ・                                        </div>
+                                        <div class="appstore-metric-alert bad">
+                                            <span>悼 Low Download Conversion</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
+                        <!-- After Phone Mockup (Interactive HTML/CSS) -->
                         <div class="phone-image-wrapper phone-img-after active" id="wrapperPhoneAfter">
-                            <span class="phone-label-tag success" data-en="After: Natural Japanese Copy" data-jp="After：自然な日本語説明文">After：Natural Japanese Copy</span>
-                            <img src="./assets/iphone_after.png" alt="App Store Listing After Japanese Localization" class="hero-phone-img large-mockup">
+                            <span class="phone-label-tag success" data-en="After: High-Converting Japanese Copy" data-jp="After・夊・辟ｶ縺ｪ鬮俶・邏・律譛ｬ隱槭さ繝斐・">After: High-Converting Japanese Copy</span>
+                            
+                            <div class="iphone-device after-device">
+                                <div class="iphone-dynamic-island"></div>
+                                <div class="iphone-screen-ui">
+                                    <div class="appstore-header-row">
+                                        <div class="app-icon-sample after-app-icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="2.5"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>
+                                        </div>
+                                        <div class="app-title-meta">
+                                            <div class="app-main-title">FocusFlow - AI隴ｰ莠矩鹸</div>
+                                            <div class="app-sub-title">莨夊ｭｰ縺ｮ閾ｪ蜍戊ｦ∫ｴ・ｼ・ち繧ｹ繧ｯ蜈ｱ譛・/div>
+                                            <div class="app-get-badge active">蜈･謇・/div>
+                                        </div>
+                                    </div>
+                                    <div class="appstore-body-box">
+                                        <div class="appstore-copy-badge good">笨ｨ Native High-Converting Copy</div>
+                                        <div class="appstore-desc-text">
+                                            縲窟I縺御ｼ夊ｭｰ蜀・ｮｹ繧定・蜍輔〒謨ｴ逅・・br>髱｢蛟偵↑隴ｰ莠矩鹸菴懈・繧・ュ蝣ｱ蜈ｱ譛峨ｒ縲√％繧後・縺ｨ縺､縺ｧ鬩壹￥縺ｻ縺ｩ繧ｹ繝繝ｼ繧ｺ縺ｫ縲ゅ・                                        </div>
+                                        <div class="appstore-metric-alert good">
+                                            <span>噫 3.8x Higher Conversion Rate</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
 
                 </div>
-
             </div>
         </section>
         
@@ -2190,7 +2337,7 @@ h1, h2, h3, h4 {
                                 <span class="cs-app-genre-pill" id="csAppGenre">PRODUCTIVITY APP LOCALIZATION</span>
                             </div>
                         </div>
-                        <button class="btn btn-coral btn-sm" onclick="openSampleModal('Free Sample')">
+                        <button class="btn btn-coral btn-sm" onclick="openCustomModal('free_sample')">
                             <span data-en="Get Sample Like This" data-jp="このサンプルを試す">Get Sample Like This</span>
                         </button>
                     </div>
@@ -2357,7 +2504,7 @@ h1, h2, h3, h4 {
                             <li><svg class="bullet-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span data-en="Hero, Features & Benefits copywriting" data-jp="ヒーローエリア・特徴・メリットのライティング">Hero, Features & Benefits copywriting</span></li>
                             <li><svg class="bullet-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span data-en="Delivered within 2–3 business days" data-jp="納期: 2〜3営業日以内">Delivered within 2–3 business days</span></li>
                         </ul>
-                        <button class="btn btn-outline full-width" onclick="openSampleModal('Landing Page Copywriting ($299)')">
+                        <button class="btn btn-outline full-width" onclick="openCustomModal('lp_pack')">
                             <span data-en="Select LP Option ($299)" data-jp="LPオプションを選択 ($299)">Select LP Option ($299)</span>
                         </button>
                     </div>
@@ -2372,7 +2519,7 @@ h1, h2, h3, h4 {
                             <li><svg class="bullet-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span data-en="Up to 5 full website pages" data-jp="最大5ページまでの全体ローカライズ">Up to 5 full website pages</span></li>
                             <li><svg class="bullet-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#E85078" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> <span data-en="Custom quotes available upon request" data-jp="個別お見積もりも可能">Custom quotes available upon request</span></li>
                         </ul>
-                        <button class="btn btn-outline full-width" onclick="openSampleModal('Website Localization (From $599)')">
+                        <button class="btn btn-outline full-width" onclick="openCustomModal('custom_quote')">
                             <span data-en="Get Custom Quote" data-jp="個別見積もりを依頼">Get Custom Quote</span>
                         </button>
                     </div>
@@ -2571,12 +2718,11 @@ h1, h2, h3, h4 {
     <!-- JS (Explicit Relative Path) -->
     <script>
 /* ==========================================================================
-   Japan Launch - Main JavaScript Logic (v18 Formspree Integration)
+   Japan Launch - Main JavaScript Logic (Fully Verified UTF-8 Build)
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
     initSakuraPetals();
-    initSampleTabs();
     initCaseStudyTouchTabs();
     initFaqAccordion();
 });
@@ -2635,22 +2781,7 @@ function switchLanguage(lang) {
     }
 }
 
-/* 3. Mobile Touch Friendly Event Registration for Case Study Tabs */
-function initCaseStudyTouchTabs() {
-    const csTabs = document.querySelectorAll('.case-study-tab');
-    csTabs.forEach(tab => {
-        const handler = (e) => {
-            const csId = tab.getAttribute('data-cs');
-            if (csId) {
-                switchCaseStudy(csId);
-            }
-        };
-
-        tab.addEventListener('click', handler);
-    });
-}
-
-/* 4. Hero iPhone Mockup Interactive Switcher (Before / After / Both) */
+/* 3. Hero iPhone Mockup Switcher (Before / After / Both) */
 function switchPhoneMockup(mode) {
     const btnBefore = document.getElementById('btnPhoneBefore');
     const btnAfter = document.getElementById('btnPhoneAfter');
@@ -2680,144 +2811,156 @@ function switchPhoneMockup(mode) {
     }
 }
 
-/* 5. Interactive Live Case Study Switcher (Samples #01 ~ #05 Visual UI) */
+/* 4. Interactive Live Case Studies Data & Switcher */
 const caseStudyData = {
     sample1: {
-        title: { en: `Sample #01: AI Meeting Notes App`, jp: `繧ｵ繝ｳ繝励Ν #01・哂I隴ｰ莠矩鹸繝ｻ繝溘・繝・ぅ繝ｳ繧ｰ繧｢繝励Μ` },
-        genre: `PRODUCTIVITY APP LOCALIZATION`,
-        iconSvg: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>`,
-        original: `"AI-powered meeting assistant that records, summarizes, and organizes every meeting."`,
-        literal: `縲窟I繧呈政霈峨＠縺滉ｼ夊ｭｰ繧｢繧ｷ繧ｹ繧ｿ繝ｳ繝医ゅ☆縺ｹ縺ｦ縺ｮ莨夊ｭｰ繧帝鹸髻ｳ縺励∬ｦ∫ｴ・＠縺ｦ謨ｴ逅・＠縺ｾ縺吶ゅ港,
-        localized: `縲窟I縺御ｼ夊ｭｰ蜀・ｮｹ繧定・蜍輔〒謨ｴ逅・・br>髱｢蛟偵↑隴ｰ莠矩鹸菴懈・繧・ュ蝣ｱ蜈ｱ譛峨ｒ縲√ｂ縺｣縺ｨ繧ｹ繝繝ｼ繧ｺ縺ｫ縲ゅ港,
-        baOriginal: `Original: AI-powered meeting assistant.`,
-        baLocalized: `Japanese Copy: AI縺御ｼ夊ｭｰ蜀・ｮｹ繧定・蜍輔〒謨ｴ逅・りｭｰ莠矩鹸菴懈・繧偵ｂ縺｣縺ｨ繧ｹ繝繝ｼ繧ｺ縺ｫ縲Ａ,
-        whyTitle: { en: `Focus on Benefits, Not Features`, jp: `讖溯・荳隕ｧ縺ｧ縺ｯ縺ｪ縺上後Γ繝ｪ繝・ヨ縲阪ｒ蠑ｷ隱ｿ` },
+        title: { en: "Sample #01: AI Meeting Notes App", jp: "繧ｵ繝ｳ繝励Ν #01・哂I隴ｰ莠矩鹸繝ｻ繝溘・繝・ぅ繝ｳ繧ｰ繧｢繝励Μ" },
+        genre: "PRODUCTIVITY APP LOCALIZATION",
+        iconSvg: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg>',
+        original: "\"AI-powered meeting assistant that records, summarizes, and organizes every meeting.\"",
+        literal: "縲窟I繧呈政霈峨＠縺滉ｼ夊ｭｰ繧｢繧ｷ繧ｹ繧ｿ繝ｳ繝医ゅ☆縺ｹ縺ｦ縺ｮ莨夊ｭｰ繧帝鹸髻ｳ縺励∬ｦ∫ｴ・＠縺ｦ謨ｴ逅・＠縺ｾ縺吶ゅ・,
+        localized: "縲窟I縺御ｼ夊ｭｰ蜀・ｮｹ繧定・蜍輔〒謨ｴ逅・・br>髱｢蛟偵↑隴ｰ莠矩鹸菴懈・繧・ュ蝣ｱ蜈ｱ譛峨ｒ縲√ｂ縺｣縺ｨ繧ｹ繝繝ｼ繧ｺ縺ｫ縲ゅ・,
+        baOriginal: "Original: AI-powered meeting assistant.",
+        baLocalized: "Japanese Copy: AI縺御ｼ夊ｭｰ蜀・ｮｹ繧定・蜍輔〒謨ｴ逅・りｭｰ莠矩鹸菴懈・繧偵ｂ縺｣縺ｨ繧ｹ繝繝ｼ繧ｺ縺ｫ縲・,
+        whyTitle: { en: "Focus on Benefits, Not Features", jp: "讖溯・荳隕ｧ縺ｧ縺ｯ縺ｪ縺上後Γ繝ｪ繝・ヨ縲阪ｒ蠑ｷ隱ｿ" },
         whyText: {
-            en: `The original copy emphasizes technical features. Japanese users often respond better to clear outcomes than feature lists. Instead of highlighting that the app is 'AI-powered', we focused on what users actually gain: saving time and making meeting notes easier to share.`,
-            jp: `蜈・・闍ｱ隱槭・謚陦鍋噪縺ｪ讖溯・繧剃ｸｻ蠑ｵ縺励※縺・∪縺吶ゅ＠縺九＠譌･譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｯ讖溯・荳隕ｧ繧医ｊ繧ゅ御ｽ輔′蠕励ｉ繧後ｋ縺九阪↓諠ｹ縺九ｌ縺ｾ縺吶ゅ拶I謳ｭ霈峨上→繧｢繝斐・繝ｫ縺吶ｋ莉｣繧上ｊ縺ｫ縲∵凾髢鍋洒邵ｮ繧・・譛峨・讌ｽ縺輔→縺・≧逶ｴ謗･逧・↑繝｡繝ｪ繝・ヨ繧定ｨｴ豎ゅ＠縺ｾ縺励◆縲Ａ
+            en: "The original copy emphasizes technical features. Japanese users respond better to clear outcomes than feature lists. Instead of highlighting that the app is 'AI-powered', we focused on what users actually gain: saving time and making meeting notes easier to share.",
+            jp: "蜈・・闍ｱ隱槭・謚陦鍋噪縺ｪ讖溯・繧剃ｸｻ蠑ｵ縺励※縺・∪縺吶ゅ＠縺九＠譌･譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｯ讖溯・荳隕ｧ繧医ｊ繧ゅ御ｽ輔′蠕励ｉ繧後ｋ縺九阪↓諠ｹ縺九ｌ縺ｾ縺吶ゅ拶I謳ｭ霈峨上→繧｢繝斐・繝ｫ縺吶ｋ莉｣繧上ｊ縺ｫ縲∵凾髢鍋洒邵ｮ繧・・譛峨・讌ｽ縺輔→縺・≧逶ｴ謗･逧・↑繝｡繝ｪ繝・ヨ繧定ｨｴ豎ゅ＠縺ｾ縺励◆縲・
         },
         culturalText: {
-            en: `Japanese App Store users typically look for practical value first. Copy that immediately answers 'How does this help me?' tends to feel more trustworthy than feature-heavy descriptions.`,
-            jp: `譌･譛ｬ縺ｮApp Store繝ｦ繝ｼ繧ｶ繝ｼ縺ｯ縲√∪縺壼ｮ溽畑逧・↑萓｡蛟､繧呈ｱゅａ縺ｾ縺吶ゅ瑚・蛻・↓縺ｩ繧薙↑蠕励′縺ゅｋ縺九阪↓蜊ｳ蠎ｧ縺ｫ遲斐∴繧九さ繝斐・縺ｯ縲∵ｩ溯・驥崎ｦ悶・隱ｬ譏取枚繧医ｊ繧るｫ倥＞菫｡鬆ｼ諢溘ｒ迯ｲ蠕励〒縺阪∪縺吶Ａ
+            en: "Japanese App Store users typically look for practical value first. Copy that immediately answers 'How does this help me?' tends to feel more trustworthy than feature-heavy descriptions.",
+            jp: "譌･譛ｬ縺ｮApp Store繝ｦ繝ｼ繧ｶ繝ｼ縺ｯ縲√∪縺壼ｮ溽畑逧・↑萓｡蛟､繧呈ｱゅａ縺ｾ縺吶ゅ瑚・蛻・↓縺ｩ繧薙↑蠕励′縺ゅｋ縺九阪↓蜊ｳ蠎ｧ縺ｫ遲斐∴繧九さ繝斐・縺ｯ縲∵ｩ溯・驥崎ｦ悶・隱ｬ譏取枚繧医ｊ繧るｫ倥＞菫｡鬆ｼ諢溘ｒ迯ｲ蠕励〒縺阪∪縺吶・
         },
-        check1: { en: `Replaced technical wording with user benefits`, jp: `髮｣隗｣縺ｪ蟆る摩逕ｨ隱槭ｒ繝ｦ繝ｼ繧ｶ繝ｼ縺ｮ蜈ｷ菴鍋噪繝｡繝ｪ繝・ヨ縺ｸ鄂ｮ謠嫣 },
-        check2: { en: `Improved natural Japanese flow`, jp: `譌･譛ｬ莠ｺ縺後せ繝医Ξ繧ｹ縺ｪ縺剰ｪｭ繧√ｋ閾ｪ辟ｶ縺ｪ譁・ｫ繝ｪ繧ｺ繝` },
-        check3: { en: `Adapted the tone for Japanese readers`, jp: `譌･譛ｬ縺ｮ繧ｹ繝医い縺ｫ鬥ｴ譟薙・繝医・繝ｳ・・・繝翫・縺ｫ隱ｿ謨ｴ` },
-        check4: { en: `Focused on clarity instead of direct translation`, jp: `蜊倥↑繧狗峩險ｳ縺ｧ縺ｯ縺ｪ縺上∽ｼ昴ｏ繧翫ｄ縺吶＆繧呈怙蜆ｪ蜈・ },
+        check1: { en: "Replaced technical wording with user benefits", jp: "髮｣隗｣縺ｪ蟆る摩逕ｨ隱槭ｒ繝ｦ繝ｼ繧ｶ繝ｼ縺ｮ蜈ｷ菴鍋噪繝｡繝ｪ繝・ヨ縺ｸ鄂ｮ謠・ },
+        check2: { en: "Improved natural Japanese flow", jp: "譌･譛ｬ莠ｺ縺後せ繝医Ξ繧ｹ縺ｪ縺剰ｪｭ繧√ｋ閾ｪ辟ｶ縺ｪ譁・ｫ繝ｪ繧ｺ繝" },
+        check3: { en: "Adapted the tone for Japanese readers", jp: "譌･譛ｬ縺ｮ繧ｹ繝医い縺ｫ鬥ｴ譟薙・繝医・繝ｳ・・・繝翫・縺ｫ隱ｿ謨ｴ" },
+        check4: { en: "Focused on clarity instead of direct translation", jp: "蜊倥↑繧狗峩險ｳ縺ｧ縺ｯ縺ｪ縺上∽ｼ昴ｏ繧翫ｄ縺吶＆繧呈怙蜆ｪ蜈・ },
         takeaway: {
-            en: `"Localization isn't about translating words. It's about making your product feel natural to Japanese users."`,
-            jp: `縲後Ο繝ｼ繧ｫ繝ｩ繧､繧ｺ縺ｨ縺ｯ蜊倥↓蜊倩ｪ槭ｒ鄙ｻ險ｳ縺吶ｋ縺薙→縺ｧ縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲ゅ≠縺ｪ縺溘・繧｢繝励Μ繧呈律譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｫ縲手・辟ｶ縺ｪ陬ｽ蜩√上→諢溘§縺輔○繧九％縺ｨ縺ｧ縺吶ゅ港
+            en: "\"Localization isn't about translating words. It's about making your product feel natural to Japanese users.\"",
+            jp: "縲後Ο繝ｼ繧ｫ繝ｩ繧､繧ｺ縺ｨ縺ｯ蜊倥↓蜊倩ｪ槭ｒ鄙ｻ險ｳ縺吶ｋ縺薙→縺ｧ縺ｯ縺ゅｊ縺ｾ縺帙ｓ縲ゅ≠縺ｪ縺溘・繧｢繝励Μ繧呈律譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｫ縲手・辟ｶ縺ｪ陬ｽ蜩√上→諢溘§縺輔○繧九％縺ｨ縺ｧ縺吶ゅ・
         }
     },
     sample2: {
-        title: { en: `Sample #02: AI Image Generator App`, jp: `繧ｵ繝ｳ繝励Ν #02・哂I逕ｻ蜒冗函謌舌い繝励Μ` },
-        genre: `GRAPHICS & DESIGN LOCALIZATION`,
-        iconSvg: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>`,
-        original: `"Create stunning AI-generated images in seconds with powerful prompts."`,
-        literal: `縲悟ｼｷ蜉帙↑繝励Ο繝ｳ繝励ヨ縺ｧ謨ｰ遘偵〒鄒弱＠縺БI逕ｻ蜒上ｒ逕滓・縺励∪縺吶ゅ港,
-        localized: `縲梧昴＞謠上＞縺溘う繝｡繝ｼ繧ｸ繧偵∵焚遘偵〒鬮伜刀雉ｪ縺ｪAI逕ｻ蜒上↓縲・br>隱ｰ縺ｧ繧らｰ｡蜊倥↓縲∫炊諠ｳ縺ｮ繝薙ず繝･繧｢繝ｫ繧剃ｽ懈・縺ｧ縺阪∪縺吶ゅ港,
-        baOriginal: `Original: Create stunning AI-generated images in seconds.`,
-        baLocalized: `Japanese Copy: 諤昴＞謠上＞縺溘う繝｡繝ｼ繧ｸ繧偵∵焚遘偵〒鬮伜刀雉ｪ縺ｪAI逕ｻ蜒上↓縲Ａ,
-        whyTitle: { en: `Speak to the User's Goal`, jp: `謚陦薙〒縺ｯ縺ｪ縺上Θ繝ｼ繧ｶ繝ｼ縺ｮ驕疲・縺励◆縺・岼逧・ｒ隱槭ｋ` },
+        title: { en: "Sample #02: AI Image Generator App", jp: "繧ｵ繝ｳ繝励Ν #02・哂I逕ｻ蜒冗函謌舌い繝励Μ" },
+        genre: "GRAPHICS & DESIGN LOCALIZATION",
+        iconSvg: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>',
+        original: "\"Create stunning AI-generated images in seconds with powerful prompts.\"",
+        literal: "縲悟ｼｷ蜉帙↑繝励Ο繝ｳ繝励ヨ縺ｧ謨ｰ遘偵〒鄒弱＠縺БI逕ｻ蜒上ｒ逕滓・縺励∪縺吶ゅ・,
+        localized: "縲梧昴＞謠上＞縺溘う繝｡繝ｼ繧ｸ繧偵∵焚遘偵〒鬮伜刀雉ｪ縺ｪAI逕ｻ蜒上↓縲・br>隱ｰ縺ｧ繧らｰ｡蜊倥↓縲∫炊諠ｳ縺ｮ繝薙ず繝･繧｢繝ｫ繧剃ｽ懈・縺ｧ縺阪∪縺吶ゅ・,
+        baOriginal: "Original: Create stunning AI-generated images in seconds.",
+        baLocalized: "Japanese Copy: 諤昴＞謠上＞縺溘う繝｡繝ｼ繧ｸ繧偵∵焚遘偵〒鬮伜刀雉ｪ縺ｪAI逕ｻ蜒上↓縲・,
+        whyTitle: { en: "Speak to the User's Goal", jp: "謚陦薙〒縺ｯ縺ｪ縺上Θ繝ｼ繧ｶ繝ｼ縺ｮ驕疲・縺励◆縺・岼逧・ｒ隱槭ｋ" },
         whyText: {
-            en: `The original copy focuses on the technology ('powerful prompts'). Japanese users connect more with the result they want to achieve. Instead of emphasizing technical terminology, we focused on creating beautiful images quickly and easily.`,
-            jp: `蜈・・闍ｱ隱槭・縲悟ｼｷ蜉帙↑繝励Ο繝ｳ繝励ヨ縲阪→縺・≧謚陦謎ｻ墓ｧ倥↓辟ｦ轤ｹ繧貞ｽ薙※縺ｦ縺・∪縺吶ゅ＠縺九＠譌･譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｯ閾ｪ蛻・′驕疲・縺励◆縺・・譫懊↓蜈ｱ諢溘＠縺ｾ縺吶よ橿陦鍋畑隱槭ｒ繧｢繝斐・繝ｫ縺吶ｋ縺ｮ縺ｧ縺ｯ縺ｪ縺上梧昴＞謠上＞縺溘ン繧ｸ繝･繧｢繝ｫ繧堤ｰ｡蜊倥↓菴懊ｌ繧九咲せ縺ｫ辟ｦ轤ｹ繧貞ｽ薙※縺ｾ縺励◆縲Ａ
+            en: "The original copy focuses on the technology ('powerful prompts'). Japanese users connect more with the result they want to achieve. Instead of emphasizing technical terminology, we focused on creating beautiful images quickly and easily.",
+            jp: "蜈・・闍ｱ隱槭・縲悟ｼｷ蜉帙↑繝励Ο繝ｳ繝励ヨ縲阪→縺・≧謚陦謎ｻ墓ｧ倥↓辟ｦ轤ｹ繧貞ｽ薙※縺ｦ縺・∪縺吶ゅ＠縺九＠譌･譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｯ閾ｪ蛻・′驕疲・縺励◆縺・・譫懊↓蜈ｱ諢溘＠縺ｾ縺吶よ橿陦鍋畑隱槭ｒ繧｢繝斐・繝ｫ縺吶ｋ縺ｮ縺ｧ縺ｯ縺ｪ縺上梧昴＞謠上＞縺溘ン繧ｸ繝･繧｢繝ｫ繧堤ｰ｡蜊倥↓菴懊ｌ繧九咲せ縺ｫ辟ｦ轤ｹ繧貞ｽ薙※縺ｾ縺励◆縲・
         },
         culturalText: {
-            en: `Japanese User Tip: Many Japanese users are unfamiliar with technical AI terminology like 'prompts'. When introducing AI products in Japan, users respond better to clear, practical benefits. Describing the experience feels more natural than highlighting underlying tech.`,
-            jp: `縲先律譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｸ縺ｮ繝偵Φ繝医大､壹￥縺ｮ譌･譛ｬ莠ｺ繝ｦ繝ｼ繧ｶ繝ｼ縺ｯ縲後・繝ｭ繝ｳ繝励ヨ縲阪・繧医≧縺ｪAI蟆る摩逕ｨ隱槭↓鬥ｴ譟薙∩縺後≠繧翫∪縺帙ｓ縲よ律譛ｬ縺ｧAI陬ｽ蜩√ｒ邏ｹ莉九☆繧矩圀縺ｯ縲・屮隗｣縺ｪ謚陦謎ｻ墓ｧ倥ｈ繧翫ｂ逶ｴ諢溽噪縺ｪ菴馴ｨ薙ｄ莉穂ｸ翫′繧翫・濶ｯ縺輔ｒ莨昴∴繧区婿縺瑚ｦｪ縺励∩繧・☆縺城涸縺阪∪縺吶Ａ
+            en: "Japanese User Tip: Many Japanese users are unfamiliar with technical AI terminology like 'prompts'. Describing the experience feels more natural than highlighting underlying tech.",
+            jp: "縲先律譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｸ縺ｮ繝偵Φ繝医大､壹￥縺ｮ譌･譛ｬ莠ｺ繝ｦ繝ｼ繧ｶ繝ｼ縺ｯ縲後・繝ｭ繝ｳ繝励ヨ縲阪・繧医≧縺ｪ蟆る摩逕ｨ隱槭↓鬥ｴ譟薙∩縺後≠繧翫∪縺帙ｓ縲よ橿陦謎ｻ墓ｧ倥ｈ繧翫ｂ逶ｴ諢溽噪縺ｪ菴馴ｨ薙ｄ莉穂ｸ翫′繧翫・濶ｯ縺輔ｒ莨昴∴繧区婿縺瑚ｦｪ縺励∩繧・☆縺城涸縺阪∪縺吶・
         },
-        check1: { en: `Reduced technical jargon (prompts)`, jp: `髮｣隗｣縺ｪ謚陦鍋畑隱橸ｼ医・繝ｭ繝ｳ繝励ヨ遲会ｼ峨ｒ蜑頑ｸ嫣 },
-        check2: { en: `Focused on the user's desired outcome`, jp: `繝ｦ繝ｼ繧ｶ繝ｼ縺梧悍繧逅・Φ縺ｮ謌先棡縺ｫ辟ｦ轤ｹ繧貞崋螳啻 },
-        check3: { en: `Improved readability & approachability`, jp: `隱ｭ縺ｿ繧・☆縺輔→隕ｪ縺励∩繧・☆縺輔ｒ蜷台ｸ柿 },
-        check4: { en: `Used natural Japanese expressions`, jp: `閾ｪ辟ｶ縺ｪ譌･譛ｬ隱槭・繝九Η繧｢繝ｳ繧ｹ縺ｸ譏・庄` },
+        check1: { en: "Reduced technical jargon (prompts)", jp: "髮｣隗｣縺ｪ謚陦鍋畑隱橸ｼ医・繝ｭ繝ｳ繝励ヨ遲会ｼ峨ｒ蜑頑ｸ・ },
+        check2: { en: "Focused on the user's desired outcome", jp: "繝ｦ繝ｼ繧ｶ繝ｼ縺梧悍繧逅・Φ縺ｮ謌先棡縺ｫ辟ｦ轤ｹ繧貞崋螳・ },
+        check3: { en: "Improved readability & approachability", jp: "隱ｭ縺ｿ繧・☆縺輔→隕ｪ縺励∩繧・☆縺輔ｒ蜷台ｸ・ },
+        check4: { en: "Used natural Japanese expressions", jp: "閾ｪ辟ｶ縺ｪ譌･譛ｬ隱槭・繝九Η繧｢繝ｳ繧ｹ縺ｸ譏・庄" },
         takeaway: {
-            en: `"Localization is about creating trust, not just translating words."`,
-            jp: `縲後Ο繝ｼ繧ｫ繝ｩ繧､繧ｺ縺ｨ縺ｯ蜊倥↑繧玖ｨ闡峨・鄙ｻ險ｳ縺ｧ縺ｯ縺ｪ縺上√Θ繝ｼ繧ｶ繝ｼ縺ｨ縺ｮ縲惹ｿ｡鬆ｼ髢｢菫ゅ上ｒ蜑ｵ繧雁・縺吶％縺ｨ縺ｧ縺吶ゅ港
+            en: "\"Localization is about creating trust, not just translating words.\"",
+            jp: "縲後Ο繝ｼ繧ｫ繝ｩ繧､繧ｺ縺ｨ縺ｯ蜊倥↑繧玖ｨ闡峨・鄙ｻ險ｳ縺ｧ縺ｯ縺ｪ縺上√Θ繝ｼ繧ｶ繝ｼ縺ｨ縺ｮ縲惹ｿ｡鬆ｼ髢｢菫ゅ上ｒ蜑ｵ繧雁・縺吶％縺ｨ縺ｧ縺吶ゅ・
         }
     },
     sample3: {
-        title: { en: `Sample #03: Team Productivity Platform`, jp: `繧ｵ繝ｳ繝励Ν #03・壹メ繝ｼ繝逕溽肇諤ｧ繝励Λ繝・ヨ繝輔か繝ｼ繝` },
-        genre: `BUSINESS & SAAS LOCALIZATION`,
-        iconSvg: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
-        original: `"Manage projects, track tasks, and collaborate seamlessly with your team窶蚤ll in one workspace."`,
-        literal: `縲後・繝ｭ繧ｸ繧ｧ繧ｯ繝医ｒ邂｡逅・＠縲√ち繧ｹ繧ｯ繧定ｿｽ霍｡縺励√メ繝ｼ繝縺ｨ繧ｷ繝ｼ繝繝ｬ繧ｹ縺ｫ繧ｳ繝ｩ繝懊Ξ繝ｼ繧ｷ繝ｧ繝ｳ縺ｧ縺阪∪縺吶ゅ☆縺ｹ縺ｦ繧・縺､縺ｮ繝ｯ繝ｼ繧ｯ繧ｹ繝壹・繧ｹ縺ｧ縲ゅ港,
-        localized: `縲後・繝ｭ繧ｸ繧ｧ繧ｯ繝育ｮ｡逅・°繧峨ち繧ｹ繧ｯ蜈ｱ譛峨∪縺ｧ縲√％繧後・縺ｨ縺､縲・br>繝√・繝蜈ｨ蜩｡縺後√せ繝繝ｼ繧ｺ縺ｫ諠・ｱ繧貞・譛峨〒縺阪ｋ繝ｯ繝ｼ繧ｯ繧ｹ繝壹・繧ｹ縺ｧ縺吶ゅ港,
-        baOriginal: `Original: Collaborate seamlessly with your team.`,
-        baLocalized: `Japanese Copy: 繝√・繝蜈ｨ蜩｡縺後√せ繝繝ｼ繧ｺ縺ｫ諠・ｱ繧貞・譛峨〒縺阪∪縺吶Ａ,
-        whyTitle: { en: `Prioritize Clarity Over Buzzwords`, jp: `繝舌ぜ繝ｯ繝ｼ繝峨〒縺ｯ縺ｪ縺上悟・縺九ｊ繧・☆縺輔阪ｒ譛蜆ｪ蜈・ },
+        title: { en: "Sample #03: Team Productivity Platform", jp: "繧ｵ繝ｳ繝励Ν #03・壹メ繝ｼ繝逕溽肇諤ｧ繝励Λ繝・ヨ繝輔か繝ｼ繝" },
+        genre: "BUSINESS & SAAS LOCALIZATION",
+        iconSvg: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+        original: "\"Manage projects, track tasks, and collaborate seamlessly with your team窶蚤ll in one workspace.\"",
+        literal: "縲後・繝ｭ繧ｸ繧ｧ繧ｯ繝医ｒ邂｡逅・＠縲√ち繧ｹ繧ｯ繧定ｿｽ霍｡縺励√メ繝ｼ繝縺ｨ繧ｷ繝ｼ繝繝ｬ繧ｹ縺ｫ繧ｳ繝ｩ繝懊Ξ繝ｼ繧ｷ繝ｧ繝ｳ縺ｧ縺阪∪縺吶ゅ☆縺ｹ縺ｦ繧・縺､縺ｮ繝ｯ繝ｼ繧ｯ繧ｹ繝壹・繧ｹ縺ｧ縲ゅ・,
+        localized: "縲後・繝ｭ繧ｸ繧ｧ繧ｯ繝育ｮ｡逅・°繧峨ち繧ｹ繧ｯ蜈ｱ譛峨∪縺ｧ縲√％繧後・縺ｨ縺､縲・br>繝√・繝蜈ｨ蜩｡縺後√せ繝繝ｼ繧ｺ縺ｫ諠・ｱ繧貞・譛峨〒縺阪ｋ繝ｯ繝ｼ繧ｯ繧ｹ繝壹・繧ｹ縺ｧ縺吶ゅ・,
+        baOriginal: "Original: Collaborate seamlessly with your team.",
+        baLocalized: "Japanese Copy: 繝√・繝蜈ｨ蜩｡縺後√せ繝繝ｼ繧ｺ縺ｫ諠・ｱ繧貞・譛峨〒縺阪∪縺吶・,
+        whyTitle: { en: "Prioritize Clarity Over Buzzwords", jp: "繝舌ぜ繝ｯ繝ｼ繝峨〒縺ｯ縺ｪ縺上悟・縺九ｊ繧・☆縺輔阪ｒ譛蜆ｪ蜈・ },
         whyText: {
-            en: `The original copy uses marketing terms like 'seamlessly' and 'all in one'. Instead of translating those expressions literally, we rewrote the message to clearly explain what users can actually do.`,
-            jp: `蜈・・闍ｱ隱槭↓縺ｯ縲後す繝ｼ繝繝ｬ繧ｹ縺ｫ縲阪後が繝ｼ繝ｫ繧､繝ｳ繝ｯ繝ｳ縲阪→縺・▲縺滓歓雎｡逧・↑陦ｨ迴ｾ縺悟性縺ｾ繧後※縺・∪縺吶ゅ◎繧後ｉ繧堤峩險ｳ縺吶ｋ縺ｮ縺ｧ縺ｯ縺ｪ縺上後メ繝ｼ繝蜈ｨ蜩｡縺後せ繝繝ｼ繧ｺ縺ｫ諠・ｱ繧貞・譛峨〒縺阪ｋ縲阪→縺・≧蜈ｷ菴鍋噪縺ｪ蛻ｩ逕ｨ萓｡蛟､縺ｫ鄂ｮ縺肴鋤縺医∪縺励◆縲Ａ
+            en: "The original copy uses marketing terms like 'seamlessly' and 'all in one'. Instead of translating those expressions literally, we rewrote the message to clearly explain what users can actually do.",
+            jp: "蜈・・闍ｱ隱槭↓縺ｯ縲後す繝ｼ繝繝ｬ繧ｹ縺ｫ縲阪後が繝ｼ繝ｫ繧､繝ｳ繝ｯ繝ｳ縲阪→縺・▲縺滓歓雎｡逧・↑陦ｨ迴ｾ縺悟性縺ｾ繧後※縺・∪縺吶ゅ◎繧後ｉ繧堤峩險ｳ縺吶ｋ縺ｮ縺ｧ縺ｯ縺ｪ縺上後メ繝ｼ繝蜈ｨ蜩｡縺後せ繝繝ｼ繧ｺ縺ｫ諠・ｱ繧貞・譛峨〒縺阪ｋ縲阪→縺・≧蜈ｷ菴鍋噪縺ｪ蛻ｩ逕ｨ萓｡蛟､縺ｫ鄂ｮ縺肴鋤縺医∪縺励◆縲・
         },
         culturalText: {
-            en: `Japanese User Tip: In Japan, clear and practical explanations often perform better than vague marketing buzzwords. Clearly stating what users can accomplish creates immediate credibility.`,
-            jp: `縲先律譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｸ縺ｮ繝偵Φ繝医第律譛ｬ縺ｮBtoB繧・函逕｣諤ｧ繝・・繝ｫ蟶ょｴ縺ｧ縺ｯ縲∵歓雎｡逧・↑讓ｪ譁・ｭ励ヰ繧ｺ繝ｯ繝ｼ繝峨ｈ繧翫ｂ縲∝・菴鍋噪縺ｧ繧上°繧翫ｄ縺吶＞隱ｬ譏弱′螂ｽ縺ｾ繧後∪縺吶ゆｽ輔′縺ｧ縺阪ｋ縺九ｒ邇・峩縺ｫ莨昴∴繧九％縺ｨ縺ｧ縲∝ｰ主・縺ｸ縺ｮ螳牙ｿ・─繧堤函縺ｿ蜃ｺ縺励∪縺吶Ａ
+            en: "Japanese User Tip: In Japan, clear and practical explanations often perform better than vague marketing buzzwords.",
+            jp: "縲先律譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｸ縺ｮ繝偵Φ繝医第律譛ｬ縺ｮBtoB蟶ょｴ縺ｧ縺ｯ縲∵歓雎｡逧・↑讓ｪ譁・ｭ励ヰ繧ｺ繝ｯ繝ｼ繝峨ｈ繧翫ｂ縲∝・菴鍋噪縺ｧ繧上°繧翫ｄ縺吶＞隱ｬ譏弱′螂ｽ縺ｾ繧後∪縺吶・
         },
-        check1: { en: `Replaced abstract buzzwords with concrete benefits`, jp: `譖匁乂縺ｪ繝舌ぜ繝ｯ繝ｼ繝峨ｒ蜈ｷ菴鍋噪繝｡繝ｪ繝・ヨ縺ｸ霆｢謠嫣 },
-        check2: { en: `Improved natural Japanese sentence structure`, jp: `譌･譛ｬ隱槭→縺励※譛繧り・辟ｶ縺ｪ隱樣・∈蜀肴ｧ区・` },
-        check3: { en: `Emphasized ease of team collaboration`, jp: `繝√・繝騾｣謳ｺ縺ｮ繧ｹ繝繝ｼ繧ｺ縺輔ｒ蛻・°繧翫ｄ縺吶￥蠑ｷ隱ｿ` },
-        check4: { en: `Ensured a professional and credible tone`, jp: `繝薙ず繝阪せ蛻ｩ逕ｨ縺ｫ縺ｵ縺輔ｏ縺励＞菫｡鬆ｼ諢溘・縺ゅｋ繝医・繝ｳ` },
+        check1: { en: "Replaced abstract buzzwords with concrete benefits", jp: "譖匁乂縺ｪ繝舌ぜ繝ｯ繝ｼ繝峨ｒ蜈ｷ菴鍋噪繝｡繝ｪ繝・ヨ縺ｸ霆｢謠・ },
+        check2: { en: "Improved natural Japanese sentence structure", jp: "譌･譛ｬ隱槭→縺励※譛繧り・辟ｶ縺ｪ隱樣・∈蜀肴ｧ区・" },
+        check3: { en: "Emphasized ease of team collaboration", jp: "繝√・繝騾｣謳ｺ縺ｮ繧ｹ繝繝ｼ繧ｺ縺輔ｒ蛻・°繧翫ｄ縺吶￥蠑ｷ隱ｿ" },
+        check4: { en: "Ensured a professional and credible tone", jp: "繝薙ず繝阪せ蛻ｩ逕ｨ縺ｫ縺ｵ縺輔ｏ縺励＞菫｡鬆ｼ諢溘・縺ゅｋ繝医・繝ｳ" },
         takeaway: {
-            en: `"Clarity always converts better than buzzwords in Japan."`,
-            jp: `縲梧律譛ｬ蟶ょｴ縺ｧ縺ｯ縲・｣ｾ縺｣縺溘ヰ繧ｺ繝ｯ繝ｼ繝峨ｈ繧翫ｂ縲取・蠢ｫ縺ｪ蛻・°繧翫ｄ縺吶＆縲上′譛繧るｫ倥＞CV繧堤函縺ｿ蜃ｺ縺励∪縺吶ゅ港
+            en: "\"Clarity always converts better than buzzwords in Japan.\"",
+            jp: "縲梧律譛ｬ蟶ょｴ縺ｧ縺ｯ縲・｣ｾ縺｣縺溘ヰ繧ｺ繝ｯ繝ｼ繝峨ｈ繧翫ｂ縲取・蠢ｫ縺ｪ蛻・°繧翫ｄ縺吶＆縲上′譛繧るｫ倥＞CV繧堤函縺ｿ蜃ｺ縺励∪縺吶ゅ・
         }
     },
     sample4: {
-        title: { en: `Sample #04: Minimal Habit Tracker App`, jp: `繧ｵ繝ｳ繝励Ν #04・夂ｿ呈・繝医Λ繝・き繝ｼ繧｢繝励Μ` },
-        genre: `LIFESTYLE APP LOCALIZATION`,
-        iconSvg: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>`,
-        original: `"The smartest, most powerful habit tracker designed to help you build unbreakable daily routines."`,
-        literal: `縲梧怙繧りｳ｢縺丞ｼｷ蜉帙↑鄙呈・繝医Λ繝・き繝ｼ縲らｴ繧峨ｌ縺ｪ縺・ｯ取律縺ｮ繝ｫ繝ｼ繝・ぅ繝ｳ繧呈ｧ狗ｯ峨☆繧九・縺ｫ蠖ｹ遶九■縺ｾ縺吶ゅ港,
-        localized: `縲梧ｯ取律縺ｮ蟆上＆縺ｪ鄙呈・繧偵∫┌逅・↑縺冗ｶ咏ｶ壹・br>繧ｷ繝ｳ繝励Ν縺縺九ｉ邯壹￠繧峨ｌ繧九∵律縲・・陦悟虚邂｡逅・い繝励Μ縺ｧ縺吶ゅ港,
-        baOriginal: `Original: The smartest, most powerful habit tracker.`,
-        baLocalized: `Japanese Copy: 豈取律縺ｮ蟆上＆縺ｪ鄙呈・繧偵∫┌逅・↑縺冗ｶ咏ｶ壹Ａ,
-        whyTitle: { en: `Tone Down Exaggerated Claims`, jp: `螟ｧ縺偵＆縺ｪ陦ｨ迴ｾ繧呈椛縺医∬ｦｪ縺励∩繧・☆縺輔ｒ驥崎ｦ冒 },
+        title: { en: "Sample #04: Minimal Habit Tracker App", jp: "繧ｵ繝ｳ繝励Ν #04・夂ｿ呈・繝医Λ繝・き繝ｼ繧｢繝励Μ" },
+        genre: "LIFESTYLE APP LOCALIZATION",
+        iconSvg: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>',
+        original: "\"The smartest, most powerful habit tracker designed to help you build unbreakable daily routines.\"",
+        literal: "縲梧怙繧りｳ｢縺丞ｼｷ蜉帙↑鄙呈・繝医Λ繝・き繝ｼ縲らｴ繧峨ｌ縺ｪ縺・ｯ取律縺ｮ繝ｫ繝ｼ繝・ぅ繝ｳ繧呈ｧ狗ｯ峨☆繧九・縺ｫ蠖ｹ遶九■縺ｾ縺吶ゅ・,
+        localized: "縲梧ｯ取律縺ｮ蟆上＆縺ｪ鄙呈・繧偵∫┌逅・↑縺冗ｶ咏ｶ壹・br>繧ｷ繝ｳ繝励Ν縺縺九ｉ邯壹￠繧峨ｌ繧九∵律縲・・陦悟虚邂｡逅・い繝励Μ縺ｧ縺吶ゅ・,
+        baOriginal: "Original: The smartest, most powerful habit tracker.",
+        baLocalized: "Japanese Copy: 豈取律縺ｮ蟆上＆縺ｪ鄙呈・繧偵∫┌逅・↑縺冗ｶ咏ｶ壹・,
+        whyTitle: { en: "Tone Down Exaggerated Claims", jp: "螟ｧ縺偵＆縺ｪ陦ｨ迴ｾ繧呈椛縺医∬ｦｪ縺励∩繧・☆縺輔ｒ驥崎ｦ・ },
         whyText: {
-            en: `Claims like 'smartest' or 'unbreakable' can sound aggressive to Japanese users. Instead of strong superlatives, we used approachable, reassuring language that feels motivating and practical.`,
-            jp: `縲梧怙繧りｳ｢縺・阪檎ｴ繧峨ｌ縺ｪ縺・阪→縺・▲縺溷ｼｷ縺・ｪ・ｼｵ陦ｨ迴ｾ縺ｯ縲∵律譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｫ縺ｯ蟆代＠謚ｼ縺嶺ｻ倥￠縺後∪縺励￥諢溘§繧峨ｌ繧九％縺ｨ縺後≠繧翫∪縺吶よ怙荳顔ｴ夊｡ｨ迴ｾ繧呈而縺医√檎┌逅・↑縺冗ｶ壹￠繧峨ｌ繧九阪後す繝ｳ繝励Ν縲阪→縺・≧隕ｪ縺励∩繧・☆縺・ｮ牙ｿ・─繧帝㍾隕悶＠縺ｾ縺励◆縲Ａ
+            en: "Claims like 'smartest' or 'unbreakable' can sound aggressive to Japanese users. Instead of strong superlatives, we used approachable, reassuring language that feels motivating and practical.",
+            jp: "縲梧怙繧りｳ｢縺・阪檎ｴ繧峨ｌ縺ｪ縺・阪→縺・▲縺溷ｼｷ縺・ｪ・ｼｵ陦ｨ迴ｾ繧呈而縺医√檎┌逅・↑縺冗ｶ壹￠繧峨ｌ繧九阪後す繝ｳ繝励Ν縲阪→縺・≧隕ｪ縺励∩繧・☆縺・ｮ牙ｿ・─繧帝㍾隕悶＠縺ｾ縺励◆縲・
         },
         culturalText: {
-            en: `Japanese User Tip: Japanese users are generally more receptive to copy that demonstrates usefulness than copy that relies on superlatives like 'best', 'smartest', or 'No.1'. In Japan, users prefer to understand how a product improves their daily work before believing claims about being the 'best'. Reducing exaggerated claims makes a product feel more credible.`,
-            jp: `縲先律譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｸ縺ｮ繝偵Φ繝医第律譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｯ縲梧怙鬮倥阪君o.1縲阪梧怙繧りｳ｢縺・阪→縺・▲縺滓怙荳顔ｴ壹・陦ｨ迴ｾ繧医ｊ繧ゅ∝ｮ滄圀縺ｮ譛臥畑諤ｧ繧剃ｼ昴∴縺ｦ縺上ｌ繧九さ繝斐・繧貞･ｽ縺ｿ縺ｾ縺吶ょ膚蜩√′縲梧怙鬮倥阪□縺ｨ菫｡縺倥ｋ蜑阪↓縲∵律縲・・菴懈･ｭ縺後←縺・隼蝟・＆繧後ｋ縺九ｒ逅・ｧ｣縺励◆縺・→閠・∴縺ｾ縺吶りｪ・ｼｵ陦ｨ迴ｾ繧呈椛縺医ｋ縺薙→縺ｧ縲∬｣ｽ蜩√∈縺ｮ菫｡鬆ｼ諤ｧ縺後げ繝・→鬮倥∪繧翫∪縺吶Ａ
+            en: "Japanese User Tip: Japanese users are generally more receptive to copy that demonstrates usefulness than copy that relies on superlatives.",
+            jp: "縲先律譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｸ縺ｮ繝偵Φ繝医第律譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｯ譛荳顔ｴ夊｡ｨ迴ｾ繧医ｊ繧ゅ∵律縲・・菴懈･ｭ縺後←縺・隼蝟・＆繧後ｋ縺九→縺・≧邏榊ｾ玲─繧呈ｱゅａ縺ｾ縺吶・
         },
-        check1: { en: `Replaced bold marketing claims with practical benefits`, jp: `螟ｧ縺偵＆縺ｪ陦ｨ迴ｾ繧貞ｮ溯ｷｵ逧・↑繝吶ロ繝輔ぅ繝・ヨ縺ｸ鄂ｮ縺肴鋤縺・ },
-        check2: { en: `Built trust through a calmer tone`, jp: `關ｽ縺｡逹縺・◆繝医・繝ｳ縺ｧ隱螳溘↑菫｡鬆ｼ諢溘ｒ驢ｸ謌秦 },
-        check3: { en: `Adapted the message for Japanese expectations`, jp: `譌･譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｮ蠢・炊逧・悄蠕・↓蜷医ｏ縺帙※陦ｨ迴ｾ繧定ｪｿ謨ｴ` },
-        check4: { en: `Improved readability`, jp: `譁・ｫ縺ｮ繝ｪ繧ｺ繝縺ｨ隕冶ｪ肴ｧ繧貞髄荳柿 },
+        check1: { en: "Replaced bold marketing claims with practical benefits", jp: "螟ｧ縺偵＆縺ｪ陦ｨ迴ｾ繧貞ｮ溯ｷｵ逧・↑繝吶ロ繝輔ぅ繝・ヨ縺ｸ鄂ｮ縺肴鋤縺・ },
+        check2: { en: "Built trust through a calmer tone", jp: "關ｽ縺｡逹縺・◆繝医・繝ｳ縺ｧ隱螳溘↑菫｡鬆ｼ諢溘ｒ驢ｸ謌・ },
+        check3: { en: "Adapted the message for Japanese expectations", jp: "譌･譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｮ蠢・炊逧・悄蠕・↓蜷医ｏ縺帙※陦ｨ迴ｾ繧定ｪｿ謨ｴ" },
+        check4: { en: "Improved readability", jp: "譁・ｫ縺ｮ繝ｪ繧ｺ繝縺ｨ隕冶ｪ肴ｧ繧貞髄荳・ },
         takeaway: {
-            en: `"Great localization builds confidence before asking for trust."`,
-            jp: `縲悟━繧後◆繝ｭ繝ｼ繧ｫ繝ｩ繧､繧ｺ縺ｯ縲∽ｿ｡鬆ｼ繧呈ｱゅａ繧句燕縺ｫ縲√∪縺壹Θ繝ｼ繧ｶ繝ｼ縺ｫ螳牙ｿ・─・育ｴ榊ｾ玲─・峨ｒ荳弱∴縺ｾ縺吶ゅ港
+            en: "\"Great localization builds confidence before asking for trust.\"",
+            jp: "縲悟━繧後◆繝ｭ繝ｼ繧ｫ繝ｩ繧､繧ｺ縺ｯ縲∽ｿ｡鬆ｼ繧呈ｱゅａ繧句燕縺ｫ縲√∪縺壹Θ繝ｼ繧ｶ繝ｼ縺ｫ螳牙ｿ・─繧剃ｸ弱∴縺ｾ縺吶ゅ・
         }
     },
     sample5: {
-        title: { en: `Sample #05: AI Design App Store Listing`, jp: `繧ｵ繝ｳ繝励Ν #05・哂I繝・じ繧､繝ｳ繧｢繝励Μ 繧ｹ繝医い隱ｬ譏取枚` },
-        genre: `STORE LISTING LOCALIZATION`,
-        iconSvg: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>`,
-        original: `"Turn your ideas into beautiful designs with AI. Create logos, illustrations, social media posts, and marketing materials in minutes. No design experience required. Simply describe what you want, and let AI do the rest."`,
-        literal: `縲窟I縺ｧ縺ゅ↑縺溘・繧｢繧､繝・い繧堤ｾ弱＠縺・ョ繧ｶ繧､繝ｳ縺ｫ螟峨∴縺ｾ縺励ｇ縺・ゅΟ繧ｴ縲√う繝ｩ繧ｹ繝医ヾNS謚慕ｨｿ縲√・繝ｼ繧ｱ繝・ぅ繝ｳ繧ｰ邏譚舌ｒ謨ｰ蛻・〒菴懈・縺ｧ縺阪∪縺吶ゅョ繧ｶ繧､繝ｳ邨碁ｨ薙・蠢・ｦ√≠繧翫∪縺帙ｓ縲よｬｲ縺励＞繧ゅ・繧定ｪｬ譏弱☆繧九□縺代〒縲∵ｮ九ｊ縺ｯAI縺瑚｡後＞縺ｾ縺吶ゅ港,
-        localized: `縲後い繧､繝・い繧貞・蜉帙☆繧九□縺代〒縲・ｫ伜刀雉ｪ縺ｪ繝・じ繧､繝ｳ繧偵☆縺舌↓菴懈・縲・br>繝ｭ繧ｴ繧・う繝ｩ繧ｹ繝医ヾNS謚慕ｨｿ逕ｻ蜒上∝ｺ・相繧ｯ繝ｪ繧ｨ繧､繝・ぅ繝悶∪縺ｧ縲、I縺後せ繝斐・繝・ぅ繝ｼ縺ｫ逕滓・縺励∪縺吶・br>蟆る摩遏･隴倥ｄ繝・じ繧､繝ｳ邨碁ｨ薙・荳崎ｦ√ょ・繧√※縺ｮ譁ｹ縺ｧ繧ゅ∵昴＞騾壹ｊ縺ｮ繝・じ繧､繝ｳ繧堤ｰ｡蜊倥↓菴懊ｌ縺ｾ縺吶ゅ港,
-        baOriginal: `Original: No design experience required.`,
-        baLocalized: `Japanese Copy: 蟆る摩遏･隴倥ｄ繝・じ繧､繝ｳ邨碁ｨ薙・荳崎ｦ√ょ・繧√※縺ｮ譁ｹ縺ｧ繧ゅ∵昴＞騾壹ｊ縺ｮ繝・じ繧､繝ｳ繧堤ｰ｡蜊倥↓菴懊ｌ縺ｾ縺吶Ａ,
-        whyTitle: { en: `Make the Experience Feel More Reassuring`, jp: `菴馴ｨ薙ｒ繧医ｊ縲悟ｮ牙ｿ・〒縺阪ｋ繧ゅ・縲阪↓蜀肴ｧ狗ｯ荏 },
+        title: { en: "Sample #05: AI Design App Store Listing", jp: "繧ｵ繝ｳ繝励Ν #05・哂I繝・じ繧､繝ｳ繧｢繝励Μ 繧ｹ繝医い隱ｬ譏取枚" },
+        genre: "STORE LISTING LOCALIZATION",
+        iconSvg: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>',
+        original: "\"Turn your ideas into beautiful designs with AI. Create logos, illustrations, social media posts, and marketing materials in minutes. No design experience required. Simply describe what you want, and let AI do the rest.\"",
+        literal: "縲窟I縺ｧ縺ゅ↑縺溘・繧｢繧､繝・い繧堤ｾ弱＠縺・ョ繧ｶ繧､繝ｳ縺ｫ螟峨∴縺ｾ縺励ｇ縺・ゅΟ繧ｴ縲√う繝ｩ繧ｹ繝医ヾNS謚慕ｨｿ縲√・繝ｼ繧ｱ繝・ぅ繝ｳ繧ｰ邏譚舌ｒ謨ｰ蛻・〒菴懈・縺ｧ縺阪∪縺吶ゅョ繧ｶ繧､繝ｳ邨碁ｨ薙・蠢・ｦ√≠繧翫∪縺帙ｓ縲よｬｲ縺励＞繧ゅ・繧定ｪｬ譏弱☆繧九□縺代〒縲∵ｮ九ｊ縺ｯAI縺瑚｡後＞縺ｾ縺吶ゅ・,
+        localized: "縲後い繧､繝・い繧貞・蜉帙☆繧九□縺代〒縲・ｫ伜刀雉ｪ縺ｪ繝・じ繧､繝ｳ繧偵☆縺舌↓菴懈・縲・br>繝ｭ繧ｴ繧・う繝ｩ繧ｹ繝医ヾNS謚慕ｨｿ逕ｻ蜒上∝ｺ・相繧ｯ繝ｪ繧ｨ繧､繝・ぅ繝悶∪縺ｧ縲、I縺後せ繝斐・繝・ぅ繝ｼ縺ｫ逕滓・縺励∪縺吶・br>蟆る摩遏･隴倥ｄ繝・じ繧､繝ｳ邨碁ｨ薙・荳崎ｦ√ょ・繧√※縺ｮ譁ｹ縺ｧ繧ゅ∵昴＞騾壹ｊ縺ｮ繝・じ繧､繝ｳ繧堤ｰ｡蜊倥↓菴懊ｌ縺ｾ縺吶ゅ・,
+        baOriginal: "Original: No design experience required.",
+        baLocalized: "Japanese Copy: 蟆る摩遏･隴倥ｄ繝・じ繧､繝ｳ邨碁ｨ薙・荳崎ｦ√ょ・繧√※縺ｮ譁ｹ縺ｧ繧ゅ∵昴＞騾壹ｊ縺ｮ繝・じ繧､繝ｳ繧堤ｰ｡蜊倥↓菴懊ｌ縺ｾ縺吶・,
+        whyTitle: { en: "Make the Experience Feel More Reassuring", jp: "菴馴ｨ薙ｒ繧医ｊ縲悟ｮ牙ｿ・〒縺阪ｋ繧ゅ・縲阪↓蜀肴ｧ狗ｯ・ },
         whyText: {
-            en: `Rather than translating sentence by sentence, we reorganized the message to match how Japanese users evaluate apps: starting with the main benefit, adding practical examples, and finishing by reducing uncertainty for first-time users.`,
-            jp: `荳譁・★縺､逶ｴ險ｳ縺吶ｋ縺ｮ縺ｧ縺ｯ縺ｪ縺上∵律譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺後い繝励Μ繧定ｩ穂ｾ｡縺吶ｋ諤晁・・繝ｭ繧ｻ繧ｹ縺ｫ蜷医ｏ縺帙※諠・ｱ鬆・ｺ上ｒ蜀肴ｧ狗ｯ峨＠縺ｾ縺励◆縲ゅ後Γ繧､繝ｳ縺ｮ繝｡繝ｪ繝・ヨ縲坂・縲悟・菴鍋噪豢ｻ逕ｨ萓九坂・縲悟・繧√※縺ｮ譁ｹ縺ｸ縺ｮ荳榊ｮ画鴛諡ｭ縲阪→縺・≧豬√ｌ縺ｧ螳牙ｿ・─繧呈署萓帙＠縺ｦ縺・∪縺吶Ａ
+            en: "Rather than translating sentence by sentence, we reorganized the message to match how Japanese users evaluate apps: starting with the main benefit, adding practical examples, and finishing by reducing uncertainty for first-time users.",
+            jp: "荳譁・★縺､逶ｴ險ｳ縺吶ｋ縺ｮ縺ｧ縺ｯ縺ｪ縺上√後Γ繧､繝ｳ縺ｮ繝｡繝ｪ繝・ヨ縲坂・縲悟・菴鍋噪豢ｻ逕ｨ萓九坂・縲悟・繧√※縺ｮ譁ｹ縺ｸ縺ｮ荳榊ｮ画鴛諡ｭ縲阪→縺・≧豬√ｌ縺ｧ螳牙ｿ・─繧呈署萓帙＠縺ｦ縺・∪縺吶・
         },
         culturalText: {
-            en: `Japanese User Tip: Japanese users often look for reassurance before trying a new product. Adding a sentence that lowers psychological barriers (e.g. '蛻昴ａ縺ｦ縺ｮ譁ｹ縺ｧ繧ょｮ牙ｿ・) can increase trust and make the product feel much more approachable.`,
-            jp: `縲先律譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｸ縺ｮ繝偵Φ繝医第律譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｯ譁ｰ縺励＞繝励Ο繝繧ｯ繝医ｒ隧ｦ縺吝燕縺ｫ縲悟ｿ・炊逧・ｮ牙ｿ・阪ｒ豎ゅａ縺ｾ縺吶ゅ悟・繧√※縺ｮ譁ｹ縺ｧ繧らｰ｡蜊倥↓菴懊ｌ縺ｾ縺吶阪・繧医≧縺ｪ蠢・炊逧・ワ繝ｼ繝峨Ν繧剃ｸ九￡繧倶ｸ譁・ｒ蜉縺医ｋ縺薙→縺ｧ縲∽ｸ榊ｮ峨′蜥後ｉ縺弱∵ｼ谿ｵ縺ｫ蟆主・縺励ｄ縺吶￥縺ｪ繧翫∪縺吶Ａ
+            en: "Japanese User Tip: Adding a sentence that lowers psychological barriers (e.g. '蛻昴ａ縺ｦ縺ｮ譁ｹ縺ｧ繧ょｮ牙ｿ・) can increase trust.",
+            jp: "縲先律譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｸ縺ｮ繝偵Φ繝医代悟・繧√※縺ｮ譁ｹ縺ｧ繧ょｮ牙ｿ・阪→縺・≧蠢・炊逧・ワ繝ｼ繝峨Ν繧剃ｸ九￡繧倶ｸ譁・′縲∵ｼ谿ｵ縺ｫ蟆主・縺励ｄ縺吶￥縺励∪縺吶・
         },
-        check1: { en: `Reorganized the information flow logically`, jp: `諠・ｱ繝輔Ο繝ｼ繧呈律譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ諤晁・↓蜷医ｏ縺帙※蜀肴ｧ区・` },
-        check2: { en: `Reduced technical & feature emphasis`, jp: `謚陦薙い繝斐・繝ｫ繧呈椛縺井ｽｿ縺・ｄ縺吶＆繧貞ｼｷ隱ｿ` },
-        check3: { en: `Added reassurance for first-time users`, jp: `縲悟・繧√※縺ｮ譁ｹ縺ｧ繧ょｮ牙ｿ・阪→縺・≧蠢・炊逧・ｮ牙ｿ・─繧定ｿｽ蜉` },
-        check4: { en: `Improved readability & adapted market tone`, jp: `隱ｭ縺ｿ繧・☆縺輔→譌･譛ｬ蟶ょｴ蜷代￠繝医・繝ｳ縺ｮ譛驕ｩ蛹冒 },
+        check1: { en: "Reorganized the information flow logically", jp: "諠・ｱ繝輔Ο繝ｼ繧呈律譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ諤晁・↓蜷医ｏ縺帙※蜀肴ｧ区・" },
+        check2: { en: "Reduced technical & feature emphasis", jp: "謚陦薙い繝斐・繝ｫ繧呈椛縺井ｽｿ縺・ｄ縺吶＆繧貞ｼｷ隱ｿ" },
+        check3: { en: "Added reassurance for first-time users", jp: "縲悟・繧√※縺ｮ譁ｹ縺ｧ繧ょｮ牙ｿ・阪→縺・≧蠢・炊逧・ｮ牙ｿ・─繧定ｿｽ蜉" },
+        check4: { en: "Improved readability & adapted market tone", jp: "隱ｭ縺ｿ繧・☆縺輔→譌･譛ｬ蟶ょｴ蜷代￠繝医・繝ｳ縺ｮ譛驕ｩ蛹・ },
         takeaway: {
-            en: `"Good localization changes more than words. It improves order, tone, and message so your product feels naturally designed for Japanese users."`,
-            jp: `縲悟━繧後◆繝ｭ繝ｼ繧ｫ繝ｩ繧､繧ｺ縺ｯ蜊倩ｪ樔ｻ･荳翫・繧ゅ・繧貞､峨∴縺ｾ縺吶る・ｺ上・繝医・繝ｳ繝ｻ繝｡繝・そ繝ｼ繧ｸ繧呈紛縺医∬｣ｽ蜩√′縺ｾ繧九〒譌･譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｮ縺溘ａ縺ｫ險ｭ險医＆繧後◆縺九・繧医≧縺ｫ諢溘§縺輔○縺ｾ縺吶ゅ港
+            en: "\"Good localization changes more than words. It improves order, tone, and message so your product feels naturally designed for Japanese users.\"",
+            jp: "縲悟━繧後◆繝ｭ繝ｼ繧ｫ繝ｩ繧､繧ｺ縺ｯ蜊倩ｪ樔ｻ･荳翫・繧ゅ・繧貞､峨∴縺ｾ縺吶る・ｺ上・繝医・繝ｳ繝ｻ繝｡繝・そ繝ｼ繧ｸ繧呈紛縺医∬｣ｽ蜩√′縺ｾ繧九〒譌･譛ｬ縺ｮ繝ｦ繝ｼ繧ｶ繝ｼ縺ｮ縺溘ａ縺ｫ險ｭ險医＆繧後◆縺九・繧医≧縺ｫ諢溘§縺輔○縺ｾ縺吶ゅ・
         }
     }
 };
+
+function initCaseStudyTouchTabs() {
+    const csTabs = document.querySelectorAll('.case-study-tab');
+    csTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            const csId = tab.getAttribute('data-cs');
+            if (csId) {
+                switchCaseStudy(csId);
+            }
+        });
+    });
+}
 
 function switchCaseStudy(csId) {
     const tabs = document.querySelectorAll('.case-study-tab');
@@ -2874,7 +3017,7 @@ function switchCaseStudy(csId) {
     if (elTakeaway) elTakeaway.innerHTML = data.takeaway[lang] || data.takeaway.en;
 }
 
-/* 6. FAQ Accordion Toggle */
+/* 5. FAQ Accordion Toggle */
 function initFaqAccordion() {
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
@@ -2891,28 +3034,28 @@ function initFaqAccordion() {
     });
 }
 
-/* 7. Dynamic Modal Configurations & Handlers */
+/* 6. Dynamic Modal Configurations & Handlers */
 const modalConfigurations = {
     free_sample: {
         package: 'Free Sample',
-        badge: { en: 'RISK-FREE SAMPLE', jp: '\u304A\u8A66\u3057\u7121\u6599\u30B5\u30F3\u30D7\u30EB' },
-        title: { en: 'Get a Free Localization Sample', jp: '\u7121\u6599\u30ED\u30FC\u30AB\u30E9\u30A4\u30BA\u30B5\u30F3\u30D7\u30EB\u3092\u4F9D\u983C' },
-        desc: { en: "We'll localize part of your content for free before you decide! Send your URL or paste text below.", jp: '\u767A\u6CE8\u3092\u6C7A\u5B9A\u3059\u308B\u524D\u306B\u3001\u539F\u7A3F\u306E\u4E00\u90E8\u3092\u7121\u6599\u3067\u30ED\u30FC\u30AB\u30E9\u30A4\u30BA\u3057\u307E\u3059\u3002URL\u307E\u305F\u306F\u30C6\u30AD\u30B9\u30C8\u3092\u5165\u529B\u3057\u3066\u304F\u3060\u3055\u3044\u3002' },
-        submitText: { en: 'Get a Free Localization Sample', jp: '\u7121\u6599\u30B5\u30F3\u30D7\u30EB\u3092\u9001\u4FE1\u3059\u308B' }
+        badge: { en: 'RISK-FREE SAMPLE', jp: '縺願ｩｦ縺礼┌譁吶し繝ｳ繝励Ν' },
+        title: { en: 'Get a Free Localization Sample', jp: '辟｡譁吶Ο繝ｼ繧ｫ繝ｩ繧､繧ｺ繧ｵ繝ｳ繝励Ν繧剃ｾ晞ｼ' },
+        desc: { en: "We'll localize part of your content for free before you decide! Send your URL or paste text below.", jp: '逋ｺ豕ｨ繧呈ｱｺ螳壹☆繧句燕縺ｫ縲∝次遞ｿ縺ｮ荳驛ｨ繧堤┌譁吶〒繝ｭ繝ｼ繧ｫ繝ｩ繧､繧ｺ縺励∪縺吶６RL縺ｾ縺溘・繝・く繧ｹ繝医ｒ蜈･蜉帙＠縺ｦ縺上□縺輔＞縲・ },
+        submitText: { en: 'Get a Free Localization Sample', jp: '辟｡譁吶し繝ｳ繝励Ν繧帝∽ｿ｡縺吶ｋ' }
     },
     lp_pack: {
         package: 'Landing Page Copywriting ($299)',
-        badge: { en: 'WEB ADD-ON ($299)', jp: 'LP\u30B3\u30D4\u30FC\u5236\u4F5C\u30D1\u30C3\u30AF ($299)' },
-        title: { en: 'Order Landing Page Copywriting ($299)', jp: 'LP\u30B3\u30D4\u30FC\u30E9\u30A4\u30C6\u30A3\u30F3\u30B0 ($299) \u3092\u7533\u3057\u8FBC\u3080' },
-        desc: { en: 'Natural Japanese copywriting for your marketing LP, hero section, features, and FAQ (2-3 business days).', jp: '\u30DE\u30FC\u30B1\u30C6\u30A3\u30F3\u30B0LP\u306E\u30D2\u30FC\u30ED\u30FC\u3001\u7279\u5FB4\u3001FAQ\u306A\u3069\u30922\u301C3\u5586\u696D\u65E5\u3067\u81EA\u7136\u306A\u65E5\u672C\u8A9E\u3078\u30ED\u30FC\u30AB\u30E9\u30A4\u30BA\u3057\u307E\u3059\u3002' },
-        submitText: { en: 'Submit LP Order Request ($299)', jp: 'LP\u5236\u4F5C ($299) \u3092\u7533\u3057\u8FBC\u3080' }
+        badge: { en: 'WEB ADD-ON ($299)', jp: 'LP繧ｳ繝斐・蛻ｶ菴懊ヱ繝・け ($299)' },
+        title: { en: 'Order Landing Page Copywriting ($299)', jp: 'LP繧ｳ繝斐・繝ｩ繧､繝・ぅ繝ｳ繧ｰ ($299) 繧堤筏縺苓ｾｼ繧' },
+        desc: { en: 'Natural Japanese copywriting for your marketing LP, hero section, features, and FAQ (2窶・ business days).', jp: '繝槭・繧ｱ繝・ぅ繝ｳ繧ｰLP縺ｮ繝偵・繝ｭ繝ｼ縲∫音蠕ｴ縲：AQ縺ｪ縺ｩ繧・縲・蝟ｶ讌ｭ譌･縺ｧ閾ｪ辟ｶ縺ｪ譌･譛ｬ隱槭∈繝ｭ繝ｼ繧ｫ繝ｩ繧､繧ｺ縺励∪縺吶・ },
+        submitText: { en: 'Submit LP Order Request ($299)', jp: 'LP蛻ｶ菴・($299) 繧堤筏縺苓ｾｼ繧' }
     },
     custom_quote: {
         package: 'Website Localization (From $599)',
-        badge: { en: 'CUSTOM QUOTE', jp: '\u500B\u5225\u304A\u898B\u7A4D\u3082\u308A' },
-        title: { en: 'Request Website Localization Quote', jp: 'Web\u30B5\u30A4\u30C8\u5168\u4F53\u30ED\u30FC\u30AB\u30E9\u30A4\u30BA \u304A\u898B\u7A4D\u3082\u308A' },
-        desc: { en: "Tell us about your multi-page product site or app. We'll send a tailored proposal and quote within 24 hours.", jp: '\u8907\u6570\u30DA\u30FC\u30B8\u306E\u30D7\u30ED\u30C0\u30AF\u30C8\u30B5\u30A4\u30C8\u3084Web\u30A2\u30D7\u30EA\u306B\u3064\u3044\u3066\u304A\u77E5\u3089\u305B\u304F\u3060\u3055\u3044\u300224\u6642\u9593\u4EE5\u5185\u306B\u304A\u898B\u7A4D\u3082\u308A\u3092\u304A\u9001\u308A\u3057\u307E\u3059\u3002' },
-        submitText: { en: 'Request Custom Quote', jp: '\u7121\u6599\u898B\u7A4D\u3082\u308A\u3092\u4F9D\u983C\u3059\u308B' }
+        badge: { en: 'CUSTOM QUOTE', jp: '蛟句挨縺願ｦ狗ｩ阪ｂ繧・ },
+        title: { en: 'Request Website Localization Quote', jp: 'Web繧ｵ繧､繝亥・菴薙Ο繝ｼ繧ｫ繝ｩ繧､繧ｺ 縺願ｦ狗ｩ阪ｂ繧・ },
+        desc: { en: "Tell us about your multi-page product site or app. We'll send a tailored proposal and quote within 24 hours.", jp: '隍・焚繝壹・繧ｸ縺ｮ繝励Ο繝繧ｯ繝医し繧､繝医ｄWeb繧｢繝励Μ縺ｫ縺､縺・※縺顔衍繧峨○縺上□縺輔＞縲・4譎る俣莉･蜀・↓縺願ｦ狗ｩ阪ｂ繧翫ｒ縺企√ｊ縺励∪縺吶・ },
+        submitText: { en: 'Request Custom Quote', jp: '辟｡譁呵ｦ狗ｩ阪ｂ繧翫ｒ萓晞ｼ縺吶ｋ' }
     }
 };
 
@@ -2955,7 +3098,7 @@ function openCustomModal(mode = 'free_sample') {
     modal.classList.add('active');
 }
 
-function openSampleModal() {
+function openSampleModal(pkgName = '') {
     openCustomModal('free_sample');
 }
 
