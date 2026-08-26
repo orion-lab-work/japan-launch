@@ -2969,16 +2969,11 @@ document.addEventListener('click', (e) => {
 });
 
 
-/* Global FAQ Toggle Helper */
+/* Independent Multi-Open FAQ Toggle (Does not close other open items) */
 window.toggleFaq = function(element) {
-    const item = element.closest('.faq-item');
+    const item = element.classList.contains('faq-item') ? element : element.closest('.faq-item');
     if (!item) return;
-    const allItems = document.querySelectorAll('.faq-item');
-    const wasActive = item.classList.contains('active');
-    allItems.forEach(i => i.classList.remove('active'));
-    if (!wasActive) {
-        item.classList.add('active');
-    }
+    item.classList.toggle('active');
 };
 
 /* Dynamic Modal Extensions (Pure ASCII Unicode Escaped) */
