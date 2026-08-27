@@ -1857,9 +1857,129 @@ h1, h2, h3, h4 {
     line-height: 1.45;
 }
 
+/* LEGAL TABS & MODAL STYLES */
+.legal-tab-btn {
+    background: transparent;
+    border: 1px solid var(--border-pink);
+    padding: 6px 14px;
+    border-radius: 99px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.legal-tab-btn.active {
+    background: var(--coral-accent);
+    color: #FFFFFF;
+    border-color: var(--coral-accent);
+}
+
+/* 3-COLUMN CLEAN FOOTER */
+.site-footer {
+    background: #FFFFFF;
+    border-top: 1px solid var(--border-pink);
+    padding: 70px 0 30px;
+    color: var(--text-dark);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+.footer-logo {
+    height: 28px;
+    width: auto;
+}
+
+.footer-tagline {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 18px;
+    max-width: 320px;
+}
+
+.footer-contact {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.f-contact-mail {
+    color: var(--coral-accent);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.f-contact-mail:hover {
+    text-decoration: underline;
+}
+
+.footer-col-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--primary-indigo);
+    margin-bottom: 18px;
+    letter-spacing: 0.3px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links li a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links li a:hover {
+    color: var(--coral-accent);
+}
+
+.footer-trust-badge {
+    display: inline-block;
+    background: var(--bg-pink-soft);
+    color: var(--coral-accent);
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-pink);
+    padding-top: 24px;
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
 @media (max-width: 900px) {
     .why-japan-grid {
         grid-template-columns: 1fr;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 }
 </style>
@@ -2117,6 +2237,70 @@ h1, h2, h3, h4 {
         </section>
 
         <!-- 5-STEP PROCESS SECTION (作業の流れ) -->
+        <section class="section-why-japan" id="market">
+            <div class="container">
+                <div class="section-header center">
+                    <span class="badge-sub" data-en="Market Opportunity" data-jp="日本市場のポテンシャル">Market Opportunity</span>
+                    <h2 data-en="Why Japan? The #3 App Market in the World" data-jp="なぜ日本なのか？世界第3位の巨大アプリ市場">Why Japan? The #3 App Market in the World</h2>
+                    <p data-en="Japan is one of the highest-spending app economies globally, yet most foreign apps fail to convert due to poor translation." data-jp="日本は世界トップクラスの課金市場ですが、多くの海外アプリが「不自然な機械翻訳」によって大きな機会損失を起こしています。">Japan is one of the highest-spending app economies globally, yet most foreign apps fail to convert due to poor translation.</p>
+                </div>
+
+                <div class="why-japan-grid">
+                    
+                    <!-- Card 1: App Store Spend Ranking -->
+                    <div class="market-card">
+                        <div class="market-card-badge" data-en="#3 Globally" data-jp="世界第3位">#3 Globally</div>
+                        <h3 data-en="App Store Consumer Spend" data-jp="アプリストア年間消費額">App Store Consumer Spend</h3>
+                        <p class="market-card-desc" data-en="Japan consistently ranks as the #3 largest app economy worldwide, behind only the US and China." data-jp="日本は米国・中国に次ぐ世界第3位のアプリ市場規模を誇ります。">Japan consistently ranks as the #3 largest app economy worldwide, behind only the US and China.</p>
+                        
+                        <div class="market-bars">
+                            <div class="m-bar-row">
+                                <span class="m-bar-rank">1</span>
+                                <span class="m-bar-country">USA</span>
+                                <div class="m-bar-track"><div class="m-bar-fill bar-usa" style="width: 100%;"></div></div>
+                            </div>
+                            <div class="m-bar-row">
+                                <span class="m-bar-rank">2</span>
+                                <span class="m-bar-country">China</span>
+                                <div class="m-bar-track"><div class="m-bar-fill bar-china" style="width: 84%;"></div></div>
+                            </div>
+                            <div class="m-bar-row highlight">
+                                <span class="m-bar-rank">3</span>
+                                <span class="m-bar-country">Japan 🇯🇵</span>
+                                <div class="m-bar-track"><div class="m-bar-fill bar-japan" style="width: 70%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: High ARPPU -->
+                    <div class="market-card">
+                        <div class="market-card-badge" data-en="High Spending" data-jp="高課金単価">High Spending</div>
+                        <h3 data-en="High Spending Power (ARPPU)" data-jp="ユーザー平均課金額 (ARPPU)">High Spending Power (ARPPU)</h3>
+                        <p class="market-card-desc" data-en="Japanese users have exceptional loyalty and high willingness to pay for well-crafted productivity apps." data-jp="日本のユーザーは信頼できる高品質なアプリに対して高いサブスク継続率を持ちます。">Japanese users have exceptional loyalty and high willingness to pay for well-crafted productivity apps.</p>
+                        
+                        <div class="market-metric-box">
+                            <div class="metric-val-large">~2.2x</div>
+                            <div class="metric-label" data-en="Higher spending per paying user compared to EU average" data-jp="欧州平均と比較した課金ユーザーあたりの消費額">Higher spending per paying user compared to EU average</div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Blue Ocean Opportunity -->
+                    <div class="market-card">
+                        <div class="market-card-badge" data-en="Blue Ocean" data-jp="ブルーオーシャン">Blue Ocean</div>
+                        <h3 data-en="Massive Language Barrier" data-jp="90%の言語障壁 ＝ チャンス">Massive Language Barrier</h3>
+                        <p class="market-card-desc" data-en="Over 90% of Japanese users abandon apps that aren't natively localized. High quality copywriting turns this into your unfair advantage." data-jp="90%以上の日本人が英語のままのアプリを離脱します。自然な日本語化を行うだけで、競合のいない市場で一人勝ちできます。">Over 90% of Japanese users abandon apps that aren't natively localized. High quality copywriting turns this barrier into your unfair advantage.</p>
+                        
+                        <div class="market-stat-callout">
+                            <div class="callout-circle">90%+</div>
+                            <div class="callout-text" data-en="Users prefer natively localized apps over English-only competitors" data-jp="英語のみの競合よりも完全日本語化されたアプリを優先選択">Users prefer natively localized apps over English-only competitors</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
         <section class="section-process" id="how-it-works">
             <div class="container">
                 <div class="section-header center">
@@ -2691,6 +2875,50 @@ h1, h2, h3, h4 {
     </div>
 
     <!-- Free Sample Request Modal (Configured for User's Formspree Endpoint: https://formspree.io/f/mdaqwlke) -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand -->
+                <div class="footer-col footer-brand-col">
+                    <a href="#hero" class="footer-brand">
+                        <span class="logo-text" style="font-size: 1.25rem; font-weight: 900; color: var(--primary-indigo);">Japan<span class="logo-accent" style="color: var(--coral-accent);">Launch</span> ・・</span>
+                    </a>
+                    <p class="footer-tagline" data-en="Native Japanese Localization & App Store Optimization for Indie Makers and Global Apps." data-jp="豬ｷ螟悶う繝ｳ繝・ぅ繝ｼ髢狗匱閠・・繧ｰ繝ｭ繝ｼ繝舌Ν繧｢繝励Μ縺ｮ縺溘ａ縺ｮ譌･譛ｬ蟶ょｴ迚ｹ蛹悶Ο繝ｼ繧ｫ繝ｩ繧､繧ｺ ・・ASO譛驕ｩ蛹悶・>Native Japanese Localization & App Store Optimization for Indie Makers and Global Apps.</p>
+                    <div class="footer-contact">
+                        <span class="f-contact-label">Direct Contact: </span>
+                        <a href="mailto:contact@jp-launch.com" class="f-contact-mail">contact@jp-launch.com</a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Services -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title" data-en="Services" data-jp="繧ｵ繝ｼ繝薙せ荳隕ｧ">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="javascript:void(0)" onclick="openSampleModal('App Store Copywriting ($199)')">App Store Pack ($199)</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSampleModal('Landing Page Copywriting ($299)')">Marketing LP ($299)</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSampleModal('Website & Web App Localization (From $599)')">Web & App UI (From $599)</a></li>
+                        <li><a href="javascript:void(0)" onclick="openSampleModal('free_sample')">Get Free Sample</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Legal & Trust -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title" data-en="Legal & Trust" data-jp="隕冗ｴ・・螳牙ｿ・ｿ晁ｨｼ">Legal & Trust</h4>
+                    <ul class="footer-links">
+                        <li><a href="javascript:void(0)" onclick="openLegalModal('privacy')">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)" onclick="openLegalModal('terms')">Terms of Service</a></li>
+                        <li><a href="javascript:void(0)" onclick="openLegalModal('refund')">Refund & Revisions (1 Free)</a></li>
+                        <li><span class="footer-trust-badge">100% IP Ownership Transfer</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Japan Launch. Crafted for global founders entering the Japanese market.</p>
+            </div>
+        </div>
+    </footer>
+
     <div class="modal-overlay" id="sampleModal">
         <div class="modal-card">
             <button class="modal-close" onclick="closeSampleModal()">&times;</button>
@@ -2742,7 +2970,82 @@ h1, h2, h3, h4 {
     </div>
 
 
-    <!-- JS (Explicit Relative Path) -->
+    <!-- Legal Modal Overlay -->
+<div class="modal-overlay" id="legalModal" style="display: none;">
+    <div class="modal-card legal-modal-card" style="max-width: 680px; max-height: 85vh; display: flex; flex-direction: column;">
+        <button class="modal-close" onclick="closeLegalModal()">&times;</button>
+        
+        <div class="legal-modal-header" style="text-align: left; border-bottom: 1px solid var(--border-pink); padding-bottom: 16px; margin-bottom: 16px;">
+            <div class="legal-tabs" style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <button class="legal-tab-btn active" onclick="switchLegalTab('privacy')">Privacy Policy</button>
+                <button class="legal-tab-btn" onclick="switchLegalTab('terms')">Terms of Service</button>
+                <button class="legal-tab-btn" onclick="switchLegalTab('refund')">Refund & Revisions</button>
+            </div>
+        </div>
+
+        <div class="legal-modal-body" style="overflow-y: auto; padding-right: 8px; flex-grow: 1; font-size: 0.88rem; line-height: 1.65; color: var(--text-dark);">
+            
+            <!-- Tab 1: Privacy Policy -->
+            <div class="legal-tab-pane active" id="pane-privacy">
+                <h3 style="font-size: 1.25rem; color: var(--primary-indigo); margin-bottom: 12px;">Privacy Policy</h3>
+                <p style="margin-bottom: 12px; color: var(--text-muted);">Last Updated: August 2026</p>
+                
+                <h4 style="font-size: 0.95rem; color: var(--primary-indigo); margin-top: 16px; margin-bottom: 6px;">1. Information We Collect</h4>
+                <p>We only collect information you voluntarily provide to us when requesting a free localization sample, custom quote, or placing an order. This includes your name, email address, app/website URL, and any project notes.</p>
+
+                <h4 style="font-size: 0.95rem; color: var(--primary-indigo); margin-top: 16px; margin-bottom: 6px;">2. How We Use Your Information</h4>
+                <p>We use your information solely to:</p>
+                <ul style="padding-left: 20px; margin-bottom: 12px;">
+                    <li>Deliver localization samples, proposals, and completed deliverables.</li>
+                    <li>Communicate regarding your project, revisions, and order updates.</li>
+                    <li>Process payments securely via verified third-party payment providers (PayPal / Stripe).</li>
+                </ul>
+
+                <h4 style="font-size: 0.95rem; color: var(--primary-indigo); margin-top: 16px; margin-bottom: 6px;">3. Data Protection & Sharing</h4>
+                <p>We never sell, rent, or trade your personal or project data with third parties. Your unreleased app details, source text, and correspondence remain strictly confidential.</p>
+
+                <h4 style="font-size: 0.95rem; color: var(--primary-indigo); margin-top: 16px; margin-bottom: 6px;">4. Contact Us</h4>
+                <p>For any privacy inquiries or to request data deletion, contact us at: <strong>contact@jp-launch.com</strong></p>
+            </div>
+
+            <!-- Tab 2: Terms of Service -->
+            <div class="legal-tab-pane" id="pane-terms" style="display: none;">
+                <h3 style="font-size: 1.25rem; color: var(--primary-indigo); margin-bottom: 12px;">Terms of Service</h3>
+                <p style="margin-bottom: 12px; color: var(--text-muted);">Last Updated: August 2026</p>
+
+                <h4 style="font-size: 0.95rem; color: var(--primary-indigo); margin-top: 16px; margin-bottom: 6px;">1. Services Provided</h4>
+                <p>Japan Launch provides Japanese localization, App Store Optimization (ASO) copywriting, and landing page copywriting services for international mobile apps, software, and web applications.</p>
+
+                <h4 style="font-size: 0.95rem; color: var(--primary-indigo); margin-top: 16px; margin-bottom: 6px;">2. 100% Intellectual Property & Copyright Transfer</h4>
+                <p>Upon receipt of full payment, <strong>100% of all intellectual property rights, commercial rights, and copyrights</strong> of the localized Japanese copy, keywords, and text deliverables are fully transferred to the client. You own the copy forever with no royalty requirements.</p>
+
+                <h4 style="font-size: 0.95rem; color: var(--primary-indigo); margin-top: 16px; margin-bottom: 6px;">3. Delivery & Formats</h4>
+                <p>Standard delivery is within 2 to 3 business days, provided in clean Google Docs, Word, or Markdown format (or i18n JSON files for web apps).</p>
+
+                <h4 style="font-size: 0.95rem; color: var(--primary-indigo); margin-top: 16px; margin-bottom: 6px;">4. Disclaimer</h4>
+                <p>While we optimize copy to the highest cultural and conversion standards, download rates and App Store ranking algorithms are subject to Apple/Google platform policies and overall market dynamics.</p>
+            </div>
+
+            <!-- Tab 3: Refund & Revisions Policy -->
+            <div class="legal-tab-pane" id="pane-refund" style="display: none;">
+                <h3 style="font-size: 1.25rem; color: var(--primary-indigo); margin-bottom: 12px;">Refund & Revision Policy</h3>
+                <p style="margin-bottom: 12px; color: var(--text-muted);">Last Updated: August 2026</p>
+
+                <h4 style="font-size: 0.95rem; color: var(--primary-indigo); margin-top: 16px; margin-bottom: 6px;">1. 1 Free Revision Included</h4>
+                <p>Every delivered package includes <strong>1 free revision round within 7 days of delivery</strong>. If you need tone adjustments, specific feature re-emphasis, or keyword tweaks, we will refine the deliverable based on your unified feedback.</p>
+
+                <h4 style="font-size: 0.95rem; color: var(--primary-indigo); margin-top: 16px; margin-bottom: 6px;">2. Additional Revisions & Major Updates</h4>
+                <p>Subsequent revision rounds (beyond the 1st included round) or requests made after the 7-day window are available as lightweight paid add-ons (starting from $49). We also provide ongoing support for your future major app updates.</p>
+
+                <h4 style="font-size: 0.95rem; color: var(--primary-indigo); margin-top: 16px; margin-bottom: 6px;">3. Refund Policy</h4>
+                <p>Due to the custom creative nature of copywriting and localization deliverables, orders cannot be refunded once drafting work has commenced. However, if a deliverable does not match the agreed scope after your included revision, we will work with you to resolve the matter fairly.</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
     <script>
 /* ==========================================================================
    Japan Launch - Main JavaScript Logic (v18 Formspree Integration)
@@ -3147,6 +3450,43 @@ window.toggleFaq = function(element) {
     const item = element.classList.contains('faq-item') ? element : element.closest('.faq-item');
     if (!item) return;
     item.classList.toggle('active');
+};
+
+/* Legal Modal Controls */
+window.openLegalModal = function(tabName = 'privacy') {
+    const modal = document.getElementById('legalModal');
+    if (!modal) return;
+    modal.style.display = 'flex';
+    modal.classList.add('active');
+    switchLegalTab(tabName);
+};
+
+window.closeLegalModal = function() {
+    const modal = document.getElementById('legalModal');
+    if (!modal) return;
+    modal.classList.remove('active');
+    setTimeout(() => { modal.style.display = 'none'; }, 300);
+};
+
+window.switchLegalTab = function(tabName) {
+    const buttons = document.querySelectorAll('.legal-tab-btn');
+    const panes = document.querySelectorAll('.legal-tab-pane');
+
+    buttons.forEach(btn => {
+        if (btn.getAttribute('onclick').includes(tabName)) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+
+    panes.forEach(pane => {
+        if (pane.id === 'pane-' + tabName) {
+            pane.style.display = 'block';
+        } else {
+            pane.style.display = 'none';
+        }
+    });
 };
 
 /* Dynamic Modal Configurations (Pure ASCII Unicode Escaped) */
