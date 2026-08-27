@@ -1876,19 +1876,26 @@ h1, h2, h3, h4 {
     border-color: var(--coral-accent);
 }
 
-/* 3-COLUMN CLEAN FOOTER */
+/* BULLETPROOF 3-COLUMN FOOTER */
 .site-footer {
-    background: #FFFFFF;
-    border-top: 1px solid var(--border-pink);
-    padding: 70px 0 30px;
-    color: var(--text-dark);
+    background: #FFFFFF !important;
+    border-top: 1px solid var(--border-pink) !important;
+    padding: 60px 0 30px !important;
+    color: var(--text-dark) !important;
+    width: 100% !important;
+}
+
+.site-footer .container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
 .footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 50px;
-    margin-bottom: 50px;
+    display: grid !important;
+    grid-template-columns: 2fr 1.2fr 1.2fr !important;
+    gap: 40px !important;
+    margin-bottom: 40px !important;
 }
 
 .footer-brand {
@@ -1896,20 +1903,15 @@ h1, h2, h3, h4 {
     align-items: center;
     gap: 8px;
     text-decoration: none;
-    margin-bottom: 16px;
-}
-
-.footer-logo {
-    height: 28px;
-    width: auto;
+    margin-bottom: 12px;
 }
 
 .footer-tagline {
     font-size: 0.88rem;
     color: var(--text-muted);
     line-height: 1.6;
-    margin-bottom: 18px;
-    max-width: 320px;
+    margin-bottom: 16px;
+    max-width: 340px;
 }
 
 .footer-contact {
@@ -1931,7 +1933,7 @@ h1, h2, h3, h4 {
     font-size: 0.95rem;
     font-weight: 800;
     color: var(--primary-indigo);
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     letter-spacing: 0.3px;
 }
 
@@ -1973,13 +1975,13 @@ h1, h2, h3, h4 {
     color: var(--text-muted);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 860px) {
     .why-japan-grid {
         grid-template-columns: 1fr;
     }
     .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
     }
 }
 </style>
@@ -2881,7 +2883,7 @@ h1, h2, h3, h4 {
                 <!-- Column 1: Brand -->
                 <div class="footer-col footer-brand-col">
                     <a href="#hero" class="footer-brand">
-                        <span class="logo-text" style="font-size: 1.25rem; font-weight: 900; color: var(--primary-indigo);">Japan<span class="logo-accent" style="color: var(--coral-accent);">Launch</span> ・・</span>
+                        <span style="font-size: 1.3rem; font-weight: 900; color: var(--primary-indigo); font-family: var(--font-heading);">Japan<span style="color: var(--coral-accent);">Launch</span></span>
                     </a>
                     <p class="footer-tagline" data-en="Native Japanese Localization & App Store Optimization for Indie Makers and Global Apps." data-jp="豬ｷ螟悶う繝ｳ繝・ぅ繝ｼ髢狗匱閠・・繧ｰ繝ｭ繝ｼ繝舌Ν繧｢繝励Μ縺ｮ縺溘ａ縺ｮ譌･譛ｬ蟶ょｴ迚ｹ蛹悶Ο繝ｼ繧ｫ繝ｩ繧､繧ｺ ・・ASO譛驕ｩ蛹悶・>Native Japanese Localization & App Store Optimization for Indie Makers and Global Apps.</p>
                     <div class="footer-contact">
