@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F19"/>
+      <stop offset="50%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1F293D"/>
+    </linearGradient>
+    <linearGradient id="blueGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <filter id="cardShadow2" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bgGrad2)"/>
+
+  <!-- Subtle Grid Pattern -->
+  <g opacity="0.06" stroke="#FFFFFF" stroke-width="1">
+    <line x1="0" y1="135" x2="1200" y2="135"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="405" x2="1200" y2="405"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+    <line x1="300" y1="0" x2="300" y2="675"/>
+    <line x1="600" y1="0" x2="600" y2="675"/>
+    <line x1="900" y1="0" x2="900" y2="675"/>
+  </g>
+
+  <!-- Top Category Pill & English Main Title -->
+  <rect x="60" y="32" width="370" height="28" rx="14" fill="rgba(56, 189, 248, 0.15)" stroke="#38BDF8" stroke-width="1"/>
+  <text x="75" y="51" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#7DD3FC" letter-spacing="1">SAMPLE #02: UI/UX TYPOGRAPHY &amp; LINE-BREAKS</text>
+  
+  <text x="60" y="94" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif" font-size="26" font-weight="800" fill="#FFFFFF">How Mid-Word Line Breaks Signal an Amateur App to Japanese Users</text>
+  <text x="60" y="120" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600" fill="#94A3B8">Original English: "Chatbox: From AI chat to Agent workflows, ready to use. Built for deeper work."</text>
+
+  <!-- LEFT CARD: BEFORE -->
+  <g transform="translate(60, 140)" filter="url(#cardShadow2)">
+    <!-- Card Container -->
+    <rect width="520" height="490" rx="18" fill="#151A28" stroke="#EF4444" stroke-width="1.5"/>
+    
+    <!-- Window Bar -->
+    <rect width="520" height="42" rx="18" fill="#0F131E"/>
+    <rect y="24" width="520" height="18" fill="#0F131E"/>
+    <circle cx="24" cy="21" r="5" fill="#FF5F56"/>
+    <circle cx="42" cy="21" r="5" fill="#FFBD2E"/>
+    <circle cx="60" cy="21" r="5" fill="#27C93F"/>
+    
+    <!-- Status Badge -->
+    <rect x="235" y="8" width="270" height="26" rx="13" fill="rgba(239, 68, 68, 0.2)" stroke="#EF4444" stroke-width="1"/>
+    <text x="370" y="25" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="800" fill="#F87171" text-anchor="middle">❌ BEFORE: BROKEN LINE BREAKS</text>
+
+    <!-- App Screen Inside -->
+    <g transform="translate(30, 60)">
+      <!-- App Shell Box -->
+      <rect width="460" height="290" rx="14" fill="#1E293B"/>
+      
+      <!-- Top App Bar -->
+      <rect width="460" height="38" rx="14" fill="#0F172A"/>
+      <rect y="22" width="460" height="16" fill="#0F172A"/>
+      <text x="20" y="24" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#94A3B8">AI Desktop App / Productivity Tool</text>
+      
+      <!-- Awkward Broken Text Box -->
+      <g transform="translate(25, 60)">
+        <rect width="410" height="120" rx="8" fill="rgba(239, 68, 68, 0.1)" stroke="#EF4444" stroke-dasharray="4 2"/>
+        <text x="18" y="32" font-family="'Noto Sans JP', sans-serif" font-size="16" font-weight="700" fill="#FCA5A5">AIチャットから Agent 作業ま</text>
+        <text x="18" y="58" font-family="'Noto Sans JP', sans-serif" font-size="16" font-weight="800" fill="#EF4444">で、</text>
+        <text x="50" y="58" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#EF4444">(Split mid-word "まで")</text>
+        <text x="18" y="86" font-family="'Noto Sans JP', sans-serif" font-size="15" fill="#CBD5E1">すぐに使える（より深い作業のために構築）</text>
+      </g>
+      
+      <g transform="translate(25, 200)">
+        <rect width="180" height="42" rx="8" fill="#334155"/>
+        <text x="90" y="26" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Download for macOS</text>
+      </g>
+    </g>
+
+    <!-- English Explanation Note -->
+    <g transform="translate(30, 375)">
+      <rect width="460" height="95" rx="10" fill="rgba(239, 68, 68, 0.12)" stroke="rgba(239, 68, 68, 0.35)" stroke-width="1"/>
+      <text x="18" y="24" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800" fill="#FFA3A3">WHY THIS FAILS IN JAPANESE:</text>
+      <text x="18" y="46" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#FFFFFF">English CSS word-breaks split Japanese characters mid-word</text>
+      <text x="18" y="66" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#FFFFFF">("作業ま / で、"). To Japanese users, this immediately screams</text>
+      <text x="18" y="84" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#E2E8F0">"untested machine translation" and damages technical trust.</text>
+    </g>
+  </g>
+
+  <!-- RIGHT CARD: AFTER -->
+  <g transform="translate(620, 140)" filter="url(#cardShadow2)">
+    <!-- Card Container -->
+    <rect width="520" height="490" rx="18" fill="#151A28" stroke="#10B981" stroke-width="2"/>
+    
+    <!-- Window Bar -->
+    <rect width="520" height="42" rx="18" fill="#0F131E"/>
+    <rect y="24" width="520" height="18" fill="#0F131E"/>
+    <circle cx="24" cy="21" r="5" fill="#FF5F56"/>
+    <circle cx="42" cy="21" r="5" fill="#FFBD2E"/>
+    <circle cx="60" cy="21" r="5" fill="#27C93F"/>
+    
+    <!-- Status Badge -->
+    <rect x="235" y="8" width="270" height="26" rx="13" fill="rgba(16, 185, 129, 0.2)" stroke="#10B981" stroke-width="1"/>
+    <text x="370" y="25" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="800" fill="#34D399" text-anchor="middle">✔ AFTER: JAPAN LAUNCH NATIVE COPY</text>
+
+    <!-- App Screen Inside -->
+    <g transform="translate(30, 60)">
+      <!-- App Shell Box -->
+      <rect width="460" height="290" rx="14" fill="#1E293B"/>
+      
+      <!-- Top App Bar -->
+      <rect width="460" height="38" rx="14" fill="#0F172A"/>
+      <rect y="22" width="460" height="16" fill="#0F172A"/>
+      <text x="20" y="24" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#94A3B8">AI Desktop App / Productivity Tool</text>
+      
+      <!-- Clean Responsive Copy -->
+      <g transform="translate(25, 60)">
+        <rect width="410" height="120" rx="8" fill="rgba(16, 185, 129, 0.08)" stroke="#10B981" stroke-width="1.5"/>
+        <text x="18" y="34" font-family="'Noto Sans JP', sans-serif" font-size="16" font-weight="700" fill="#E2E8F0">AIチャットからAgent作業まで、すぐに使える。</text>
+        <text x="18" y="62" font-family="'Noto Sans JP', sans-serif" font-size="15" font-weight="600" fill="#A7F3D0">より深い作業や思考にも、しっかり応える設計。</text>
+        <text x="18" y="94" font-family="'Segoe UI', sans-serif" font-size="12" fill="#6EE7B7">Typographic phrase rhythm matched to natural Japanese reading.</text>
+      </g>
+      
+      <g transform="translate(25, 200)">
+        <rect width="210" height="42" rx="8" fill="url(#blueGrad2)"/>
+        <text x="105" y="26" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Mac版を無料でダウンロード</text>
+      </g>
+    </g>
+
+    <!-- English Explanation Note -->
+    <g transform="translate(30, 375)">
+      <rect width="460" height="95" rx="10" fill="rgba(16, 185, 129, 0.12)" stroke="rgba(16, 185, 129, 0.35)" stroke-width="1"/>
+      <text x="18" y="24" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800" fill="#34D399">WHAT WE FIXED &amp; WHY IT CONVERTS:</text>
+      <text x="18" y="46" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#FFFFFF">Optimized phrase character lengths to prevent awkward wrapping.</text>
+      <text x="18" y="66" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#FFFFFF">Preserved the product's core identity ("Agent") naturally.</text>
+      <text x="18" y="84" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#E2E8F0">Polished stiff literal prose ("built for") into comforting quality.</text>
+    </g>
+  </g>
+</svg>

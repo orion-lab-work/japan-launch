@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bgGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F111A"/>
+      <stop offset="50%" stop-color="#181A2A"/>
+      <stop offset="100%" stop-color="#242740"/>
+    </linearGradient>
+    <linearGradient id="coralGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6584"/>
+      <stop offset="100%" stop-color="#E85078"/>
+    </linearGradient>
+    <filter id="cardShadow1" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bgGrad1)"/>
+
+  <!-- Subtle Grid Pattern -->
+  <g opacity="0.06" stroke="#FFFFFF" stroke-width="1">
+    <line x1="0" y1="135" x2="1200" y2="135"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="405" x2="1200" y2="405"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+    <line x1="300" y1="0" x2="300" y2="675"/>
+    <line x1="600" y1="0" x2="600" y2="675"/>
+    <line x1="900" y1="0" x2="900" y2="675"/>
+  </g>
+
+  <!-- Top Category Pill & English Main Title -->
+  <rect x="60" y="32" width="370" height="28" rx="14" fill="rgba(232, 80, 120, 0.15)" stroke="#E85078" stroke-width="1"/>
+  <text x="75" y="51" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#FF8BA7" letter-spacing="1">SAMPLE #01: SAAS CHECKOUT &amp; UPGRADE FLOW</text>
+  
+  <text x="60" y="94" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif" font-size="26" font-weight="800" fill="#FFFFFF">How Awkward Japanese Button Copy Kills Paid Conversions</text>
+  <text x="60" y="120" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600" fill="#94A3B8">Original English: "Get more with Premium. Work your way. Get Premium."</text>
+
+  <!-- LEFT CARD: BEFORE -->
+  <g transform="translate(60, 140)" filter="url(#cardShadow1)">
+    <!-- Card Container -->
+    <rect width="520" height="490" rx="18" fill="#1C1E2E" stroke="#FF4D4D" stroke-width="1.5"/>
+    
+    <!-- Window Bar -->
+    <rect width="520" height="42" rx="18" fill="#161824"/>
+    <rect y="24" width="520" height="18" fill="#161824"/>
+    <circle cx="24" cy="21" r="5" fill="#FF5F56"/>
+    <circle cx="42" cy="21" r="5" fill="#FFBD2E"/>
+    <circle cx="60" cy="21" r="5" fill="#27C93F"/>
+    
+    <!-- Status Badge -->
+    <rect x="235" y="8" width="270" height="26" rx="13" fill="rgba(255, 77, 77, 0.2)" stroke="#FF4D4D" stroke-width="1"/>
+    <text x="370" y="25" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="800" fill="#FF6B6B" text-anchor="middle">❌ BEFORE: LITERAL TRANSLATION</text>
+
+    <!-- Modal Mockup Inside -->
+    <g transform="translate(30, 60)">
+      <!-- Modal Inner Box -->
+      <rect width="460" height="290" rx="14" fill="#FFFFFF"/>
+      
+      <text x="25" y="38" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#64748B">Document &amp; PDF Management SaaS</text>
+      
+      <!-- Awkward Heading with red highlight -->
+      <rect x="20" y="55" width="420" height="36" rx="6" fill="#FFE5E5" stroke="#FF4D4D" stroke-dasharray="4 2"/>
+      <text x="30" y="78" font-family="'Noto Sans JP', sans-serif" font-size="17" font-weight="800" fill="#DC2626">Premiumでもっと手に入れる</text>
+      <text x="295" y="78" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#DC2626">(Literal "Get more")</text>
+      
+      <!-- Subtext -->
+      <text x="25" y="120" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#64748B">お好みの方法で作業を実行します。</text>
+      
+      <!-- Pricing Pill -->
+      <rect x="25" y="145" width="180" height="34" rx="8" fill="#F1F5F9"/>
+      <text x="40" y="167" font-family="'Segoe UI', sans-serif" font-size="13" font-weight="800" fill="#0F172A">¥1,200 / mo ($8/mo)</text>
+      
+      <!-- Awkward Button -->
+      <rect x="25" y="200" width="410" height="52" rx="10" fill="#DC2626"/>
+      <text x="230" y="232" font-family="'Noto Sans JP', sans-serif" font-size="17" font-weight="800" fill="#FFFFFF" text-anchor="middle">Premiumを取得する</text>
+    </g>
+
+    <!-- English Explanation Note -->
+    <g transform="translate(30, 375)">
+      <rect width="460" height="95" rx="10" fill="rgba(255, 77, 77, 0.12)" stroke="rgba(255, 77, 77, 0.35)" stroke-width="1"/>
+      <text x="18" y="24" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800" fill="#FFA3A3">WHY THIS FAILS IN JAPANESE:</text>
+      <text x="18" y="46" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#FFFFFF">"取得する" literally means "to obtain/acquire" (used for licenses).</text>
+      <text x="18" y="66" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#FFFFFF">It sounds rigid and legalistic, causing high cart abandonment</text>
+      <text x="18" y="84" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#E2E8F0">right at the checkout step when Japanese users are about to pay.</text>
+    </g>
+  </g>
+
+  <!-- RIGHT CARD: AFTER -->
+  <g transform="translate(620, 140)" filter="url(#cardShadow1)">
+    <!-- Card Container -->
+    <rect width="520" height="490" rx="18" fill="#1C1E2E" stroke="#10B981" stroke-width="2"/>
+    
+    <!-- Window Bar -->
+    <rect width="520" height="42" rx="18" fill="#161824"/>
+    <rect y="24" width="520" height="18" fill="#161824"/>
+    <circle cx="24" cy="21" r="5" fill="#FF5F56"/>
+    <circle cx="42" cy="21" r="5" fill="#FFBD2E"/>
+    <circle cx="60" cy="21" r="5" fill="#27C93F"/>
+    
+    <!-- Status Badge -->
+    <rect x="235" y="8" width="270" height="26" rx="13" fill="rgba(16, 185, 129, 0.2)" stroke="#10B981" stroke-width="1"/>
+    <text x="370" y="25" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="800" fill="#34D399" text-anchor="middle">✔ AFTER: JAPAN LAUNCH NATIVE COPY</text>
+
+    <!-- Modal Mockup Inside -->
+    <g transform="translate(30, 60)">
+      <!-- Modal Inner Box -->
+      <rect width="460" height="290" rx="14" fill="#FFFFFF"/>
+      
+      <text x="25" y="38" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#475569">Document &amp; PDF Management SaaS</text>
+      
+      <!-- Polished Heading with green highlight -->
+      <rect x="20" y="55" width="420" height="36" rx="6" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+      <text x="30" y="78" font-family="'Noto Sans JP', sans-serif" font-size="16.5" font-weight="800" fill="#047857">Premiumで、作業をもっと快適に。</text>
+      
+      <!-- Subtext -->
+      <text x="25" y="120" font-family="'Noto Sans JP', sans-serif" font-size="13.5" font-weight="600" fill="#334155">あなたのワークスタイルに合わせて、自由に。</text>
+      
+      <!-- Pricing Pill (Expanded to 310px width so Save 20% never overflows) -->
+      <rect x="25" y="145" width="310" height="34" rx="8" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+      <text x="38" y="167" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="800" fill="#166534">¥1,200 / 月 (Annual Plan · Save 20%)</text>
+      
+      <!-- High Converting Button -->
+      <rect x="25" y="200" width="410" height="52" rx="10" fill="url(#coralGrad1)"/>
+      <text x="230" y="232" font-family="'Noto Sans JP', sans-serif" font-size="16.5" font-weight="800" fill="#FFFFFF" text-anchor="middle">Premiumに登録する（いつでも解約可能）</text>
+    </g>
+
+    <!-- English Explanation Note -->
+    <g transform="translate(30, 375)">
+      <rect width="460" height="95" rx="10" fill="rgba(16, 185, 129, 0.12)" stroke="rgba(16, 185, 129, 0.35)" stroke-width="1"/>
+      <text x="18" y="24" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800" fill="#34D399">WHAT WE FIXED &amp; WHY IT CONVERTS:</text>
+      <text x="18" y="46" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#FFFFFF">Changed button to "Premiumに登録する" (Subscribe to Premium).</text>
+      <text x="18" y="66" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#FFFFFF">Heading highlights user benefit: "Work effortlessly with Premium."</text>
+      <text x="18" y="84" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#E2E8F0">Added cancel-anytime reassurance — builds trust for Japanese payers.</text>
+    </g>
+  </g>
+</svg>

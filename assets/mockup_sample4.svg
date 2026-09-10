@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#061A14"/>
+      <stop offset="50%" stop-color="#0F2D24"/>
+      <stop offset="100%" stop-color="#1A3E32"/>
+    </linearGradient>
+    <linearGradient id="emeraldGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="cardShadow4" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bgGrad4)"/>
+
+  <!-- Subtle Grid Pattern -->
+  <g opacity="0.06" stroke="#FFFFFF" stroke-width="1">
+    <line x1="0" y1="135" x2="1200" y2="135"/>
+    <line x1="0" y1="270" x2="1200" y2="270"/>
+    <line x1="0" y1="405" x2="1200" y2="405"/>
+    <line x1="0" y1="540" x2="1200" y2="540"/>
+    <line x1="300" y1="0" x2="300" y2="675"/>
+    <line x1="600" y1="0" x2="600" y2="675"/>
+    <line x1="900" y1="0" x2="900" y2="675"/>
+  </g>
+
+  <!-- Top Category Pill & English Main Title -->
+  <rect x="60" y="32" width="370" height="28" rx="14" fill="rgba(52, 211, 153, 0.15)" stroke="#34D399" stroke-width="1"/>
+  <text x="75" y="51" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" fill="#A7F3D0" letter-spacing="1">SAMPLE #04: WELLNESS, HABITS &amp; DETOX</text>
+  
+  <text x="60" y="94" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif" font-size="26" font-weight="800" fill="#FFFFFF">Why Aggressive Commands Fail and Gentle Empathy Wins Japanese Users</text>
+  <text x="60" y="120" font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="600" fill="#94A3B8">Original English: "Cut screen time in half. Rewire your brain to hate scrolling. Saves 21 hours every month."</text>
+
+  <!-- LEFT CARD: BEFORE -->
+  <g transform="translate(60, 140)" filter="url(#cardShadow4)">
+    <!-- Card Container -->
+    <rect width="520" height="490" rx="18" fill="#1C2723" stroke="#EF4444" stroke-width="1.5"/>
+    
+    <!-- Window Bar -->
+    <rect width="520" height="42" rx="18" fill="#131B18"/>
+    <rect y="24" width="520" height="18" fill="#131B18"/>
+    <circle cx="24" cy="21" r="5" fill="#FF5F56"/>
+    <circle cx="42" cy="21" r="5" fill="#FFBD2E"/>
+    <circle cx="60" cy="21" r="5" fill="#27C93F"/>
+    
+    <!-- Status Badge -->
+    <rect x="235" y="8" width="270" height="26" rx="13" fill="rgba(239, 68, 68, 0.2)" stroke="#EF4444" stroke-width="1"/>
+    <text x="370" y="25" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="800" fill="#F87171" text-anchor="middle">❌ BEFORE: AGGRESSIVE COMMANDS</text>
+
+    <!-- App Screen Inside -->
+    <g transform="translate(30, 60)">
+      <rect width="460" height="290" rx="14" fill="#FFFFFF"/>
+      
+      <!-- Top Bar -->
+      <rect width="460" height="36" rx="14" fill="#F8FAFC"/>
+      <rect y="20" width="460" height="16" fill="#F8FAFC"/>
+      <text x="20" y="23" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#64748B">Mindfulness &amp; Screen Time Tracker</text>
+      
+      <!-- Content with Red Highlight -->
+      <g transform="translate(25, 45)">
+        <text x="0" y="20" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#94A3B8">Literal translation from English:</text>
+        
+        <rect x="0" y="30" width="410" height="95" rx="6" fill="#FEF2F2" stroke="#EF4444" stroke-dasharray="4 2"/>
+        <text x="16" y="54" font-family="'Noto Sans JP', sans-serif" font-size="14.5" font-weight="800" fill="#DC2626">画面時間を半分に減らす。</text>
+        <text x="16" y="78" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="800" fill="#EF4444">脳を再配線してスクロールを嫌うようにする。</text>
+        <text x="16" y="102" font-family="'Noto Sans JP', sans-serif" font-size="13" fill="#64748B">毎月21時間を節約してくれます。</text>
+        
+        <rect x="0" y="145" width="220" height="42" rx="8" fill="#EF4444"/>
+        <text x="110" y="171" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">脳を今すぐ変える</text>
+      </g>
+    </g>
+
+    <!-- English Explanation Note -->
+    <g transform="translate(30, 375)">
+      <rect width="460" height="95" rx="10" fill="rgba(239, 68, 68, 0.12)" stroke="rgba(239, 68, 68, 0.35)" stroke-width="1"/>
+      <text x="18" y="24" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800" fill="#FFA3A3">WHY THIS FAILS IN JAPANESE:</text>
+      <text x="18" y="46" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#FFFFFF">"脳を再配線" (rewire your brain) sounds like a dystopian threat.</text>
+      <text x="18" y="66" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#FFFFFF">Aggressive imperative commands trigger psychological guilt,</text>
+      <text x="18" y="84" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#E2E8F0">leading Japanese users to delete the app rather than subscribe.</text>
+    </g>
+  </g>
+
+  <!-- RIGHT CARD: AFTER -->
+  <g transform="translate(620, 140)" filter="url(#cardShadow4)">
+    <!-- Card Container -->
+    <rect width="520" height="490" rx="18" fill="#1C2723" stroke="#10B981" stroke-width="2"/>
+    
+    <!-- Window Bar -->
+    <rect width="520" height="42" rx="18" fill="#131B18"/>
+    <rect y="24" width="520" height="18" fill="#131B18"/>
+    <circle cx="24" cy="21" r="5" fill="#FF5F56"/>
+    <circle cx="42" cy="21" r="5" fill="#FFBD2E"/>
+    <circle cx="60" cy="21" r="5" fill="#27C93F"/>
+    
+    <!-- Status Badge -->
+    <rect x="235" y="8" width="270" height="26" rx="13" fill="rgba(16, 185, 129, 0.2)" stroke="#10B981" stroke-width="1"/>
+    <text x="370" y="25" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="800" fill="#34D399" text-anchor="middle">✔ AFTER: JAPAN LAUNCH NATIVE COPY</text>
+
+    <!-- App Screen Inside -->
+    <g transform="translate(30, 60)">
+      <rect width="460" height="290" rx="14" fill="#FFFFFF"/>
+      
+      <!-- Top Bar -->
+      <rect width="460" height="36" rx="14" fill="#F8FAFC"/>
+      <rect y="20" width="460" height="16" fill="#F8FAFC"/>
+      <text x="20" y="23" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#475569">Mindfulness &amp; Screen Time Tracker</text>
+      
+      <!-- Content with Green Highlight -->
+      <g transform="translate(25, 45)">
+        <text x="0" y="20" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="700" fill="#059669">Empathetic High-LTV Japanese Copy:</text>
+        
+        <rect x="0" y="30" width="410" height="95" rx="6" fill="#ECFDF5" stroke="#10B981" stroke-width="1.5"/>
+        <text x="16" y="54" font-family="'Noto Sans JP', sans-serif" font-size="15" font-weight="800" fill="#047857">スクリーンタイムを、半分に。</text>
+        <text x="16" y="76" font-family="'Noto Sans JP', sans-serif" font-size="13" font-weight="600" fill="#065F46">無意識のスクロール癖を自然にリセット。</text>
+        <text x="16" y="100" font-family="'Noto Sans JP', sans-serif" font-size="13.5" font-weight="700" fill="#047857">毎月21時間の『ゆとり』をあなたにお届けします。</text>
+        
+        <rect x="0" y="145" width="220" height="42" rx="8" fill="url(#emeraldGrad4)"/>
+        <text x="110" y="171" font-family="'Noto Sans JP', sans-serif" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">今日から始める（無料お試し）</text>
+      </g>
+    </g>
+
+    <!-- English Explanation Note -->
+    <g transform="translate(30, 375)">
+      <rect width="460" height="95" rx="10" fill="rgba(16, 185, 129, 0.12)" stroke="rgba(16, 185, 129, 0.35)" stroke-width="1"/>
+      <text x="18" y="24" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="800" fill="#34D399">WHAT WE FIXED &amp; WHY IT CONVERTS:</text>
+      <text x="18" y="46" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#FFFFFF">Reframed "saving hours" into "ゆとり" (peace of mind / breathing room).</text>
+      <text x="18" y="66" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#FFFFFF">Shifted tone from aggressive orders to supportive personal care.</text>
+      <text x="18" y="84" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="500" fill="#E2E8F0">Proven to dramatically boost subscription renewal and retention.</text>
+    </g>
+  </g>
+</svg>
