@@ -2415,14 +2415,19 @@ h1, h2, h3, h4 {
                         </button>
                     </div>
 
-                    <!-- Interactive UI Mockup Preview (Expanded Full-Scale Container) -->
-                    <div class="cs-mockup-preview-wrapper" style="margin-bottom: 24px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border-pink); box-shadow: var(--shadow-md); background: #0F111A;">
-                        <div style="padding: 12px 20px; background: rgba(28, 30, 54, 0.04); border-bottom: 1px solid var(--border-pink); display: flex; align-items: center; justify-content: space-between;">
-                            <span style="font-size: 0.85rem; font-weight: 800; color: var(--primary-indigo); letter-spacing: 0.5px; text-transform: uppercase;" data-en="Product Context &amp; UI Preview" data-jp="プロダクト画面・UIプレビュー">Product Context &amp; UI Preview</span>
-                            <span style="font-size: 0.8rem; color: var(--coral-accent); font-weight: 700; background: var(--bg-pink-soft); padding: 3px 10px; border-radius: 6px;" data-en="Interactive Case Study" data-jp="制作実例・ビジュアル解説">Interactive Case Study</span>
+                    <!-- Interactive UI Mockup Preview (Sleek High-Res Container) -->
+                    <div class="cs-mockup-preview-wrapper" style="max-width: 1024px; width: 100%; margin: 0 auto; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15); background: #0A0D16;">
+                        <div style="padding: 10px 16px; background: #131726; border-bottom: 1px solid rgba(255, 255, 255, 0.07); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                            <div style="display: flex; align-items: center; gap: 8px;">
+                                <span style="width: 10px; height: 10px; border-radius: 50%; background: #FF5F56; display: inline-block;"></span>
+                                <span style="width: 10px; height: 10px; border-radius: 50%; background: #FFBD2E; display: inline-block;"></span>
+                                <span style="width: 10px; height: 10px; border-radius: 50%; background: #27C93F; display: inline-block;"></span>
+                                <span style="margin-left: 8px; font-size: 0.78rem; font-weight: 700; color: #94A3B8; letter-spacing: 0.5px; text-transform: uppercase;" data-en="Visual Case Study &amp; UI Comparison" data-jp="制作実例・UIビジュアル解説">Visual Case Study &amp; UI Comparison</span>
+                            </div>
+                            <span style="font-size: 0.75rem; color: #FF8BA7; font-weight: 700; background: rgba(232, 80, 120, 0.15); border: 1px solid rgba(232, 80, 120, 0.3); padding: 3px 10px; border-radius: 6px;" data-en="High-Res Interactive Preview" data-jp="高解像度プレビュー">High-Res Interactive Preview</span>
                         </div>
-                        <div style="width: 100%; display: flex; align-items: center; justify-content: center; background: #0F111A;">
-                            <img id="csMockupImg" src="./assets/mockup_sample1.svg" alt="Case Study UI Mockup" style="width: 100%; height: auto; display: block;" loading="eager">
+                        <div style="width: 100%; display: flex; align-items: center; justify-content: center; background: #0A0D16;">
+                            <img id="csMockupImg" src="./assets/mockup_sample1.png" alt="Case Study UI Mockup" style="width: 100%; height: auto; display: block; border-radius: 0 0 18px 18px; image-rendering: -webkit-optimize-contrast;" loading="eager">
                         </div>
                     </div>
 
@@ -3221,7 +3226,7 @@ const caseStudyData = {
     sample1: {
         title: { en: `Sample #01: Document & PDF SaaS (Checkout & Upgrade Flow)`, jp: `サンプル #01：課金・アップグレード導線の直訳解消（SaaS）` },
         genre: `PAID CONVERSION & SAAS LOCALIZATION`,
-        mockupImg: `./assets/mockup_sample1.svg`,
+        mockupImg: `./assets/mockup_sample1.png`,
         iconSvg: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>`,
         original: `"Get more with Premium. Work your way. Get Premium."`,
         literal: `「Premiumでもっと手に入れる。お好みの方法で作業を実行。Premiumを取得する」`,
@@ -3257,7 +3262,7 @@ const caseStudyData = {
     sample2: {
         title: { en: `Sample #02: Desktop & Mobile AI App (Layout & Line-Break Fix)`, jp: `サンプル #02：文字の泣き別れ・レイアウト崩れ解消（AIアプリ）` },
         genre: `UI/UX & CSS LINE-BREAK OPTIMIZATION`,
-        mockupImg: `./assets/mockup_sample2.svg`,
+        mockupImg: `./assets/mockup_sample2.png`,
         iconSvg: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>`,
         original: `"Chatbox: From AI chat to Agent workflows, ready to use immediately. Built for deeper work."`,
         literal: `「Chatbox：AIチャットから Agent 作業ま<br>で、<br>すぐに使える（より深い作業のために構築）」`,
@@ -3293,7 +3298,7 @@ const caseStudyData = {
     sample3: {
         title: { en: `Sample #03: AI Knowledge Base for Teams (B2B SaaS)`, jp: `サンプル #03：B2B SaaSの信頼性と即時性の訴求（AI Wiki）` },
         genre: `B2B SAAS & KNOWLEDGE MANAGEMENT`,
-        mockupImg: `./assets/mockup_sample3.svg`,
+        mockupImg: `./assets/mockup_sample3.png`,
         iconSvg: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>`,
         original: `"Verified knowledge, in sync with reality. Finally, an AI knowledge base that actually does the work."`,
         literal: `「検証済みナレッジ、現実と同期。ついに、仕事をするAIナレッジベースが登場」`,
@@ -3329,7 +3334,7 @@ const caseStudyData = {
     sample4: {
         title: { en: `Sample #04: Digital Detox & Habit Tracker (Emotional Empathy)`, jp: `サンプル #04：心理的共感と「ゆとり」の創出（習慣・集中）` },
         genre: `WELLNESS & HABIT APP LOCALIZATION`,
-        mockupImg: `./assets/mockup_sample4.svg`,
+        mockupImg: `./assets/mockup_sample4.png`,
         iconSvg: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
         original: `"Cut screen time in half. Rewire your brain to hate scrolling. This app saves 21 hours every month."`,
         literal: `「画面時間を半分に減らす。脳を再配線してスクロールを嫌うようにする。この無料アプリは毎月21時間を節約してくれます。」`,
@@ -3365,7 +3370,7 @@ const caseStudyData = {
     sample5: {
         title: { en: `Sample #05: Developer Tools & Creative Platforms`, jp: `サンプル #05：開発者ツール・専門ツールの機能価値の明快化` },
         genre: `DEVELOPER TOOLS & CREATIVE WEB APPS`,
-        mockupImg: `./assets/mockup_sample5.svg`,
+        mockupImg: `./assets/mockup_sample5.png`,
         iconSvg: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
         original: `"Modern auth for developers with no unexpected bills. Free online photo editor for professionals."`,
         literal: `「開発者のためのモ / ダンな認証基盤。予期せぬ請求なし。無料の写真編集者。」`,
