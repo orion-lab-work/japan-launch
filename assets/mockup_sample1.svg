@@ -1,0 +1,87 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">DocuFlow screen comparing literal Japanese with a natural Japanese localization edit</title>
+  <desc id="desc">Side by side comparison of awkward Japanese machine translation and a natural Japanese localization edit. Plan names, prices, billing, and features are kept equivalent.</desc>
+  <defs>
+    <linearGradient id="canvas" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#111827"/><stop offset="1" stop-color="#252642"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff6584"/><stop offset="1" stop-color="#e85078"/></linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#090b14" flood-opacity=".28"/></filter>
+    <style>
+      .label{font:700 20px Arial,sans-serif;letter-spacing:2px}
+      .ui{font-family:Arial,"Noto Sans JP",sans-serif;fill:#171b2d}
+      .muted{fill:#647084}
+      .panel{fill:#f7f8fc}
+      .plan{fill:#fff;stroke:#dfe3ec;stroke-width:2}
+      .pro{fill:#f2f0ff;stroke:#6256db;stroke-width:3}
+      .feature{font-size:15px}
+    </style>
+  </defs>
+  <rect width="1600" height="900" rx="32" fill="url(#canvas)"/>
+  <text x="800" y="57" text-anchor="middle" fill="#cbd5e1" class="label">ONE SCREEN · BEFORE / AFTER</text>
+  <g aria-label="変更箇所の凡例" font-family="Arial, sans-serif" font-size="14" font-weight="700"><rect x="1210" y="22" width="370" height="38" rx="10" fill="#1e293b" fill-opacity=".94"/><rect x="1230" y="34" width="22" height="16" rx="4" fill="none" stroke="#f59e0b" stroke-width="3"/><text x="1260" y="48" fill="#dbe3f1">Before</text><rect x="1340" y="34" width="22" height="16" rx="4" fill="none" stroke="#2dd4bf" stroke-width="3"/><text x="1370" y="48" fill="#dbe3f1">After</text><text x="1425" y="48" fill="#dbe3f1">枠内が変更箇所</text></g>
+  <g filter="url(#shadow)">
+    <rect x="40" y="92" width="740" height="770" rx="24" class="panel"/>
+    <rect x="820" y="92" width="740" height="770" rx="24" class="panel"/>
+  </g>
+  <rect x="68" y="116" width="220" height="38" rx="19" fill="#fff1cf"/>
+  <text x="178" y="142" text-anchor="middle" fill="#9b5700" font-size="15" font-weight="700">BEFORE · AI翻訳の直訳例</text>
+  <rect x="848" y="116" width="250" height="38" rx="19" fill="url(#accent)"/>
+  <text x="973" y="142" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">AFTER · 自然な日本語へ調整</text>
+  <g transform="translate(68 176)">
+    <rect width="684" height="650" rx="18" fill="#fff" stroke="#e0e3ea"/>
+    <text x="342" y="52" text-anchor="middle" class="ui" font-size="29" font-weight="700">DocuFlowプランを上昇させる</text>
+    <text x="342" y="84" text-anchor="middle" class="ui muted" font-size="17">強力な機能をロック解除して、シームレスに共同作業しましょう。</text>
+    <g transform="translate(20 116)">
+      <rect width="200" height="500" rx="14" class="plan"/>
+      <text x="20" y="42" class="ui" font-size="24" font-weight="700">Starter</text>
+      <text x="20" y="70" class="ui muted" font-size="16">無料、基本的な特徴</text>
+      <text x="20" y="124" class="ui" font-size="40" font-weight="700">$0</text><text x="73" y="124" class="ui" font-size="17">/mo</text>
+      <text x="20" y="169" class="ui feature">✓ 書類10個</text><text x="20" y="201" class="ui feature">✓ 1人のユーザー</text><text x="20" y="233" class="ui feature">✓ 基本的な共有</text><text x="20" y="265" class="ui feature">✓ 5GB保管</text>
+      <rect x="16" y="435" width="168" height="45" rx="22" fill="#fff" stroke="#cbd2df"/><text x="100" y="464" text-anchor="middle" class="ui" font-size="16" font-weight="700">上昇する</text>
+    </g>
+    <g transform="translate(242 116)">
+      <rect width="200" height="500" rx="14" class="pro"/>
+      <rect x="45" y="-12" width="110" height="28" rx="14" fill="#39328f"/><text x="100" y="8" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">MOST POPULAR</text>
+      <text x="20" y="42" class="ui" font-size="24" font-weight="700">Pro</text><text x="20" y="70" class="ui muted" font-size="16">チーム向け</text>
+      <text x="20" y="124" class="ui" font-size="40" font-weight="700">$19</text><text x="81" y="124" class="ui" font-size="16">/month</text><text x="20" y="148" class="ui muted" font-size="14">Billed Annually</text>
+      <text x="20" y="184" class="ui feature">✓ 書類数の制限なし</text><text x="20" y="216" class="ui feature">✓ チーム5人まで</text><text x="20" y="248" class="ui feature">✓ リアルタイム協力</text><text x="20" y="280" class="ui feature">✓ 高度なテンプレート</text><text x="20" y="312" class="ui feature">✓ 50GB Storage</text><text x="20" y="344" class="ui feature">✓ Version History</text>
+      <rect x="16" y="435" width="168" height="45" rx="22" fill="#584fe0"/><text x="100" y="464" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">Proに上昇</text>
+    </g>
+    <g transform="translate(464 116)">
+      <rect width="200" height="500" rx="14" class="plan"/>
+      <text x="20" y="42" class="ui" font-size="24" font-weight="700">Business</text><text x="20" y="70" class="ui muted" font-size="16">先進</text>
+      <text x="20" y="124" class="ui" font-size="40" font-weight="700">$49</text><text x="81" y="124" class="ui" font-size="17">/mo</text>
+      <text x="20" y="169" class="ui feature">✓ Proの中の全て</text><text x="20" y="201" class="ui feature">✓ 無制限のメンバー</text><text x="20" y="233" class="ui feature">✓ 管理者制御</text><text x="20" y="265" class="ui feature">✓ SSO Integration</text><text x="20" y="297" class="ui feature">✓ Priority Support</text>
+      <rect x="16" y="435" width="168" height="45" rx="22" fill="#fff" stroke="#cbd2df"/><text x="100" y="464" text-anchor="middle" class="ui" font-size="15" font-weight="700">Businessを選んでください</text>
+    </g>
+  </g>
+  <g transform="translate(848 176)">
+    <rect width="684" height="650" rx="18" fill="#fff" stroke="#e0e3ea"/>
+    <text x="342" y="52" text-anchor="middle" class="ui" font-size="28" font-weight="700">DocuFlowのプランをアップグレード</text>
+    <text x="342" y="84" text-anchor="middle" class="ui muted" font-size="17">便利な機能で、チームの作業をもっとスムーズに。</text>
+    <g transform="translate(20 116)">
+      <rect width="200" height="500" rx="14" class="plan"/>
+      <text x="20" y="42" class="ui" font-size="24" font-weight="700">Starter</text><text x="20" y="70" class="ui muted" font-size="16">無料・基本機能</text>
+      <text x="20" y="124" class="ui" font-size="40" font-weight="700">$0</text><text x="73" y="124" class="ui" font-size="17">/月</text>
+      <text x="20" y="169" class="ui feature">✓ ドキュメント10件</text><text x="20" y="201" class="ui feature">✓ ユーザー1名</text><text x="20" y="233" class="ui feature">✓ 基本の共有機能</text><text x="20" y="265" class="ui feature">✓ 5GBストレージ</text>
+      <rect x="16" y="435" width="168" height="45" rx="22" fill="#fff" stroke="#cbd2df"/><text x="100" y="464" text-anchor="middle" class="ui" font-size="16" font-weight="700">プランを変更する</text>
+    </g>
+    <g transform="translate(242 116)">
+      <rect width="200" height="500" rx="14" class="pro"/>
+      <rect x="45" y="-12" width="110" height="28" rx="14" fill="#39328f"/><text x="100" y="8" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">人気プラン</text>
+      <text x="20" y="42" class="ui" font-size="24" font-weight="700">Pro</text><text x="20" y="70" class="ui muted" font-size="15">チーム向け</text>
+      <text x="20" y="124" class="ui" font-size="40" font-weight="700">$19</text><text x="81" y="124" class="ui" font-size="16">/月</text><text x="20" y="148" class="ui muted" font-size="14">年払い</text>
+      <text x="20" y="184" class="ui feature">✓ ドキュメント数無制限</text><text x="20" y="216" class="ui feature">✓ チームメンバー5名</text><text x="20" y="248" class="ui feature">✓ リアルタイム共同作業</text><text x="20" y="280" class="ui feature">✓ 高度なテンプレート</text><text x="20" y="312" class="ui feature">✓ 50GBストレージ</text><text x="20" y="344" class="ui feature">✓ バージョン履歴</text>
+      <rect x="16" y="435" width="168" height="45" rx="22" fill="#584fe0"/><text x="100" y="464" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">Proプランに変更</text>
+    </g>
+    <g transform="translate(464 116)">
+      <rect width="200" height="500" rx="14" class="plan"/>
+      <text x="20" y="42" class="ui" font-size="24" font-weight="700">Business</text><text x="20" y="70" class="ui muted" font-size="16">高度な機能</text>
+      <text x="20" y="124" class="ui" font-size="40" font-weight="700">$49</text><text x="81" y="124" class="ui" font-size="17">/月</text>
+      <text x="20" y="169" class="ui feature">✓ Proの全機能</text><text x="20" y="201" class="ui feature">✓ メンバー数無制限</text><text x="20" y="233" class="ui feature">✓ 管理者向け設定</text><text x="20" y="265" class="ui feature">✓ SSO連携</text><text x="20" y="297" class="ui feature">✓ 優先サポート</text>
+      <rect x="16" y="435" width="168" height="45" rx="22" fill="#fff" stroke="#cbd2df"/><text x="100" y="464" text-anchor="middle" class="ui" font-size="15" font-weight="700">Businessプランを選択</text>
+    </g>
+  </g>
+  <text x="800" y="884" text-anchor="middle" fill="#cbd5e1" font-size="16">架空のUIを使った改善サンプル · プランと価格はそのままに、日本語の表現を調整</text>
+  <g aria-label="変更箇所"><rect x="108" y="211" width="660" height="96" rx="12" fill="none" stroke="#f59e0b" stroke-width="3"/><rect x="888" y="211" width="660" height="96" rx="12" fill="none" stroke="#2dd4bf" stroke-width="3"/></g>
+</svg>
+
